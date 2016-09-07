@@ -1,0 +1,714 @@
+
+{
+  "Publication":"Golf Magazine",
+  "Year":2012,
+  "Type":"public",
+  "Courses": [
+    {
+      "CourseName":"Pacific Dunes",
+      "Ranking":1,
+      "State":"OR",
+      "Architect":"Tom Doak",
+      "Year":"2001",
+      "Coordinates":[43.188221,-124.390174]}
+  ,{
+      "CourseName":"Pebble Beach",
+      "Ranking":2,
+      "State":"CA",
+      "Architect":"Jack Neville",
+      "Year":"1919",
+      "Coordinates":[36.56,-121.95]}
+  ,{
+      "CourseName":"Pinehurst (No.2)",
+      "Ranking":3,
+      "State":"NC",
+      "Architect":"Donald Ross",
+      "Year":"1907",
+      "Coordinates":[35.1895,-79.4678]}
+  ,{
+      "CourseName":"Whistling Straits (Straits)",
+      "Ranking":4,
+      "State":"WI",
+      "Architect":"Pete Dye",
+      "Year":"1998",
+      "Coordinates":[43.851,-87.735]}
+  ,{
+      "CourseName":"Kiawah Island (Ocean)",
+      "Ranking":5,
+      "State":"SC",
+      "Architect":"Pete Dye",
+      "Year":"1991",
+      "Coordinates":[32.6113,-80.0229]}
+  ,{
+      "CourseName":"Bethpage(Black)",
+      "Ranking":6,
+      "State":"NY",
+      "Architect":"A.W. Tillinghast",
+      "Year":"1935",
+      "Coordinates":[40.7423,-73.4552]}
+  ,{
+      "CourseName":"TPC Sawgrass (Players Stadium)",
+      "Ranking":7,
+      "State":"FL",
+      "Architect":"Pete Dye",
+      "Year":"1981",
+      "Coordinates":[30.198,-81.394]}
+  ,{
+      "CourseName":"Old Macdonald",
+      "Ranking":9,
+      "State":"OR",
+      "Architect":"Tom Doak",
+      "Year":"2010",
+      "Coordinates":[43.188221,-124.390174]}
+  ,{
+      "CourseName":"Bandon Dunes",
+      "Ranking":8,
+      "State":"OR",
+      "Architect":"David McLay Kidd",
+      "Year":"1999",
+      "Coordinates":[43.188221,-124.390174]}
+  ,{
+      "CourseName":"Spyglass Hill",
+      "Ranking":10,
+      "State":"CA",
+      "Architect":"Robert Trent Jones",
+      "Year":"1966",
+      "Coordinates":[36.5851,-121.9555]}
+  ,{
+      "CourseName":"Blackwolf Run (River)",
+      "Ranking":11,
+      "State":"WI",
+      "Architect":"Pete Dye",
+      "Year":"1988",
+      "Coordinates":[43.728061,-87.885]}
+  ,{
+      "CourseName":"Harbour Town",
+      "Ranking":12,
+      "State":"SC",
+      "Architect":"Pete Dye",
+      "Year":"1969",
+      "Coordinates":[32.136,-80.81]}
+  ,{
+      "CourseName":"Pasatiempo",
+      "Ranking":13,
+      "State":"CA",
+      "Architect":"Alister MacKenzie",
+      "Year":"1929",
+      "Coordinates":[37.0064,-122.03]}
+  ,{
+      "CourseName":"Chambers Bay",
+      "Ranking":14,
+      "State":"WA",
+      "Architect":"Robert Trent Jones II",
+      "Year":"2007",
+      "Coordinates":[47.2,-122.57]}
+  ,{
+      "CourseName":"Bandon Trails",
+      "Ranking":15,
+      "State":"OR",
+      "Architect":"Bill Coore",
+      "Year":"2005",
+      "Coordinates":[43.188221,-124.390174]}
+  ,{
+      "CourseName":"The Prince at Princeville",
+      "Ranking":16,
+      "State":"HI",
+      "Architect":"Robert Trent Jones Jr.",
+      "Year":"1991",
+      "Coordinates":[22.211461,-159.46239]}
+  ,{
+      "CourseName":"Shadow Creek",
+      "Ranking":17,
+      "State":"NV",
+      "Architect":"Tom Fazio",
+      "Year":"1990",
+      "Coordinates":[36.256995,-115.107959]}
+  ,{
+      "CourseName":"Kapalua Resort (Plantation)",
+      "Ranking":18,
+      "State":"HI",
+      "Architect":"Bill Coore/Ben Crenshaw",
+      "Year":"1991",
+      "Coordinates":[21.006677,-156.639]}
+  ,{
+      "CourseName":"World Woods (Pine Barrens)",
+      "Ranking":19,
+      "State":"FL",
+      "Architect":"Tom Fazio",
+      "Year":"1993",
+      "Coordinates":[28.68371,-82.479344]}
+  ,{
+      "CourseName":"Troon North Golf Club (Pinnacle)",
+      "Ranking":20,
+      "State":"AZ",
+      "Architect":"Tom Weiskopf/Jay Morrish",
+      "Year":"1991",
+      "Coordinates":[33.744906,-111.85878]}
+  ,{
+      "CourseName":"Cog Hill (No. 4)",
+      "Ranking":21,
+      "State":"IL",
+      "Architect":"Dick Wilson",
+      "Year":"1964",
+      "Coordinates":[41.678515,-87.948596]}
+  ,{
+      "CourseName":"Mauna Kea Golf Course",
+      "Ranking":22,
+      "State":"HI",
+      "Architect":"Robert Trent Jones Sr./Rees Jones",
+      "Year":"1964/2008",
+      "Coordinates":[20.004858,-155.81902]}
+  ,{
+      "CourseName":"Sea Island Golf Club(Seaside)",
+      "Ranking":23,
+      "State":"GA",
+      "Architect":"Colt-Alison/Tom Fazio",
+      "Year":"1928/1999",
+      "Coordinates":[31.159346,-81.40801]}
+  ,{
+      "CourseName":"Omni Homestead (Cascades)",
+      "Ranking":24,
+      "State":"VA",
+      "Architect":"William Flynn",
+      "Year":"1923",
+      "Coordinates":[37.997345,-79.83013]}
+  ,{
+      "CourseName":"Torrey Pines (South)",
+      "Ranking":25,
+      "State":"CA",
+      "Architect":"Billy Bell Jr.",
+      "Year":"1957",
+      "Coordinates":[32.9045,-117.2454]}
+  ,{
+      "CourseName":"Fallen Oak at Beau Rivage Resort",
+      "Ranking":26,
+      "State":"MS",
+      "Architect":"Tom Fazio",
+      "Year":"2006",
+      "Coordinates":[30.642604,-88.90502]}
+  ,{
+      "CourseName":"Caledonia Golf & Fish Club",
+      "Ranking":27,
+      "State":"SC",
+      "Architect":"Mike Strantz",
+      "Year":"1994",
+      "Coordinates":[33.472206,-79.13457]}
+  ,{
+      "CourseName":"Arcadia Bluffs Golf Club",
+      "Ranking":28,
+      "State":"MI",
+      "Architect":"Rich Smith/Warren Henderson",
+      "Year":"1999",
+      "Coordinates":[44.45683,-86.24220]}
+  ,{
+      "CourseName":"Erin Hills Golf Course",
+      "Ranking":29,
+      "State":"WI",
+      "Architect":"Muchael Hurdzan/Dana Fry/Ron Whitten",
+      "Year":"2006",
+      "Coordinates":[43.244204,-88.39540]}
+  ,{
+      "CourseName":"Trump National Golf Club Los Angeles",
+      "Ranking":30,
+      "State":"CA",
+      "Architect":"Donald J. Trump",
+      "Year":"2005",
+      "Coordinates":[33.729642,-118.34428]}
+  ,{
+      "CourseName":"Paa-Ko Ridge Golf Club",
+      "Ranking":31,
+      "State":"NM",
+      "Architect":"Ken Dye",
+      "Year":"2000",
+      "Coordinates":[35.207277,-106.3186]}
+  ,{
+      "CourseName":"Dancing Rabbit (Azaleas)",
+      "Ranking":32,
+      "State":"MS",
+      "Architect":"Tom Fazio/Jerry Pate",
+      "Year":"1997",
+      "Coordinates":[32.771455,-89.2158]}
+  ,{
+      "CourseName":"Forest Dunes Golf Club",
+      "Ranking":33,
+      "State":"MI",
+      "Architect":"Tom Weiskopf",
+      "Year":"2002",
+      "Coordinates":[44.591933,-84.529]}
+  ,{
+      "CourseName":"Red Sky Ranch Golf Club (Norma)",
+      "Ranking":34,
+      "State":"CO",
+      "Architect":"Greg Norman",
+      "Year":"2003",
+      "Coordinates":[39.687952,-106.69554]}
+  ,{
+      "CourseName":"The Golf Club at Cuscowilla",
+      "Ranking":35,
+      "State":"GA",
+      "Architect":"Bill Coore/Ben Crenshaw",
+      "Year":"1998",
+      "Coordinates":[33.412817,-83.25509]}
+  ,{
+      "CourseName":"The Highland Course at Primland Resort",
+      "Ranking":36,
+      "State":"VA",
+      "Architect":"Donald Steel",
+      "Year":"2006",
+      "Coordinates":[36.662859,-80.42656]}
+  ,{
+      "CourseName":"We-Ko-Pa Golf Club (Cholla)",
+      "Ranking":37,
+      "State":"AZ",
+      "Architect":"Scott Miller",
+      "Year":"2001",
+      "Coordinates":[33.583401,-111.9277]}
+  ,{
+      "CourseName":"Pronghorn Golf Club & Resort (Nicklaus)",
+      "Ranking":38,
+      "State":"OR",
+      "Architect":"jack Nicklaus",
+      "Year":"2004",
+      "Coordinates":[44.189612,-121.1788]}
+  ,{
+      "CourseName":"Taconic Golf Club",
+      "Ranking":39,
+      "State":"MA",
+      "Architect":"Wayne Stiles",
+      "Year":"1928",
+      "Coordinates":[42.703828,-73.2047]}
+  ,{
+      "CourseName":"We-Ko-Pa Golf Club (Saguaro)",
+      "Ranking":40,
+      "State":"AZ",
+      "Architect":"Bill Coore/Ben Crenshaw",
+      "Year":"2006",
+      "Coordinates":[33.58547,-111.8944]}
+  ,{
+      "CourseName":"Bulle Rock",
+      "Ranking":41,
+      "State":"MD",
+      "Architect":"Pete Dye",
+      "Year":"1998",
+      "Coordinates":[39.540205,-76.13233]}
+  ,{
+      "CourseName":"The Links at Spanish Bay",
+      "Ranking":42,
+      "State":"CA",
+      "Architect":"Robert Trent Jones Jr.",
+      "Year":"1987",
+      "Coordinates":[36.60939,-121.94561]}
+  ,{
+      "CourseName":"Reynolds Plantation (Great Waters)",
+      "Ranking":43,
+      "State":"GA",
+      "Architect":"jack Nicklaus",
+      "Year":"1992",
+      "Coordinates":[33.450771,-83.22296]}
+  ,{
+      "CourseName":"Black Mesa",
+      "Ranking":44,
+      "State":"NM",
+      "Architect":"Baxter Spann",
+      "Year":"2003",
+      "Coordinates":[35.960533,-106.053451]}
+  ,{
+      "CourseName":"Crosswater at Sunriver Resort",
+      "Ranking":45,
+      "State":"OR",
+      "Architect":"Bob Cupp/John Fought",
+      "Year":"1995",
+      "Coordinates":[43.853105,-121.44736]}
+  ,{
+      "CourseName":"The Challenge at Manele",
+      "Ranking":46,
+      "State":"HI",
+      "Architect":"jack Nicklaus",
+      "Year":"1993",
+      "Coordinates":[20.741665,-156.903]}
+  ,{
+      "CourseName":"Dunes Golf & Beach Club",
+      "Ranking":47,
+      "State":"SC",
+      "Architect":"Robert Trent Jones Sr.",
+      "Year":"1948",
+      "Coordinates":[33.75721,-78.79592]}
+  ,{
+      "CourseName":"Dunes Golf & Beach Club",
+      "Ranking":47,
+      "State":"SC",
+      "Architect":"Robert Trent Jones Sr.",
+      "Year":"1948",
+      "Coordinates":[33.75721,-78.79592]}
+  ,{
+      "CourseName":"Arnold Palmer's Bay Hill Club (Championship)",
+      "Ranking":48,
+      "State":"FL",
+      "Architect":"Dick Wilson/Arnold Palmer",
+      "Year":"1961/2009",
+      "Coordinates":[28.458774,-81.51029]}
+  ,{
+      "CourseName":"Bay Harbor Golf Club (Links/Quarry)",
+      "Ranking":49,
+      "State":"MI",
+      "Architect":"Arthur Hills",
+      "Year":"1996",
+      "Coordinates":[45.36226,-85.05073]}
+  ,{
+      "CourseName":"Pine Needles Lodge and Golf Club",
+      "Ranking":50,
+      "State":"NC",
+      "Architect":"Donald Ross",
+      "Year":"1927",
+      "Coordinates":[35.196281,-79.38911]}
+  ,{
+      "CourseName":"May River Golf Club at Palmetto Bluff",
+      "Ranking":51,
+      "State":"SC",
+      "Architect":"jack Nicklaus",
+      "Year":"2004",
+      "Coordinates":[32.211266,-80.88557]}
+  ,{
+      "CourseName":"Troon North Golf Club (Monument)",
+      "Ranking":52,
+      "State":"AZ",
+      "Architect":"Tom Weiskopf/Jayy Morrish",
+      "Year":"1991",
+      "Coordinates":[33.746794,-111.85815]}
+  ,{
+      "CourseName":"PGA West (TPC Stadium)",
+      "Ranking":53,
+      "State":"CA",
+      "Architect":"Pete Dye",
+      "Year":"1986",
+      "Coordinates":[33.652184,-116.25937]}
+  ,{
+      "CourseName":"The Quarry at Giants Ridge",
+      "Ranking":54,
+      "State":"MN",
+      "Architect":"Jeff Brauer",
+      "Year":"2003",
+      "Coordinates":[47.541761,-92.2941]}
+  ,{
+      "CourseName":"Longaberger",
+      "Ranking":55,
+      "State":"OH",
+      "Architect":"Arthur Hills",
+      "Year":"1999",
+      "Coordinates":[40.088689,-82.23459]}
+  ,{
+      "CourseName":"Pumpkin Ridge Golf Club (Ghost Creek)",
+      "Ranking":56,
+      "State":"OR",
+      "Architect":"Bob Cupp/John Fought",
+      "Year":"1992",
+      "Coordinates":[45.615683,-123.0025]}
+  ,{
+      "CourseName":"The Harvester Golf Club",
+      "Ranking":57,
+      "State":"IA",
+      "Architect":"Keith Foster",
+      "Year":"2000",
+      "Coordinates":[41.876433,-93.21050]}
+  ,{
+      "CourseName":"Cascata",
+      "Ranking":58,
+      "State":"NV",
+      "Architect":"Rees Jones",
+      "Year":"2000",
+      "Coordinates":[35.977033,-114.89178]}
+  ,{
+      "CourseName":"Golden Horseshow Golf Club (Gold)",
+      "Ranking":59,
+      "State":"VA",
+      "Architect":"Robert Trent Jones Sr.",
+      "Year":"1963",
+      "Coordinates":[37.26374,-76.69747]}
+  ,{
+      "CourseName":"Atunyote at Turning Stone Resort",
+      "Ranking":60,
+      "State":"NY",
+      "Architect":"Tom Fazio",
+      "Year":"2004",
+      "Coordinates":[43.094481,-75.53739]}
+  ,{
+      "CourseName":"Shenandoah at Turning Stone",
+      "Ranking":61,
+      "State":"NY",
+      "Architect":"Rick Smith",
+      "Year":"2000",
+      "Coordinates":[43.120600,-75.577368]}
+  ,{
+      "CourseName":"Reynolds Plantation(Oconee)",
+      "Ranking":62,
+      "State":"GA",
+      "Architect":"Rees Jones",
+      "Year":"2001",
+      "Coordinates":[33.468478,-83.2475]}
+  ,{
+      "CourseName":"Linville Golf Club",
+      "Ranking":63,
+      "State":"NC",
+      "Architect":"Donald Ross",
+      "Year":"1924",
+      "Coordinates":[36.064307,-81.86880]}
+  ,{
+      "CourseName":"CordeValle",
+      "Ranking":64,
+      "State":"CA",
+      "Architect":"Robert Trent Jones Jr.",
+      "Year":"1999",
+      "Coordinates":[37.066514,-121.62760]}
+  ,{
+      "CourseName":"Wolf Creek Golf Club",
+      "Ranking":65,
+      "State":"NV",
+      "Architect":"Dennis Ryder",
+      "Year":"2000",
+      "Coordinates":[36.831763,-114.06051]}
+  ,{
+      "CourseName":"Wynn Las Vegas",
+      "Ranking":66,
+      "State":"NV",
+      "Architect":"Tom Fazio",
+      "Year":"2005",
+      "Coordinates":[36.126058,-115.16066]}
+  ,{
+      "CourseName":"Omni Barton Creek resort (Fazio Canyons)",
+      "Ranking":67,
+      "State":"TX",
+      "Architect":"Tom Fazio",
+      "Year":"2000",
+      "Coordinates":[30.291267,-97.85537]}
+  ,{
+      "CourseName":"Karsten Creek Golf Club",
+      "Ranking":68,
+      "State":"OK",
+      "Architect":"Tom Fazio",
+      "Year":"1994",
+      "Coordinates":[36.102169,-97.118579]}
+  ,{
+      "CourseName":"The Greenbrier (Old White TPC)",
+      "Ranking":69,
+      "State":"WV",
+      "Architect":"C.B. Macdonald/ Lester George",
+      "Year":"1914/2007",
+      "Coordinates":[37.783509,-80.31688]}
+  ,{
+      "CourseName":"The Broadmoor (East)",
+      "Ranking":70,
+      "State":"CO",
+      "Architect":"Donald Ross/Robert Trent Jones Sr.",
+      "Year":"1918/1965",
+      "Coordinates":[38.784703,-104.84825]}
+  ,{
+      "CourseName":"French Lick Resort (Pete Dye)",
+      "Ranking":71,
+      "State":"IN",
+      "Architect":"Pete Dye",
+      "Year":"2009",
+      "Coordinates":[38.571029,-86.63677]}
+  ,{
+      "CourseName":"The Glen Club",
+      "Ranking":72,
+      "State":"IL",
+      "Architect":"Tom Fazio",
+      "Year":"2001",
+      "Coordinates":[42.087754,-87.82736]}
+  ,{
+      "CourseName":"Wild Horse Golf Club",
+      "Ranking":73,
+      "State":"NE",
+      "Architect":"Dan Proctor/Dave Axland",
+      "Year":"1999",
+      "Coordinates":[40.955678,-100.19374]}
+  ,{
+      "CourseName":"Whistling Straits Golf Club (Irish)",
+      "Ranking":74,
+      "State":"WI",
+      "Architect":"Pete Dye",
+      "Year":"2000",
+      "Coordinates":[43.8478,-87.73520]}
+  ,{
+      "CourseName":"Hammock Beach Resort (Ocean)",
+      "Ranking":75,
+      "State":"FL",
+      "Architect":"jack Nicklaus",
+      "Year":"2000",
+      "Coordinates":[29.602358,-81.18819]}
+  ,{
+      "CourseName":"Innisbrook Resort (Copperhead)",
+      "Ranking":76,
+      "State":"FL",
+      "Architect":"Lawrence Packard/Roger Packard",
+      "Year":"1972",
+      "Coordinates":[28.111213,-82.75271]}
+  ,{
+      "CourseName":"La Quinta Resort (Mountain)",
+      "Ranking":77,
+      "State":"CA",
+      "Architect":"Pete Dye",
+      "Year":"1980",
+      "Coordinates":[33.683185,-116.31193]}
+  ,{
+      "CourseName":"The Prarie Club (Dunes)",
+      "Ranking":78,
+      "State":"NE",
+      "Architect":"Tom Lehman/Chris Brands",
+      "Year":"2010",
+      "Coordinates":[42.726302,-100.79879]}
+  ,{
+      "CourseName":"Lakota Canyon Ranch & Golf Club",
+      "Ranking":79,
+      "State":"CO",
+      "Architect":"Jim Engh",
+      "Year":"2004",
+      "Coordinates":[39.586275,-107.5179]}
+  ,{
+      "CourseName":"Atlantic City Country Club",
+      "Ranking":80,
+      "State":"NJ",
+      "Architect":"Reid/Park Jr./Flynn/Doak",
+      "Year":"1897/1923/1999",
+      "Coordinates":[39.370544,-74.54129]}
+  ,{
+      "CourseName":"Hawktree",
+      "Ranking":81,
+      "State":"ND",
+      "Architect":"Jim Engh",
+      "Year":"2000",
+      "Coordinates":[46.899361,-100.842111]}
+  ,{
+      "CourseName":"The Links at Lighthouse Sound",
+      "Ranking":82,
+      "State":"MD",
+      "Architect":"Arthur Hills",
+      "Year":"2000",
+      "Coordinates":[38.40872,-75.10598]}
+  ,{
+      "CourseName":"Tullymore Golf Resort",
+      "Ranking":83,
+      "State":"MI",
+      "Architect":"Jim Engh",
+      "Year":"2002",
+      "Coordinates":[43.564437,-85.32278]}
+  ,{
+      "CourseName":"Marquette Golf Club (Greywalls)",
+      "Ranking":84,
+      "State":"MI",
+      "Architect":"Mike DeVries",
+      "Year":"2005",
+      "Coordinates":[46.53837,-87.42555]}
+  ,{
+      "CourseName":"Lake of Isles (North) ",
+      "Ranking":85,
+      "State":"CT",
+      "Architect":"Rees Jones",
+      "Year":"2005",
+      "Coordinates":[41.484664,-71.9449]}
+  ,{
+      "CourseName":"Barefoot Resort (Love)",
+      "Ranking":86,
+      "State":"SC",
+      "Architect":"Davis Love III",
+      "Year":"2000",
+      "Coordinates":[33.806604,-78.75654]}
+  ,{
+      "CourseName":"Southern Hills",
+      "Ranking":87,
+      "State":"OK",
+      "Architect":"Perry Maxwell",
+      "Year":"1936",
+      "Coordinates":[36.072636,-95.949658]}
+  ,{
+      "CourseName":"Branson Creek",
+      "Ranking":88,
+      "State":"MO",
+      "Architect":"Tom Fazio",
+      "Year":"2000",
+      "Coordinates":[36.576410,-93.193554]}
+  ,{
+      "CourseName":"Sunday River Golf Club",
+      "Ranking":89,
+      "State":"ME",
+      "Architect":"Robert Trent Jones II",
+      "Year":"2005",
+      "Coordinates":[44.488258,-70.88761]}
+  ,{
+      "CourseName":"Circling Raven Golf Club",
+      "Ranking":90,
+      "State":"ID",
+      "Architect":"Gene Bates",
+      "Year":"2003",
+      "Coordinates":[47.425993,-116.96392]}
+  ,{
+      "CourseName":"Rustic Canyon Golf Course",
+      "Ranking":91,
+      "State":"CA",
+      "Architect":"G. Hanse/J. Wagner/G. Shackelford",
+      "Year":"2001",
+      "Coordinates":[34.312072,-118.86775]}
+  ,{
+      "CourseName":"Coeur d'Alene Resort",
+      "Ranking":92,
+      "State":"ID",
+      "Architect":"Scott Miller",
+      "Year":"1991",
+      "Coordinates":[47.426871,-116.97817]}
+  ,{
+      "CourseName":"The Boulders Club(South)",
+      "Ranking":93,
+      "State":"AZ",
+      "Architect":"Jay Morrish",
+      "Year":"1984",
+      "Coordinates":[33.803251,-111.91823]}
+  ,{
+      "CourseName":"The Golf Club at Redlands Mesa",
+      "Ranking":94,
+      "State":"CO",
+      "Architect":"Jim Engh",
+      "Year":"2001",
+      "Coordinates":[39.056358,-108.62112]}
+  ,{
+      "CourseName":"Tobacco Road Golf Club",
+      "Ranking":95,
+      "State":"NC",
+      "Architect":"Mike Strantz",
+      "Year":"1998",
+      "Coordinates":[35.397277,-79.21345]}
+  ,{
+      "CourseName":"Dormie Club",
+      "Ranking":96,
+      "State":"NC",
+      "Architect":"Bill Coore/Ben Crenshaw",
+      "Year":"2010",
+      "Coordinates":[35.260477,-79.50470]}
+  ,{
+      "CourseName":"Pinehurst Resort(No. 8)",
+      "Ranking":97,
+      "State":"NC",
+      "Architect":"Tom Fazio",
+      "Year":"1996",
+      "Coordinates":[35.19521,-79.47597]}
+  ,{
+      "CourseName":"The General at Eagle Ridge",
+      "Ranking":98,
+      "State":"IL",
+      "Architect":"Roger Packard/Andy North",
+      "Year":"1997",
+      "Coordinates":[42.373780,-90.327901]}
+  ,{
+      "CourseName":"Grayhawk Golf Club (Talon)",
+      "Ranking":99,
+      "State":"AZ",
+      "Architect":"David Grahm/Gary Panks",
+      "Year":"1994",
+      "Coordinates":[33.678078,-111.89735]}
+  ,{
+      "CourseName":"Trump National Doral (Blue Monster)",
+      "Ranking":100,
+      "State":"FL",
+      "Architect":"Dick Wilson/Gil Hanse",
+      "Year":"1961/2014",
+      "Coordinates":[25.814225,-80.33799]}
+  ]}

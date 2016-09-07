@@ -1,0 +1,408 @@
+.course, .architect {
+    list-style: none;
+    padding: 2px 0px;
+}
+#main {
+    position:relative;
+}
+#chart {
+    position:absolute;
+
+    width:100%;
+    height:80%;
+    float:left;
+
+}
+
+.courseInformationContainer > ul {
+    list-style: none;
+}
+
+#sliderLabel {
+    text-align: center;
+    width:140px;
+    ;
+}
+
+.courseInformationContainer {
+    top:64%;
+    height:35%;
+    background-color: white;
+    position:absolute;
+    border:solid 1px #000000;
+    border-radius: 10px;
+    width:300px;
+    display:block;
+    text-align:center;
+    list-style: none;
+}
+
+.search {
+    z-index: 11;
+    position: relative;
+    width:300px;
+    float: left;
+    height:15%;
+    background-color: #f6f6f6;
+    top: 85%;
+    border: solid 1px #333333;
+    border-radius: 3px;
+    overflow-y: scroll;
+}
+#courseList {
+    overflow-y: scroll;
+}
+#chart > svg {
+    background-color: white;
+    height:80%;
+
+}
+
+#courseList .ui-selected {
+    font-weight:bold;
+}
+
+.architect {
+    margin-right:5px;
+}
+
+
+.courseList, .architectList {
+    padding-bottom: 10px;
+
+}
+.courseList .ui-selecting, .architectList .ui-selecting { background: #FECA40; }
+.courseList .ui-selected, .architectList .ui-selected {background: lightblue  }
+
+#selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+html,body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.container {
+    width : 280px;
+    position: relative;
+    z-index: 10;
+}
+.container-left {
+ float:left;
+    height:100%;
+}
+.container-right {
+    float:right;
+    height:100%;
+    margin-right:5px;
+    overflow-y: hidden;
+}
+#map {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.heading {
+    text-align: center;
+    background-color: #BBBBBB;
+}
+
+
+.courseInfoHeader, .recentRankingsHeader {
+    margin-top:0px;
+    background-color: #BBBBBB;
+    margin-bottom: 5px;
+    border: solid 1px #333333;
+    border-radius: 3px;
+    height:15px;
+    top:0;
+}
+.reproject {
+    position: absolute;
+    z-index: 99;
+    left: 50px;
+    top: 250px;
+}
+
+
+.metro {
+    stroke: black;
+    stroke-width: 1;
+    fill-opacity:0.5;
+}
+
+.private-rankings-div, .public-rankings-div {
+    height:30%;
+}
+.infoH {
+    margin-top: 3px;
+    margin-bottom:3px;
+}
+
+.recentRankings-ul {
+    list-style: none;
+    text-align: left;
+    font-size: 13px;
+    padding-left: 2px;
+}
+.pointG {
+    pointer-events: all;
+}
+.markerButton {
+    position: fixed;
+    top: 20px;
+    cursor: pointer;
+    z-index: 99;
+}
+#map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+div.d3MapModal {
+    display: none;
+    background: rgba(38,38,38,1);
+    border:solid 1px #a6a6a6;
+    border-radius: 10px;
+}
+
+
+svg {
+    position: relative;
+}
+
+
+
+h3 {
+    font-size:13px;
+}
+h2 {
+    font-size:13px;
+    margin:0;
+    padding: 2px 6px;
+    font-variant:small-caps;
+
+}
+.control-right {
+    z-index: 10;
+    position: relative;
+    display: block;
+    background-color: #f7f7f7;
+    border: solid 1px #333333;
+    border-radius: 3px;
+    height: 100%;
+}
+.control-left {
+    z-index: 10;
+    position: relative;
+    display: block;
+    background-color: #f7f7f7;
+    border: solid 1px #333333;
+    border-radius: 3px;
+    height: 60%;
+}
+.heading {
+    box-shadow: inset 0 0 10px rgba(0,0,0,.5);
+}
+
+
+.control.control-left {
+    float: left;
+    top: 0;
+}
+
+li.course span:first-child {
+    margin-right: 6px;
+    border: 1px solid green;
+    border-radius:5px;
+    padding: 0 2px;
+}
+#architects > ul, #courses > ul, #rankings > ul {
+    padding: 0 6px;
+    padding-bottom: 15px;
+    font-size: 13px;
+    margin-top:1px;
+    overflow-x: scroll;
+    height:99%;
+}
+
+
+
+.control.control-right {
+    float: right;
+    top: 0;
+    height : 100%;
+}
+#architects {
+    width: 250px;
+    height: 15%;
+
+}
+
+.btn.btn-filter.btn-sm {
+    width: 50%;
+    background: #c2c2c2;
+    color: #333;
+    font-size: 14px;
+}
+
+.btn.btn-filter.btn-sm.active {
+    color: #f7f7f7;
+}
+
+.rankingButton {
+    width:75px;
+}
+
+.btn-filter span {
+    margin-right: 14px;
+    margin-top: 4px;
+}
+
+#filterButtonGroup {
+    width: 100%;
+}
+
+#allCoursesDiv {
+    border: solid 1px #333333;
+    border-radius: 3px;
+}
+
+#publicButton.active {
+    background: #b08d93;
+}
+
+#privateButton.active {
+    background: #7a90b0;
+}
+
+#rankingHeader {
+    width:100%;
+    margin-right: 0;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+}
+
+#specificRankingDiv {
+    border: solid 1px #333333;
+    border-radius: 3px;
+}
+
+#specificRankingHeader {
+    width:100%;
+    text-align: center;
+    font-size: 18px;
+}
+#rankingsControl {
+    width:250px;
+    height:30%;
+    position:relative;
+    z-index: 100;
+}
+#pickRankingButton {
+    width:100%;
+}
+#courses {
+    width:250px;
+    height:30%;
+    position:relative;
+}
+#showAllButton {
+    width:100%;
+}
+
+.cInfo {
+    margin-top:3px;
+    margin-bottom:3px;
+}
+#slider {
+    margin-left: 10px;
+}
+path {
+    fill-opacity: .7;
+    stroke-width: 2px;
+}
+.line > path {
+    fill-opacity: 0;
+}
+.rankingSelectionButton {
+    width:49%;
+    height: 40px;
+}
+
+.dropdown-toggle {
+    height:40px;
+}
+
+#publicationButton {
+    width:100px;
+}
+#typeButton {
+    width:65px;
+}
+#yearButton {
+    width:65px
+}
+#mapTitleDiv {
+    text-align: center;
+    z-index: 10;
+    position:relative;
+}
+
+#mapTitle {
+    background-color: lightgrey;
+    width:140px;
+    left:50%;
+    height:30px;
+    position:absolute;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.yearSpan {
+    margin-right: 30px;
+}
+.pubSpan {
+    float:left;
+    width:100px;
+}
+#bringBackCoursesDiv {
+    position:absolute;
+    left:315px;
+    border:1px solid black;
+}
+
+.selectDiv {
+    display: inline-block;
+    text-align: center;
+    float:left;
+}
+.checkText {
+    font-size: 11px;
+    margin-right: 3px;
+}
+#pubSelectDiv {
+    margin-right:10px;
+}
+
+.tooltip {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    pointer-events: none;
+    z-index: 10;
+    background-color:lightgrey;
+}
+
+.course {
+    width:94%;
+    list-style-type: disc;
+}

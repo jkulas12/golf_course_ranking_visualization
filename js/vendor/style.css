@@ -21,7 +21,6 @@
 #sliderLabel {
     text-align: center;
     width:140px;
-    ;
 }
 
 .courseInformationContainer {
@@ -96,6 +95,11 @@ html,body {
     margin-right:5px;
     overflow-y: hidden;
 }
+
+#mapContainer {
+    z-index: 0;
+    position:absolute;
+}
 #map {
     height: 100%;
     width: 100%;
@@ -145,8 +149,10 @@ html,body {
     font-size: 13px;
     padding-left: 2px;
 }
-.pointG {
+.point {
     pointer-events: all;
+    stroke: black;
+    stroke-width: 1px;
 }
 .markerButton {
     position: fixed;
@@ -160,7 +166,6 @@ html,body {
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: 0;
 }
 
 div.d3MapModal {
@@ -405,4 +410,16 @@ path {
 .course {
     width:94%;
     list-style-type: disc;
+}
+
+#sliderDiv {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+li.course:nth-child(even) {
+    background: #f7f7f7;
+}
+li.course:nth-child(odd) {
+    background: #f0f0f0;
 }

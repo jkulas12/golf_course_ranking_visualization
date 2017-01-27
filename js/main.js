@@ -7,11 +7,15 @@
 var tile;
 var raster;
 var zoom;
+
 var svg;
 var pi = Math.PI,
     tau = 2 * pi;
+
 var projection;
 var rubberBand;
+
+
 var annotG;
 
 var mapCourses;

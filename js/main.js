@@ -54,7 +54,8 @@ var all_rankings = [
     "GDigest_2013_All",
     "GDigest_2013_Public",
     "GDigest_2015_All",
-    "GDigest_2015_Public"
+    "GDigest_2015_Public",
+    'GDigest_2017_All'
 ];
 
 
@@ -625,12 +626,12 @@ function initialize_chart() {
         width = 300 - margin.left - margin.right,
         chartHeight =  $(window).height() * 0.65 - margin.top - margin.bottom;
 
-    xScale = d3.scaleLinear().range([margin.left, width - margin.right]).domain([2000, 2016]);
+    xScale = d3.scaleLinear().range([margin.left, width - margin.right]).domain([2000, 2017]);
     yScale = d3.scaleLinear().range([chartHeight - margin.top, margin.bottom]).domain([103, 1]);
     var x = d3.scaleLinear().range([0, width]);
     var y = d3.scaleLinear().range([1, chartHeight]);
 
-    x.domain([2000, 2016]);
+    x.domain([2000, 2017]);
     y.domain([1, 103]);
 
     var valueline = d3.line()
@@ -801,11 +802,11 @@ function initialize_publication_year_widget() {
 
 
     var slider = $('#pubYearSelectWidgetDiv').limitslider({
-        values:     [2001, 2016],
+        values:     [2001, 2017],
         min:2001,
-        max:2016,
+        max:2017,
         left: 2001,
-        right: 2016,
+        right: 2017,
         gap : 0,
         slide: function(event, ui) {
             var text;
@@ -819,7 +820,7 @@ function initialize_publication_year_widget() {
             refresh_map();
         }
     });
-    $('#yearSelectHeader').text("2001 to 2016");
+    $('#yearSelectHeader').text("2001 to 2017");
     // add classes to the left and right slider nodes (needed to bind click behaviour)
     $($('.ui-slider-handle')[0]).addClass('left-slide-node');
     $($('.ui-slider-handle')[1]).addClass('right-slide-node');
@@ -848,15 +849,15 @@ function initialize_course_year_slider() {
     $("#slider").slider({
         range:"max",
         min:1890,
-        max:2016,
-        value:2016,
+        max:2017,
+        value:2017,
         slide: function(event, ui) {
             refresh_map();
             $("#year").val($("#slider").slider("option","value"));
         }
     });
 
-    $("#year").val(2016);
+    $("#year").val(2017);
 
 }
 // updates map, courses and architects list

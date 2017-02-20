@@ -58,6 +58,7 @@ var all_rankings = [
     'GDigest_2017_All'
 ];
 
+var most_recent_ranking = 'GDigest_2017_All';
 
 // mapping from publication display_name -> class_name
 var pub_display_class_map = {
@@ -89,7 +90,6 @@ ranking_map = {};
 // list of all selected courses (selected on courseList)
 var selectCourses = [];
 
-
 // all points displayed on map
 // global tooltip object
 var tooltip;
@@ -102,7 +102,7 @@ var lineGen = d3.line()
         return yScale(d.rank);
     });
 
-
+var yScale, xScale;
 
 
 var wt = d3.transition()
@@ -337,24 +337,268 @@ function load_all_rankings(rankings) {
                     .style("opacity", 0);
                 initialize_chart();
                 initialize_container_lists();
+                populate_ranking_matrix();
                 add_check_boxes();
                 initialize_publication_year_widget();
                 initialize_course_year_slider();
                 initialize_selectable();
                 refresh_map();
 
+
             });
         }
     });
 }
 
+function populate_ranking_matrix() {
+    var year_scale = d3.scaleLinear().domain([2001, 2017]).range([0, 135]);
+    var rankings = Object.keys(ranking_map);
+    // kind of hacky...
+    // empty object inserts to offset the pattern svg inserted for hatching
+    var golf_mag_rankings = [{},{}, {}, {}, {}, {}, {}];
+    var golf_digest_rankings = [{},{}, {}, {}, {}, {}, {}];
 
-// TODO
-// function to initialize tooltip
-function initialize_tooltip() {
+
+
+    for (var r in rankings) {
+        var ranking = rankings[r].split('_');
+        var rank_obj = {'publication' : ranking[0],
+                        'year' : +ranking[1],
+                        'type' : ranking[2]}
+        if (rank_obj['publication'] === 'Golf') {
+            golf_mag_rankings.push(rank_obj)
+        } else {
+            golf_digest_rankings.push(rank_obj)
+        }
+    }
+    // add shading behind rankings
+    // every 2 years?
+    var start_years = [2001,2005,2009,2013, 2017]
+    d3.select('#GDigestCoursesContainer > svg')
+        .append('svg')
+        .selectAll('rect')
+        .data(start_years)
+        .enter()
+        .append('rect')
+        .attr('height', 96)
+        .attr('width', 20)
+        .attr('x', function(d) {
+            return year_scale(d)
+        })
+        .attr('fill', 'gray')
+        .style('opacity',.2);
+    d3.select('#GolfCoursesContainer > svg')
+        .append('svg')
+        .selectAll('rect')
+        .data(start_years)
+        .enter()
+        .append('rect')
+        .attr('height', 96)
+        .attr('width', 20)
+        .attr('x', function(d) {
+            return year_scale(d)
+        })
+        .attr('fill', 'gray')
+        .style('opacity',.2);
+
+    var year_axis =d3.axisTop(year_scale)
+        .tickValues([2001,2003,2005,2007,2009,2011,2013,2015,2017])
+        .tickFormat(function(d) {
+            return "'" + String(d).slice(2,4);
+        });
+    var svg = d3.select('#rankingYearsSVG')
+        .attr('height', 35)
+        .attr('width', 190);
+
+    svg.append('g')
+        .attr('transform', 'translate(35,30)')
+        .attr('class', 'rankingYearAxisGroup')
+        .call(year_axis)
+        .selectAll('text')
+        .style("text-anchor", "end")
+        .attr("dx", ".5em")
+        //.attr("dy", ".5em");
+
+    d3.select('#GolfCoursesContainer > svg')
+        .selectAll('rect')
+        .data(golf_mag_rankings)
+        .enter()
+        .append('rect')
+        .attr('class',function(d) {return 'Golf ' + d['type'] + ' ' + d['year'] +  ' rankingRect selected'})
+        .attr('y', function(d) {
+            if (d['type'] === 'Public') {
+                return 30
+            }  else {
+                return 7
+            }
+        })
+        .attr('x', function(d) {
+            return year_scale(d['year'])
+        })
+        .attr('width', 8)
+        .attr('height', 15)
+        .attr('fill', function(d) {
+            return d['type'] == 'Public' ?  '#FF8080' : '#80B3ff';
+        });
+    d3.select('#GDigestCoursesContainer > svg')
+        .selectAll('rect')
+        .data(golf_digest_rankings)
+        .enter()
+        .append('rect')
+        .attr('class',function(d) {return 'GDigest ' + d['type'] + ' ' + d['year'] +  ' rankingRect selected'})
+        .attr('y', function(d) {
+            if (d['type'] === 'Public') {
+                return 30
+            }  else {
+                return 7
+            }
+        })
+        .attr('x', function(d) {
+            return year_scale(d['year'])
+        })
+        .attr('width', 8)
+        .attr('height', 15)
+        .attr('fill', function(d) {
+            return d['type'] == 'Public' ?  '#E60000' : '#0000E6'
+        });
+    d3.selectAll('.rankingRect')
+        .on('click', function(d) {
+            var classList = d3.select(this)._groups[0][0].classList;
+            var classSelector = classList[0] + classList[1];
+            if (d3.select(this).classed('selected')) {
+                d3.select(this).classed('selected', false);
+                d3.select(this).classed('unselected', true);
+                d3.select(this).attr('fill', 'url(#' + classSelector + '-pattern-stripe)');
+                // do stuff to update map
+            } else {
+                d3.select(this).classed('selected', true);
+                d3.select(this).classed('unselected', false);
+                d3.select(this).attr('fill', lineColors[classList[0] + '_' + classList[1]]);
+            }
+            refresh_map();
+        });
+    $('.pubTextContainer')
+        .click(function(d) {
+            var pub_name = d.currentTarget.textContent;
+            // if all rects with this pub name are selected, deselect all
+            // else, select all
+            var selected_ranks;
+            var all_ranks;
+            var pub_class;
+            if (pub_name === 'Golf Digest') {
+                selected_ranks = d3.selectAll('.GDigest.rankingRect.selected');
+                // all publications for a given ranking
+                all_ranks = d3.selectAll('.GDigest.rankingRect');
+                pub_class = '.GDigest';
+            } else {
+                selected_ranks = d3.selectAll('.Golf.rankingRect.selected');
+                all_ranks = d3.selectAll('.Golf.rankingRect');
+                pub_class = '.Golf'
+            }
+
+            if (selected_ranks._groups[0].length === all_ranks._groups[0].length) {
+                // all previous selected, deselect all
+                d3.selectAll(pub_class + '.rankingRect.selected')
+                    .attr('fill', function(d) {
+                        return 'url(#' + d['publication'] + d['type'] + '-pattern-stripe)'
+                    })
+                    .classed('unselected', true).classed('selected', false);
+
+            } else {
+                d3.selectAll(pub_class + '.rankingRect.unselected')
+                    .attr('fill', function(d) {
+                        return lineColors[d['publication'] + '_' + d['type']];
+                    })
+                    .classed('unselected', false).classed('selected', true);
+            }
+            refresh_map();
+            // get all selected rankings
+        });
+
+    $('.rankingTextDiv')
+        .click(function(d) {
+            var clicked_text = d.currentTarget.id;
+            var selectedRanks;
+            var all_ranks;
+            var pub_class;
+            var type_class;
+            // golfMag
+            console.log(clicked_text);
+            if ((clicked_text).search('Golf') !== -1) {
+                // All
+                pub_class = '.Golf';
+                if (clicked_text.search('All') !== -1) {
+                    selectedRanks = d3.selectAll('.Golf.All.selected');
+                    all_ranks = d3.selectAll('.Golf.All');
+                    type_class = 'All';
+                } else {
+                    selectedRanks = d3.selectAll('.Golf.Public.selected');
+                    all_ranks = d3.selectAll('.Golf.Public');
+                    type_class = 'Public';
+                }
+            // golfDigest
+            } else {
+                pub_class = '.GDigest';
+                if (clicked_text.search('All') !== -1) {
+                    selectedRanks = d3.selectAll('.GDigest.All.selected');
+                    all_ranks = d3.selectAll('.GDigest.All');
+                    type_class = 'All';
+                } else {
+                    selectedRanks = d3.selectAll('.GDigest.Public.selected');
+                    all_ranks = d3.selectAll('.GDigest.Public');
+                    type_class = 'Public';
+                }
+            }
+
+            if (selectedRanks._groups[0].length === all_ranks._groups[0].length) {
+                d3.selectAll(pub_class + '.' + type_class +'.rankingRect.selected')
+                    .attr('fill', function(d) {
+                        return 'url(#' + d['publication'] + d['type'] + '-pattern-stripe)'
+                    })
+                    .classed('unselected', true).classed('selected', false);
+            } else {
+                d3.selectAll(pub_class +  '.'  + type_class + '.rankingRect.unselected')
+                    .attr('fill', function(d) {
+                        return lineColors[d['publication'] + '_' + d['type']];
+                    })
+                    .classed('unselected', false).classed('selected', true);
+            }
+            refresh_map();
+        });
+
+
+
+    d3.selectAll('.rankingRect').style('z-index', 1);
+
 
 }
+// get all rankings that are currently selected
+function get_selected_rankings() {
+    var selected_rankings = d3.selectAll('.rankingRect.selected')._groups[0];
+    $('#rankingHeader').text('Ranking Select   (' + selected_rankings.length + ' shown)')
+    var selected_classes = [];
+    // class in format GDigest_2011_Public
+    // GDigest or Golf
+    for (var i in selected_rankings) {
+        if (selected_rankings.hasOwnProperty(i)) {
+            var classes = selected_rankings[i].classList;
+            if (classes[0] === 'Golf') {
+                selected_classes.push('Golf_' +
+                    classes[2] + '_' + classes[1])
+            } else {
+                selected_classes.push('GDigest_' +
+                    classes[2] + '_' + classes[1])
+            }
 
+        }
+    }
+    return selected_classes;
+}
+
+function bring_back_all_courses() {
+    $('#mapTitle').text('All Courses');
+    refresh_map();
+}
 
 // function to bind all selection handlers to list and headers
 function initialize_selectable() {
@@ -364,7 +608,7 @@ function initialize_selectable() {
     var archCount = {};
 
     // bind selectable functionality for courses header
-    $('.coursesHeadingDiv').selectable({
+    $('.courseHeadingTitleDiv').selectable({
         selected : function(event, ui) {
             // reset selection
             $('.ui-selected').removeClass('ui-selected').addClass('ui-unselecting');
@@ -372,7 +616,7 @@ function initialize_selectable() {
             $('.architectList').data('ui-selectable')._mouseStop(null);
             courseCount = {};
             archCount = {};
-            refresh_map();
+            bring_back_all_courses();
             clearLegend();
         }
     });
@@ -424,6 +668,8 @@ function initialize_selectable() {
                 selectCourses.push($(ui.selected.__data__)[0]);
                 refresh_points(selectCourses);
                 $(ui.selected).addClass('prevCourse');
+            } else {
+                console.log("selected but not LI")
             }
         },
         unselected : function(event, ui) {
@@ -510,6 +756,142 @@ function initialize_selectable() {
             }
         }
     })
+
+    // selectables for course ordering
+
+    // alphabetical sorting
+    $('.alphabeticalSortDiv').click(function(d) {
+        var sorted_courses;
+        var descending;
+        // if list was previously sorted alphabetically
+        if ($('.alphabeticalSortDiv').hasClass('active')) {
+            var span = $('.alphabeticalSortDiv > span');
+            // starting descending, switch to ascending
+            if (span.hasClass('glyphicon-arrow-down')) {
+                span.removeClass('glyphicon-arrow-down')
+                    .addClass('glyphicon-arrow-up');
+                descending = false;
+
+            } else {
+                // switch to ascending
+                span.removeClass('glyphicon-arrow-up')
+                    .addClass('glyphicon-arrow-down');
+                descending = true;
+            }
+
+            // sort
+
+        // list was previously sorted numerically
+        } else {
+            // switch active div
+            $('.alphabeticalSortDiv').addClass('active').removeClass('inactive');
+            $('.orderedSortDiv').removeClass('active').addClass('inactive');
+
+            // switched orderedSort to descending arrow
+            if ($('.orderedSortDiv > svg ').hasClass('glyphicon-arrow-up')) {
+                $('.orderedSortDiv > svg ').removeClass('glyphicon-arrow-up')
+                    .addClass('glyphicon-arrow-down');
+            }
+            descending = true;
+        }
+        if (descending) {
+            sorted_courses = get_valid_courses().sort(function(a,b) { return a.displayName > b.displayName ? 1 : -1});
+        } else {
+            sorted_courses = get_valid_courses().sort(function(a,b) {return a.displayName <= b.displayName ? 1 : -1});
+        }
+        update_course_list(sorted_courses)
+
+    });
+
+    // numeric sorting
+    $('.orderedSortDiv').click(function(d) {
+        var sorted_courses;
+        var descending;
+        // if list was previously sorted ordered
+        if ($('.orderedSortDiv').hasClass('active')) {
+            var span = $('.orderedSortDiv > span');
+            // starting descending, switch to ascending
+            if (span.hasClass('glyphicon-arrow-down')) {
+                span.removeClass('glyphicon-arrow-down')
+                    .addClass('glyphicon-arrow-up');
+                descending = false;
+
+            } else {
+                // switch to ascending
+                span.removeClass('glyphicon-arrow-up')
+                    .addClass('glyphicon-arrow-down');
+                descending = true;
+            }
+            // list was previously sorted numerically
+        } else {
+            // switch active div
+            $('.orderedSortDiv').addClass('active').removeClass('inactive');
+            $('.alphabeticalSortDiv').removeClass('active').addClass('inactive');
+
+            // switched orderedSort to descending arrow
+            if ($('.alphabeticalSortDiv > svg ').hasClass('glyphicon-arrow-up')) {
+                $('.alphabeticalSortDiv > svg ').removeClass('glyphicon-arrow-up')
+                    .addClass('glyphicon-arrow-down');
+            }
+            descending = true;
+        }
+        if (descending) {
+            sorted_courses = get_valid_courses().sort(function(a,b) { return composite_sort(a,b)});
+        } else {
+            sorted_courses = get_valid_courses().sort(function(a,b) {return composite_sort(b,a)});
+        }
+        update_course_list(sorted_courses)
+
+    })
+}
+
+function composite_sort(a,b) {
+
+    // most recent public publication for a
+    var a_recent_pub = Object.keys(a.rankings).filter(function(c) {
+        return c.split('_')[2] === 'Public';
+    }).sort(function(cA,cB) {
+        return +cA.split('_')[1] - (+cB.split('_')[1]);
+    }).slice(-1)[0];
+    // most recent public publication for b
+    var b_recent_pub =  Object.keys(b.rankings).filter(function(c) {
+        return c.split('_')[2] === 'Public';
+    }).sort(function(cA,cB) {
+        return +cA.split('_')[1] - (+cB.split('_')[1]);
+    }).slice(-1)[0];
+
+    // most recent All publication for a
+    var a_recent_all =  Object.keys(a.rankings).filter(function(c) {
+        return c.split('_')[2] === 'All';
+    }).sort(function(cA,cB) {
+        return +cA.split('_')[1] - (+cB.split('_')[1]);
+    }).slice(-1)[0];
+    // most recent All publication for b
+    var b_recent_all =  Object.keys(b.rankings).filter(function(c) {
+        return c.split('_')[2] === 'All';
+    }).sort(function(cA,cB) {
+        return +cA.split('_')[1] - (+cB.split('_')[1]);
+    }).slice(-1)[0];
+
+    // ranking types for a course
+    var a_types = uniq( Object.keys(a.rankings).map(function(c) {
+        return c.split('_')[2];
+    }));
+    var b_types = uniq( Object.keys(b.rankings).map(function(c) {
+        return c.split('_')[2];
+    }));
+
+    if (a_types.indexOf('All') !== -1 && b_types.indexOf('All') !== -1) {
+        // compare most recent all ranking
+        return a.rankings[a_recent_all] - b.rankings[b_recent_all];
+    } else if (a_types.indexOf('All') !== -1 && b_types.indexOf('All') === -1) {
+        return -1
+    } else if (a_types.indexOf('All') === -1 && b_types.indexOf('All') !== -1) {
+        return 1
+    } else {
+        return a.rankings[a_recent_pub] - b.rankings[b_recent_pub];
+    }
+
 }
 
 // function to check if course is in current rankings being shown
@@ -565,7 +947,6 @@ function refresh_chart(course) {
                 lineColors[d.className]
         });
 
-    console.log(pathContainers);
     // ENTER
     svg.selectAll('path')
         .data(containerData)
@@ -576,42 +957,61 @@ function refresh_chart(course) {
         })
         .attr('class', 'line')
         .append('path')
-        .attr('d',function(d) {
-            console.log(d);
-            return lineGen(d.ranks)})
+        .attr('d',function(d) { return lineGen(d.ranks)})
         .on('mouseover', function(d) {
             d3.event.stopPropagation();
         });
+    // construct data for dots representing a single ranking
+    var point_data = containerData.map(function(d) {
+        return d.ranks
+    });
+    // flatten point data
+    point_data = [].concat.apply([], point_data);
 
-    // ENTER
-    //svg.selectAll('circle')
-    //    .data(function(d) {return d.ranks;})
-    //    .enter().append('circle')
-    //    .attr('cx', function(d) {return xScale(+d.year); })
-    //    .attr('cy', function(d) {return yScale(d.rank); })
-    //    .style('fill', function(d) {return  lineColors[d.className]})
-    //    .attr('r', 3);
-    // TODO: Figure out sonething wrong with data. Log should work on line 545. should log list with 1 object
+    svg.selectAll('circle')
+        .data(point_data)
+        .enter().append('circle')
+        .attr('cx', function(d) {return xScale(+d.year); })
+        .attr('cy', function(d) {
+            console.log(d)
+            return yScale(d.rank); })
+        .style('fill', function(d) {return  lineColors[d.className]})
+        .attr('class', function(d) {
+        })
+        .attr('r', 3);
+
+
+
     updateCourseLegend(containerData, course);
+}
+
+function scroll_courses_list(course) {
+    console.log(course);
+    var top = $('.course.course-' + course['className']).position().top;
+    $('.courseList').animate({
+        scrollTop: top + $('.courseList').scrollTop() - 39
+}, 500);
+    console.log(top);
+    console.log($('.courseList').scrollTop())
 }
 
 // function to add headings and lists to courses and architects lists
 function initialize_container_lists() {
     // add headers to courses and architects divs
-    var coursesHeadingDiv = $('#courses')
-        .append($("<div></div>")
-            .addClass("coursesHeadingDiv")
-            .addClass("heading")
-            .append($("<h2></h2>")
-                .addClass("coursesHeading")
-                .text("Courses")));
-    var archsHeadingDiv = $('#architects')
-        .append($("<div></div>")
-            .addClass("archsHeadingDiv")
-            .addClass("heading")
-            .append($("<h2></h2>")
-                .addClass("archsHeading")
-                .text("Architects")));
+    //var coursesHeadingDiv = $('#courses')
+    //    .append($("<div></div>")
+    //        .addClass("coursesHeadingDiv")
+    //        .addClass("heading")
+    //        .append($("<h2></h2>")
+    //            .addClass("coursesHeading")
+    //            .text("Courses")));
+    //var archsHeadingDiv = $('#architects')
+    //    .append($("<div></div>")
+    //        .addClass("archsHeadingDiv")
+    //        .addClass("heading")
+    //        .append($("<h2></h2>")
+    //            .addClass("archsHeading")
+    //            .text("Architects")));
 
     var courseUl = $('#courses').append($("<ul></ul>").addClass("courseList"));
     var architectUl = $('#architects').append($('<ul></ul>').addClass("architectList"));
@@ -622,22 +1022,22 @@ function initialize_container_lists() {
 // function to initially draw chart and container
 function initialize_chart() {
     // chart size variables
-    var margin = {top: 10, right: 20, bottom: 15, left: 20},
+    var margin = {top: 10, right: 10, bottom: 13, left: 15},
         width = 300 - margin.left - margin.right,
         chartHeight =  $(window).height() * 0.65 - margin.top - margin.bottom;
+    var xAxis_buffer = 5;
+    xScale = d3.scaleLinear().range([width - margin.right, margin.left * 2]).domain([2017, 2000]);
+    yScale = d3.scaleLinear().range([chartHeight - margin.bottom - xAxis_buffer, margin.top]).domain([100, 1]);
+    var x = d3.scaleLinear().range([width - margin.right, margin.left]);
+    var y = d3.scaleLinear().range([margin.top, chartHeight - margin.bottom - xAxis_buffer]);
 
-    xScale = d3.scaleLinear().range([margin.left, width - margin.right]).domain([2000, 2017]);
-    yScale = d3.scaleLinear().range([chartHeight - margin.top, margin.bottom]).domain([103, 1]);
-    var x = d3.scaleLinear().range([0, width]);
-    var y = d3.scaleLinear().range([1, chartHeight]);
-
-    x.domain([2000, 2017]);
-    y.domain([1, 103]);
+    x.domain([2017, 2000]);
+    y.domain([1, 100]);
 
     var valueline = d3.line()
         .x(function(d) {return x(parseInt(d.year)); })
         .y(function(d) {return y(d.rank); });
-
+    var yTicks = [1,10,20,30,40,50,60,70,80,90,100];
     // add svg canvas
     var chartSVG = d3.select('#chart')
         .append("svg")
@@ -647,15 +1047,19 @@ function initialize_chart() {
         .attr('height', chartHeight + margin.top + margin.bottom)
         .append("g")
         .attr("transform",
-            "translate(" + margin.left + "," + 0 + ")");
+            "translate(" + margin.left + "," + margin.top + ")");
 
     // add axis
     chartSVG.append("svg:g")
-        .attr("transform", "translate(0," + (chartHeight - margin.bottom + 5) + ")")
-        .call(d3.axisBottom(x));
+        .attr("transform", "translate(" + margin.left + "," + (chartHeight - margin.bottom) + ")")
+        .call(d3.axisBottom(x)
+            .tickFormat(function(d) {
+                return "'" +  String(d).slice(2,4)
+            }));
     chartSVG.append("svg:g")
         .attr('transform', "translate(" + (margin.left) + ",0)")
-        .call(d3.axisLeft(y));
+        .call(d3.axisLeft(y)
+            .tickValues(yTicks));
 
 
     $('.legend').remove();
@@ -726,6 +1130,17 @@ function initialize_chart() {
     recentRankingsUlHeader.append('span')
         .text('rank')
         .attr('class', 'recentRankingsUlHeadSpan rankSpan')
+
+}
+
+function clear_ranking_filter() {
+    d3.selectAll('.rankingRect').classed('selected', true)
+        .classed('unselected', false)
+        .attr('fill', function(d) {
+            if (d['publication'] === 'Golf') {return d['type'] == 'Public' ?  '#FF8080' : '#80B3ff';}
+            if (d['publication'] === 'GDigest') {return d['type'] == 'Public' ?  '#E60000' : '#0000E6';}
+        });
+    refresh_map();
 
 }
 
@@ -862,27 +1277,31 @@ function initialize_course_year_slider() {
 }
 // updates map, courses and architects list
 function refresh_map() {
-    var valid_courses = get_valid_courses();
+    var valid_courses = get_valid_courses().sort( function(a,b)  {return a.displayName > b.displayName ? 1 : -1});
+    if (!$('.alphabeticalSortDiv').hasClass('active')) {
+        $('.alphabeticalSortDiv').removeClass('inactive')
+            .addClass('active')
+        $('.orderedSortDiv').addClass('inactive').removeClass('active')
+    } else {
+        if (!$('.alphabeticalSortDiv > svg').hasClass('glyphicon-arrow-down')) {
+            $('.alphabeticalSortDiv > svg').removeClass('glyphicon-arrow-up')
+                .addClass('glyphicon-arrow-down')
+        }
+    }
+
     refresh_points(valid_courses);
     update_course_list(valid_courses);
     update_architect_list(valid_courses);
-
 }
 
 
 // generates list of valid courses based on publication type, pub_year and course year
 function get_valid_courses() {
 
+    var filtered_rankings = get_selected_rankings();
 
-    var valid_publications = [];
     var valid_types = [];
     var valid_year = +$("#slider").slider("option","value");
-    // bounds that a publication date must fall in
-    var pub_year_bounds = $('#pubYearSelectWidgetDiv').limitslider("values");
-    // find valid publications
-    $(".cb_pub:checked").each(function() {
-        valid_publications.push($(this).val());
-    });
 
     // find valid types
     $('.cb_type:checked').each(function() {
@@ -890,20 +1309,6 @@ function get_valid_courses() {
     });
 
 
-    // first, generate list of valid rankings to pull courses from
-    var rankings = Object.keys(ranking_map);
-    var filtered_rankings = rankings.filter(function(c) {
-        var split_ranking = c.split("_");
-        var pub_name = pub_display_class_map[split_ranking[0]];
-        var pub_year = +split_ranking[1];
-        var valid_pub_year = pub_year >= pub_year_bounds[0] && pub_year <= pub_year_bounds[1];
-        var valid_pub = valid_publications.indexOf(pub_name) !== -1;
-        return valid_pub_year && valid_pub;
-    });
-    // return an empty array if there are no valid rankings
-    if (filtered_rankings.length === 0) {
-        return [];
-    }
     // find list of valid courses from valid rankings
     // first: map ranking -> courses
     // second: reduce from [[courses], [courses], [courses]] -> [courses]
@@ -911,7 +1316,12 @@ function get_valid_courses() {
     // fourth(uniq function): remove duplicates by converting to set then back to array
     // fifth: map cNape -> course(object)
 
-    return uniq(filtered_rankings.map(function(r) {
+    // return an empty array if there are no valid rankings
+    if (filtered_rankings.length === 0) {
+        return [];
+    }
+
+    var valid_courses = uniq(filtered_rankings.map(function(r) {
         return Object.keys(ranking_map[r]['courses'])
     }).reduce(function(a,b) {return a.concat(b)})
         .map(function(c) {
@@ -923,12 +1333,17 @@ function get_valid_courses() {
             valid_types.indexOf(c.type) !== -1;
     });
 
+    return valid_courses;
+
+
 }
+
 
 
 // removes old points if they exist and adds new points
 // courses: list of courses to be mapped
 function refresh_points(courses) {
+    console.log('refresh points');
     // map courses to add geometry
     var mapped_courses = courses.map(function(c) {return type(c)});
 
@@ -965,7 +1380,21 @@ function refresh_points(courses) {
                 .style("opacity", 0);
         })
         .on('click', function(d) {
+            d3.selectAll('.point')
+                .style('fill', function(c) {
+                    if (c.type === "private") {
+                        return "blue"
+                    } else {
+                        return "red"
+                    }
+                })
+                .attr('r', 5);
+            d3.select(this)
+                .style('fill', '#ffdc16')
+                .attr('r', 7);
+            //pan_to_course(d);
             refresh_chart(d);
+            scroll_courses_list(d);
         });
     mapCourses = d3.selectAll('.point');
 }
@@ -1092,10 +1521,54 @@ function endRubberBand() {
         update_course_list(selectedCourses);
         update_architect_list(selectedCourses);
         rubberBand = null;
-
+    window.getSelection().empty();
 
     }
 
+}
+
+function pan_to_course(d) {
+    var clicked = d3.event.target,
+        direction = 1,
+        factor = 0.2,
+        target_zoom = 1,
+        center = [$(window).width() / 2, $(window).height() / 2],
+        extent = zoom.scaleExtent(),
+        translate = zoom.translate(),
+        translate0 = [],
+        l = [],
+        view = {x: translate[0], y: translate[1], k: zoom.scale()};
+
+    d3.event.preventDefault();
+    direction = 1;
+    target_zoom = zoom.scale() * (1 + factor * direction);
+
+    if (target_zoom < extent[0] || target_zoom > extent[1]) { return false; }
+
+    translate0 = [(center[0] - view.x) / view.k, (center[1] - view.y) / view.k];
+    view.k = target_zoom;
+    l = [translate0[0] * view.k + view.x, translate0[1] * view.k + view.y];
+
+    view.x += center[0] - l[0];
+    view.y += center[1] - l[1];
+
+    interpolateZoom([view.x, view.y], view.k);
+}
+
+
+
+function interpolateZoom (translate, scale) {
+    var self = this;
+    return d3.transition().duration(350).tween("zoom", function () {
+        var iTranslate = d3.interpolate(zoom.translate(), translate),
+            iScale = d3.interpolate(zoom.scale(), scale);
+        return function (t) {
+            zoom
+                .scale(iScale(t))
+                .translate(iTranslate(t));
+            zoomed();
+        };
+    });
 }
 
 // clear chart of all text and plots
@@ -1134,6 +1607,7 @@ function clearLegend() {
 // TODO: add functionality to update points if they exist
 function zoomed() {
     var transform = d3.event.transform;
+
     var tiles = tile
         .scale(transform.k)
         .translate([transform.x, transform.y])
@@ -1145,8 +1619,7 @@ function zoomed() {
         .translate([transform.x, transform.y]);
     d3.selectAll(".point")
         .attr("cx", function(d) {return projection(d.geometry.coordinates)[0]})
-        .attr("cy", function(d) {return projection(d.geometry.coordinates)[1]})
-        .attr("r", Math.log(10 * transform.k *.0008));
+        .attr("cy", function(d) {return projection(d.geometry.coordinates)[1]});
 
     var image = raster
         .attr("transform", stringify(tiles.scale, tiles.translate))
@@ -1172,7 +1645,7 @@ function zoomUp() {
 // function to update course list
 function update_course_list(courses) {
 
-
+    $('.courseHeading > text').text('Courses (' + courses.length + ' shown)')
 
     // select the courses list
     var courseSelect = d3.select("#courses ul").selectAll('.course')
@@ -1191,6 +1664,19 @@ function update_course_list(courses) {
         .style('float', 'left')
         .style("border", "none");
 
+
+    // add course rank if in composite rank
+    if ($('.orderedSortDiv').hasClass('active')) {
+        courseEnter.append('span')
+            .text(function(d,i) {
+                if ($('.orderedSortDiv > span').hasClass('glyphicon-arrow-down')) {
+                    return i + 1;
+                } else {
+                    return courseEnter.data().length + 2 - i;
+                }
+            })
+            .attr('class', 'rankSpan')
+    }
     // adds course name
     courseEnter.append('span')
         .text ( function(a) {
@@ -1200,7 +1686,7 @@ function update_course_list(courses) {
         .transition()
         .duration(250)
         .delay(function(d,i) {
-            return i * 2;
+            return i * 1.2;
         })
         .ease(d3.easeLinear)
         .style('opacity', 0)
@@ -1255,7 +1741,7 @@ function update_architect_list(courses) {
 // function to resize right panel on load or resizing viz
 function rightControlResize() {
     var windowHeight = $(window).height();
-    $("#rankingsControl").height(200);
+    $("#rankingCourseSelectDiv").height(180);
 
     var remainingSpace = windowHeight - 200;
 
@@ -1384,6 +1870,20 @@ function updateCourseLegend(containerData, course) {
         .attr('class', 'rankSpan');
     d3.select(".legend-right-ul-header")
         .text("Recent Rankings");
+}
+
+function show_most_recent_ranking() {
+    show_single_ranking(most_recent_ranking);
+}
+
+function show_single_ranking(ranking) {
+    $('#mapTitle').text(ranking);
+    var valid_courses = Object.keys(ranking_map[ranking].courses).map(function(d) {
+        return course_map[createClassName(d)];
+    });
+    refresh_points(valid_courses);
+    update_course_list(valid_courses);
+    update_architect_list(valid_courses);
 }
 
 

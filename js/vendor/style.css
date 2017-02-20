@@ -20,7 +20,7 @@
 
 #sliderLabel {
     text-align: center;
-    width:140px;
+    width:130px;
 }
 
 .courseInformationContainer {
@@ -70,18 +70,14 @@
     padding-bottom: 10px;
 
 }
-.courseList .ui-selecting, .architectList .ui-selecting { background: #FECA40; }
-.courseList .ui-selected, .architectList .ui-selected {background: lightblue  }
 
-#selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-#selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
 html,body {
     height: 100%;
     width: 100%;
     margin: 0;
 }
 .container {
-    width : 280px;
+    width : 300px;
     position: relative;
     z-index: 10;
 }
@@ -303,8 +299,8 @@ li.course span:first-child {
     text-align: center;
     font-size: 18px;
 }
-#rankingsControl {
-    width:250px;
+#rankingCourseSelectDiv {
+    width:280px;
     height:30%;
     position:relative;
     z-index: 100;
@@ -382,6 +378,12 @@ path {
     border:1px solid black;
 }
 
+#showMostRecentRankingDiv {
+    position: absolute;
+    left:900px;
+    border: 1px solid;
+}
+
 .selectDiv {
     display: inline-block;
     text-align: center;
@@ -413,7 +415,7 @@ path {
 }
 
 #sliderDiv {
-    margin-top: 20px;
+    margin-top: 5px;
     display: inline-block;
 }
 
@@ -422,4 +424,66 @@ li.course:nth-child(even) {
 }
 li.course:nth-child(odd) {
     background: #f0f0f0;
+}
+
+.courseList .ui-selecting, .architectList .ui-selecting { background: #FECA40; }
+.courseList .ui-selected, .architectList .ui-selected {background: lightblue  }
+
+#selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+
+.active {
+    opacity: 1;
+}
+.inactive {
+    opacity: .3;
+}
+
+.rankSpan {
+    margin-right: 5px;
+}
+.rankContainer {
+    height: 50px;
+}
+
+.rankingTextDiv {
+    width: 30px;
+    height: 50%;
+}
+
+.rankContainer {
+    display: flex;
+}
+
+.coursesContainer {
+    width : 160px;
+}
+
+.rankingRect.unselected {
+    /*opacity:.5;*/
+    /*background: repeating-linear-gradient(*/
+            /*45deg,*/
+            /*#606dbc,*/
+            /*#606dbc 10px,*/
+            /*#465298 10px,*/
+            /*#465298 20px*/
+    /*);*/
+}
+.rankingRect.selected {
+    opacity: 1;
+}
+
+.pubTextContainer {
+    margin-top:15px;
+    height:30px;
+    vertical-align: middle;
+}
+
+#courseFilterDiv {
+    height : 10%;
+    width:280px;
+}
+
+.rankingYearAxisGroup > path {
+    display: none;
 }

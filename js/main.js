@@ -67,6 +67,10 @@ var pub_display_class_map = {
 
 };
 
+var course_type_colors = {
+    'public' : '#008837',
+    'private' : '#a6611a'
+}
 var lineColors = {
 
     'GDigest_All' : "#0000E6",
@@ -76,7 +80,7 @@ var lineColors = {
 
 };
 
-
+var zoom_scale;
 
 // map of all courses
 course_map = {};
@@ -93,6 +97,10 @@ var selectCourses = [];
 // all points displayed on map
 // global tooltip object
 var tooltip;
+
+var rankTooltip;
+
+var chartTooltip;
 
 var lineGen = d3.line()
     .x(function(d) {
@@ -292,6 +300,15 @@ function load_all_rankings(rankings) {
                         console.log("couldn't find course: " + course_class_name);
                     }
                 });
+                d3.csv('Data/supplemental/course_location_info.csv', function(locationData) {
+                    locationData.forEach(function(c) {
+                        var course_class_name = createClassName(c.CourseName);
+                        if (Object.keys(course_map).indexOf(course_class_name) !== -1) {
+                            course_map[course_class_name]['city'] = c.City;
+                            course_map[course_class_name]['state'] = c.State;
+                        }
+                    })
+                })
                 /////////////////////////////////////////////
                 /// compute and integrate chart data ////////
                 /////////////////////////////////////////////
@@ -335,13 +352,22 @@ function load_all_rankings(rankings) {
                 tooltip = d3.select("#mapContainer").append("div")
                     .attr("class", "tooltip")
                     .style("opacity", 0);
+
+                rankTooltip = d3.select('body').append('div')
+                    .attr('class', 'rankTooltip')
+                    .style('opacity', 0);
+
+                chartTooltip = d3.select('body').append('div')
+                    .attr('class', 'chartTooltip')
+                    .style('opacity', 0)
+                console.log(course_map)
                 initialize_chart();
                 initialize_container_lists();
                 populate_ranking_matrix();
                 add_check_boxes();
                 initialize_publication_year_widget();
                 initialize_course_year_slider();
-                initialize_selectable();
+                initialize_selectable()
                 refresh_map();
 
 
@@ -440,6 +466,8 @@ function populate_ranking_matrix() {
         .attr('fill', function(d) {
             return d['type'] == 'Public' ?  '#FF8080' : '#80B3ff';
         });
+
+
     d3.select('#GDigestCoursesContainer > svg')
         .selectAll('rect')
         .data(golf_digest_rankings)
@@ -476,9 +504,25 @@ function populate_ranking_matrix() {
                 d3.select(this).attr('fill', lineColors[classList[0] + '_' + classList[1]]);
             }
             refresh_map();
-        });
+        })
+        .on("mouseover", function(d) {
+            rankTooltip.transition()
+                .duration(200)
+                .style("opacity", .9)
+                .style("background-color", 'lightgray');
+            rankTooltip.html(d['year'])
+                .style("left", (d3.event.pageX + 5) + "px")
+                .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(d) {
+            rankTooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        })
+    ;
     $('.pubTextContainer')
         .click(function(d) {
+            console.log('GDigest clicketd')
             var pub_name = d.currentTarget.textContent;
             // if all rects with this pub name are selected, deselect all
             // else, select all
@@ -495,6 +539,7 @@ function populate_ranking_matrix() {
                 all_ranks = d3.selectAll('.Golf.rankingRect');
                 pub_class = '.Golf'
             }
+            console.log(pub_class);
 
             if (selected_ranks._groups[0].length === all_ranks._groups[0].length) {
                 // all previous selected, deselect all
@@ -523,7 +568,6 @@ function populate_ranking_matrix() {
             var pub_class;
             var type_class;
             // golfMag
-            console.log(clicked_text);
             if ((clicked_text).search('Golf') !== -1) {
                 // All
                 pub_class = '.Golf';
@@ -600,6 +644,37 @@ function bring_back_all_courses() {
     refresh_map();
 }
 
+function reset_map() {
+    // reset selection
+    $('.ui-selected').removeClass('ui-selected').addClass('ui-unselecting');
+    //$('.courseList').data('ui-selectable')._mouseStop(null);
+    //$('.architectList').data('ui-selectable')._mouseStop(null);
+    courseCount = {};
+    archCount = {};
+    selectCourses = [];
+    bring_back_all_courses();
+    clearLegend();
+
+    // reset map to center with normal zoom
+    var h = $(window).height();
+    var w = $(window).width();
+
+    projection
+        .scale(1 / tau)
+        .translate([0, 0]);
+
+    var center = projection([-98.5, 39.5]);
+
+
+    svg.call(zoom)
+        .transition()
+        .duration(2000)
+        .call(zoom.transform, d3.zoomIdentity
+            .translate(w / 2, h / 2)
+            .scale(1 << 12)
+            .translate(-center[0], -center[1]));
+}
+
 // function to bind all selection handlers to list and headers
 function initialize_selectable() {
 
@@ -610,14 +685,7 @@ function initialize_selectable() {
     // bind selectable functionality for courses header
     $('.courseHeadingTitleDiv').selectable({
         selected : function(event, ui) {
-            // reset selection
-            $('.ui-selected').removeClass('ui-selected').addClass('ui-unselecting');
-            $('.courseList').data('ui-selectable')._mouseStop(null);
-            $('.architectList').data('ui-selectable')._mouseStop(null);
-            courseCount = {};
-            archCount = {};
-            bring_back_all_courses();
-            clearLegend();
+            reset_map();
         }
     });
     // bind selectable functionality for architects header
@@ -636,7 +704,7 @@ function initialize_selectable() {
             // possible later error...make sure to not modify object
             var course = course_map[$(ui.selected.__data__)[0].className];
             // check to see if the previous selection was an architect
-            updateChart(course);
+            pan_to_course(course);
             if (d3.selectAll('.prevArch')._groups[0].length != 0) {
 
                 selectCourses = [];
@@ -644,7 +712,7 @@ function initialize_selectable() {
             }
             // ensure that we're only selecting on the LI selection
             if (ui.selected.tagName === "LI" && courseCount[course.className] !== -1) {
-                refresh_chart(course);
+
                 // TODO: figure out how to do map center on functionaloty
                 // map.centerOn([course.x,course.y],"latlong",2000);
 
@@ -666,6 +734,7 @@ function initialize_selectable() {
                 d3.selectAll('.prevArch  > .ui-selected').classed('ui-selected', false).classed('prevArch', false);
                 d3.selectAll('.prevArch').classed('ui-selected', false).classed('prevArch', false);
                 selectCourses.push($(ui.selected.__data__)[0]);
+                refresh_chart(course);
                 refresh_points(selectCourses);
                 $(ui.selected).addClass('prevCourse');
             } else {
@@ -842,7 +911,68 @@ function initialize_selectable() {
         }
         update_course_list(sorted_courses)
 
-    })
+    });
+
+    var courseNames = [];
+    for (var c in course_map) {courseNames.push(course_map[c]['displayName'])}
+    var default_search_text = 'Search Courses'
+    // autocomplete for courses search bar
+    $( "#courseListSearchInput").autocomplete({
+        source : courseNames,
+        select: function(event, ui) {
+            // reset selected courses
+            selectCourses = []
+            var course = course_map[createClassName($("#courseListSearchInput").val())];
+
+            pan_to_course(course);
+            if (d3.selectAll('.prevArch')._groups[0].length != 0) {
+
+                selectCourses = [];
+                courseCount = {};
+            }
+            d3.selectAll(".courseList > li.ui-selected").classed('ui-selected', false)
+            d3.select('.course-' + createClassName($("#courseListSearchInput").val())).classed('ui-selected', true);
+            // ensure that we're only selecting on the LI selection
+            refresh_chart(course);
+            scroll_courses_list(course);
+            // how many times a course has been selected
+            if (courseCount.hasOwnProperty(course.className)) {
+                courseCount[course.className]++;
+            } else {
+                courseCount[course.className] = 1;
+            }
+            // update mapping of architect -> number of courses
+            course.architects.forEach(function(arch) {
+                if (archCount.hasOwnProperty(arch)) {
+                    archCount[arch]++;
+                } else {
+                    archCount[arch] = 1;
+                }
+            });
+
+            d3.selectAll('.prevArch  > .ui-selected').classed('ui-selected', false).classed('prevArch', false);
+            d3.selectAll('.prevArch').classed('ui-selected', false).classed('prevArch', false);
+            selectCourses.push(course);
+            refresh_points(selectCourses);
+            $(ui.selected).addClass('prevCourse');
+            $('#courseListSearchInput').val(default_search_text)
+                .css('color', '#929292');
+            return false;
+        }
+    });
+    // set default value
+    $('#courseListSearchInput').val(default_search_text)
+        .css('color', '#929292');
+    $('#courseListSearchInput')
+        .focus(function() {
+            if ($(this).val() === default_search_text) {
+                $(this).val('')
+                    .css('color', 'black')
+            } else {
+                $(this).val('')
+                    .css('color', '#929292')
+            }
+        })
 }
 
 function composite_sort(a,b) {
@@ -907,6 +1037,7 @@ function is_course_in_current_rankings(course) {
 
 // TODO not done
 function refresh_chart(course) {
+    console.log(course);
     tooltip.transition()
         .duration(500)
         .style("opacity", 0)
@@ -914,6 +1045,7 @@ function refresh_chart(course) {
 
     // if more than one course is selected, dont show chart
     if (d3.selectAll(".courseList > li.ui-selected")._groups[0].length > 1) {
+        console.log('not valid')
         clearChart();
         clearLegend();
         return
@@ -973,10 +1105,24 @@ function refresh_chart(course) {
         .enter().append('circle')
         .attr('cx', function(d) {return xScale(+d.year); })
         .attr('cy', function(d) {
-            console.log(d)
             return yScale(d.rank); })
         .style('fill', function(d) {return  lineColors[d.className]})
         .attr('class', function(d) {
+        })
+        .on("mouseover", function(d) {
+            console.log(d);
+            chartTooltip.transition()
+                .duration(200)
+                .style("opacity", .9)
+                .style("background-color", 'lightgray');
+            chartTooltip.html(d['year'])
+                .style("left", (d3.event.pageX + 5) + "px")
+                .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(d) {
+            chartTooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
         })
         .attr('r', 3);
 
@@ -986,37 +1132,16 @@ function refresh_chart(course) {
 }
 
 function scroll_courses_list(course) {
-    console.log(course);
     var top = $('.course.course-' + course['className']).position().top;
     $('.courseList').animate({
-        scrollTop: top + $('.courseList').scrollTop() - 39
-}, 500);
-    console.log(top);
-    console.log($('.courseList').scrollTop())
+        scrollTop: top + $('.courseList').scrollTop() - 65
+    }, 500);
 }
 
 // function to add headings and lists to courses and architects lists
 function initialize_container_lists() {
-    // add headers to courses and architects divs
-    //var coursesHeadingDiv = $('#courses')
-    //    .append($("<div></div>")
-    //        .addClass("coursesHeadingDiv")
-    //        .addClass("heading")
-    //        .append($("<h2></h2>")
-    //            .addClass("coursesHeading")
-    //            .text("Courses")));
-    //var archsHeadingDiv = $('#architects')
-    //    .append($("<div></div>")
-    //        .addClass("archsHeadingDiv")
-    //        .addClass("heading")
-    //        .append($("<h2></h2>")
-    //            .addClass("archsHeading")
-    //            .text("Architects")));
-
     var courseUl = $('#courses').append($("<ul></ul>").addClass("courseList"));
     var architectUl = $('#architects').append($('<ul></ul>').addClass("architectList"));
-
-
 }
 
 // function to initially draw chart and container
@@ -1024,11 +1149,11 @@ function initialize_chart() {
     // chart size variables
     var margin = {top: 10, right: 10, bottom: 13, left: 15},
         width = 300 - margin.left - margin.right,
-        chartHeight =  $(window).height() * 0.65 - margin.top - margin.bottom;
+        chartHeight =  $('#chart').height() - margin.top - margin.bottom;
     var xAxis_buffer = 5;
-    xScale = d3.scaleLinear().range([width - margin.right, margin.left * 2]).domain([2017, 2000]);
+    xScale = d3.scaleLinear().range([width, margin.right + margin.left]).domain([2017, 2000]);
     yScale = d3.scaleLinear().range([chartHeight - margin.bottom - xAxis_buffer, margin.top]).domain([100, 1]);
-    var x = d3.scaleLinear().range([width - margin.right, margin.left]);
+    var x = d3.scaleLinear().range([width - margin.left, margin.right]);
     var y = d3.scaleLinear().range([margin.top, chartHeight - margin.bottom - xAxis_buffer]);
 
     x.domain([2017, 2000]);
@@ -1085,29 +1210,31 @@ function initialize_chart() {
         .append('div')
         .attr('class', 'courseRecentRankingsDiv');
 
-
+    // for title of course
     courseInfo.append('h3')
         .text("")
         .attr('class', 'courseInfoHeader');
 
+    // for location and type
+    // ex: Augusta, GA (private)
     courseInfo.append('h3')
         .text("")
-        .attr("class", "courseArchitectInfo infoH");
+        .attr("class", "courseLocTypeInfo infoH");
+    // for architect and year
+    // ex: Architect: Allister Mackenzie (1921)
     courseInfo.append('h3')
         .text("")
-        .attr("class", "courseYearInfo infoH");
+        .attr("class", "courseArchYearInfo infoH");
+    // for yardage
+    // ex: Yardage: 7445
     courseInfo.append('h3')
         .text("")
-        .attr("class", "courseTypeInfo infoH");
+        .attr("class", "courseYardageInfo infoH");
+    // for rating
+    // ex: Rating: 76.2
     courseInfo.append("h3")
         .text("")
-        .attr("class","courseYardageInfo infoH");
-    courseInfo.append("h3")
-        .text("")
-        .attr("class","courseSlopeInfo infoH");
-    courseInfo.append("h3")
-        .text("")
-        .attr("class","courseRatingInfo infoH");
+        .attr("class","courseSlopeRatingInfo infoH");
 
 
     courseRecentRankings.append("h3")
@@ -1130,6 +1257,27 @@ function initialize_chart() {
     recentRankingsUlHeader.append('span')
         .text('rank')
         .attr('class', 'recentRankingsUlHeadSpan rankSpan')
+
+}
+
+
+
+// function to clear legend of all contents
+function clearLegend() {
+    d3.select(".courseInfoHeader")
+        .text("");
+    d3.selectAll(".courseLocTypeInfo")
+        .text("");
+    d3.selectAll(".courseArchYearInfo")
+        .text("");
+    d3.selectAll(".courseYardageInfo")
+        .text("");
+    d3.selectAll(".courseYardageInfo")
+        .text("");
+    d3.selectAll(".courseSlopeRatingInfo")
+        .text("");
+    $(".legendRanking").remove();
+    d3.selectAll(".chart > g svg").remove();
 
 }
 
@@ -1231,7 +1379,7 @@ function initialize_publication_year_widget() {
                 text = ui.values[0] + " to " + ui.values[1];
             }
             $('#yearSelectHeader').text(text);
-            // TODO: add functionality to update point and lists based on criteria
+
             refresh_map();
         }
     });
@@ -1289,7 +1437,7 @@ function refresh_map() {
         }
     }
 
-    refresh_points(valid_courses);
+    refresh_points([]);
     update_course_list(valid_courses);
     update_architect_list(valid_courses);
 }
@@ -1342,28 +1490,33 @@ function get_valid_courses() {
 
 // removes old points if they exist and adds new points
 // courses: list of courses to be mapped
+// courses is selected courses
 function refresh_points(courses) {
-    console.log('refresh points');
+
     // map courses to add geometry
-    var mapped_courses = courses.map(function(c) {return type(c)});
+    var highlighted_courses = courses.map(function(c) {return type(c)});
+    var all_course_names = get_valid_courses().map(function(c) {return c.className})
+    var highlighted_course_names = highlighted_courses.map(function(c) {return c['className']});
+    var non_highlighted_course_names = arr_diff(all_course_names, highlighted_course_names);
+    var all_courses = all_course_names.map(function(c) {return type(course_map[c])})
+    var non_highlighted_courses = non_highlighted_course_names.map(function(c) {return type(course_map[c])})
 
     // empty pointLayer
     $('.pointLayer').empty();
-    var points = d3.select('.pointLayer').selectAll('circle')
-        .data(mapped_courses)
+
+    // map select courses
+    var all_points = d3.select('.pointLayer').selectAll('.non_highlighted_point')
+        .data(non_highlighted_courses)
         .enter()
         .append('circle')
         .attr('cx', function(d) {return projection(d.geometry.coordinates)[0]})
         .attr('cy', function(d) {return projection(d.geometry.coordinates)[1]})
         .attr('r', 5)
         .style("fill", function(c) {
-            if (c.type === "private") {
-                return "blue"
-            } else {
-                return "red"
-            }
+            return course_type_colors[c.type];
         })
-        .attr('class', 'point')
+        .style('opacity', function() {return courses.length > 0 ? .3 : 1})
+        .attr('class', 'point non_highlighted_point')
         .on("mouseover", function(d) {
             tooltip.transition()
                 .duration(200)
@@ -1382,27 +1535,77 @@ function refresh_points(courses) {
         .on('click', function(d) {
             d3.selectAll('.point')
                 .style('fill', function(c) {
-                    if (c.type === "private") {
-                        return "blue"
-                    } else {
-                        return "red"
-                    }
+                    return course_type_colors[c.type];
                 })
                 .attr('r', 5);
             d3.select(this)
                 .style('fill', '#ffdc16')
                 .attr('r', 7);
-            //pan_to_course(d);
+
+            d3.selectAll(".courseList > li.ui-selected").classed('ui-selected', false)
+            d3.select('.course-' + d['className']).classed('ui-selected', true);
+            pan_to_course(d);
             refresh_chart(d);
             scroll_courses_list(d);
+            d3.event.stopPropagation();
+        });
+
+    // highlighted courses
+    var highlighted_points = d3.select('.pointLayer').selectAll('.highlighted_point')
+        .data(highlighted_courses)
+        .enter()
+        .append('circle')
+        .attr('cx', function(d) {return projection(d.geometry.coordinates)[0]})
+        .attr('cy', function(d) {return projection(d.geometry.coordinates)[1]})
+        .attr('r', 8)
+        .style("fill",'yellow')
+        .style('stroke', function(c) {
+            return course_type_colors[c.type];
+        }).style('stroke-width', '3px')
+        .attr('r', 8)
+        .attr('class', 'point highlighted_point')
+        .on("mouseover", function(d) {
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", .9)
+                .style("background-color", 'lightgray');
+            tooltip.html(d.displayName + "<br/> " + d.yearCreated[0]
+                    + ", " + architect_map[d.architects[0]].displayName + "<br/>")
+                .style("left", (d3.event.pageX + 5) + "px")
+                .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(d) {
+            tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        })
+        .on('click', function(d) {
+
+            d3.selectAll('.point')
+                .style('fill', function(c) {
+                    return course_type_colors[c.type];
+                })
+                .attr('r', 5);
+            d3.select(this)
+                .style('fill', '#yellow')
+                .style('stroke', function(c) {
+                    return course_type_colors[c.type];
+                }).style('stroke-width', '3px')
+                .attr('r', 8);
+            pan_to_course(d);
+            refresh_chart(d);
+            scroll_courses_list(d);
+            d3.event.stopPropagation();
         });
     mapCourses = d3.selectAll('.point');
+
 }
 
 // generate initial map as well as bind zoom functionality
 function generate_map() {
     var h = $(window).height();
     var w = $(window).width();
+
 
     projection = d3.geoMercator()
         .scale(1 / tau)
@@ -1425,7 +1628,11 @@ function generate_map() {
 
     svg = d3.select('#map')
         .style("width", w)
-        .style("height", h);
+        .style("height", h)
+        .on('click', function(d) {
+            // reset map when any point on map is clicked (not a course)
+            reset_map();
+        });
 
     d3.select('#mapContainer')
         .style("width", w + 'px')
@@ -1439,6 +1646,8 @@ function generate_map() {
             .translate(w / 2, h / 2)
             .scale(1 << 12)
             .translate(-center[0], -center[1]));
+
+    zoom_scale = 1 << 12;
     // add svg container to hold all points
     d3.select('#map').append("svg")
         .style("width", w)
@@ -1466,6 +1675,28 @@ function generate_map() {
             }
         });
 }
+
+function pan_to_course(course) {
+
+    var h = $(window).height();
+    var w = $(window).width();
+
+    projection
+        .scale(1 / tau)
+        .translate([0, 0]);
+
+    var c_proj = projection(course['geometry']['coordinates'])
+    svg.call(zoom)
+        .transition()
+        .duration(2000)
+        .call(zoom.transform, d3.zoomIdentity
+            .translate(w / 2, h / 2)
+            .scale(zoom_scale)
+            .translate(-c_proj[0], -c_proj[1]));
+
+}
+
+
 
 /////////////////////////////////////////////
 //////   Rubberbanding for shift-click //////
@@ -1527,34 +1758,6 @@ function endRubberBand() {
 
 }
 
-function pan_to_course(d) {
-    var clicked = d3.event.target,
-        direction = 1,
-        factor = 0.2,
-        target_zoom = 1,
-        center = [$(window).width() / 2, $(window).height() / 2],
-        extent = zoom.scaleExtent(),
-        translate = zoom.translate(),
-        translate0 = [],
-        l = [],
-        view = {x: translate[0], y: translate[1], k: zoom.scale()};
-
-    d3.event.preventDefault();
-    direction = 1;
-    target_zoom = zoom.scale() * (1 + factor * direction);
-
-    if (target_zoom < extent[0] || target_zoom > extent[1]) { return false; }
-
-    translate0 = [(center[0] - view.x) / view.k, (center[1] - view.y) / view.k];
-    view.k = target_zoom;
-    l = [translate0[0] * view.k + view.x, translate0[1] * view.k + view.y];
-
-    view.x += center[0] - l[0];
-    view.y += center[1] - l[1];
-
-    interpolateZoom([view.x, view.y], view.k);
-}
-
 
 
 function interpolateZoom (translate, scale) {
@@ -1580,45 +1783,27 @@ function clearChart() {
     $(".legend-type").text("");
 }
 
-// function to clear legend of all contents
-function clearLegend() {
-    d3.select(".courseInfoHeader")
-        .text("");
-    d3.selectAll(".courseArchitectInfo")
-        .text("");
-    d3.selectAll(".courseYearInfo")
-        .text("");
-    d3.selectAll(".courseTypeInfo")
-        .text("");
-    d3.selectAll(".courseYardageInfo")
-        .text("");
-    d3.selectAll(".courseSlopeInfo")
-        .text("");
-    d3.selectAll(".courseRatingInfo")
-        .text("");
-    d3.select(".recentRankingsHeader")
-        .text("");
-    $(".legendRanking").remove();
 
-}
 
 
 // function to zoom map. Queries new tiles
 // TODO: add functionality to update points if they exist
 function zoomed() {
-    var transform = d3.event.transform;
 
+    var THUNDERFOREST_API_KEY = 'da810a2ed98e498e84b33ffb8bee9af1';
+    var transform = d3.event.transform;
+    zoom_scale = transform.k
     var tiles = tile
         .scale(transform.k)
         .translate([transform.x, transform.y])
         ();
 
-
     projection
         .scale(transform.k / tau)
         .translate([transform.x, transform.y]);
     d3.selectAll(".point")
-        .attr("cx", function(d) {return projection(d.geometry.coordinates)[0]})
+        .attr("cx", function(d) {
+            return projection(d.geometry.coordinates)[0]})
         .attr("cy", function(d) {return projection(d.geometry.coordinates)[1]});
 
     var image = raster
@@ -1630,7 +1815,7 @@ function zoomed() {
 
     image.enter().append("image")
         .attr("xlink:href", function(d) {
-            return "http://" + "abc"[d[1] % 3] + ".tile.openstreetmap.org/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
+            return "http://" + "abc"[d[1] % 3] + ".tile.openstreetmap.org/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"})
         .attr("x", function(d) { return d[0] * 256; })
         .attr("y", function(d) { return d[1] * 256; })
         .attr("width", 256)
@@ -1751,80 +1936,6 @@ function rightControlResize() {
 }
 
 
-
-// function to update chart
-function updateChart(course) {
-    //// mapping of ranking to line color
-    //var lineColors = {
-    //    'GDigest_All' : "#0000E6",
-    //    'GDigest_Public' : "#E60000" ,
-    //    'Golf_All' : "#80B3ff",
-    //    'Golf_Public' : "#FF8080"
-    //
-    //};
-    //tooltip.transition()
-    //    .duration(500)
-    //    .style("opacity", 0);
-    //$(".legend-rankings-ul").empty();
-    //
-    //
-    //// if more than one course is selected, dont show chart
-    //if (d3.selectAll(".courseList > li.ui-selected")._groups[0].length > 1) {
-    //    clearChart();
-    //    clearLegend();
-    //    return
-    //}
-    //
-    //d3.selectAll(".chart > g svg").remove();
-    //var chartData = course_map[course['className']]['chart_data'];
-    //var containerData = [];
-    //for (var key in chartData) {
-    //    chartData[key].ranks.sort(function(a,b) {
-    //        if (a.year < b.year) return -1;
-    //        if (a.year > b.year) return 1;
-    //    });
-    //
-    //    chartData[key]['type'] = chartData[key]['className'].split("_")[1];
-    //
-    //    containerData.push(chartData[key]);
-    //}
-    //
-    //var svg = d3.select(".chart > g")
-    //    .append('svg');
-    //var pathContainers = svg.selectAll('g.line')
-    //    .data(containerData);
-    //
-    //pathContainers.enter()
-    //    .append('g')
-    //    .attr('class', 'line')
-    //    .attr("style", function(d) {
-    //        return "stroke: " +
-    //            lineColors[d.className]
-    //    });
-    //
-    //pathContainers.selectAll('path')
-    //    .data(function(d) {return [d];})
-    //    .enter().append('path')
-    //    .attr('d',function(d) {
-    //        return lineGen(d.ranks) })
-    //    .on('mouseover', function(d) {
-    //        d3.event.stopPropagation();
-    //
-    //    });
-    //
-    //
-    //pathContainers.selectAll('circle')
-    //    .data(function(d) {return d.ranks;})
-    //    .enter().append('circle')
-    //    .attr('cx', function(d) {return xScale(d.year); })
-    //    .attr('cy', function(d) {return yScale(d.rank); })
-    //    .style('fill', function(d) {return  lineColors[d.className]})
-    //    .attr('r', 5);
-    //updateCourseLegend(containerData, course);
-    //
-
-}
-
 function updateCourseLegend(containerData, course) {
 
     $(".recentRankings-ul > li").not("li:first").remove();
@@ -1832,18 +1943,19 @@ function updateCourseLegend(containerData, course) {
         .data(containerData);
     d3.select(".courseInfoHeader")
         .text(course.displayName);
-    d3.selectAll(".courseArchitectInfo")
-        .text("architect: " + architectsToString(course.architects));
-    d3.selectAll(".courseYearInfo")
-        .text("built: " + course.yearCreated[0]);
-    d3.selectAll(".courseTypeInfo")
-        .text("type: " + course.type);
+
+    d3.selectAll(".courseLocTypeInfo")
+        .text(course.city + ', ' + course.state + '   (' + course.type + ')')
+    d3.selectAll(".courseArchYearInfo")
+        .text('Architect: ' + architectsToString(course.architects) + ' (' + course.yearCreated[0] + ')');
+
     d3.selectAll(".courseYardageInfo")
-        .text("yardage: " + course.yardage);
-    d3.selectAll(".courseSlopeinfo")
-        .text("slope: " + course.slope);
-    d3.selectAll(".courseRatingInfo")
-        .text("rating: " + course.rating);
+        .text("Yardage: " + course.yardage);
+
+
+    d3.selectAll(".courseSlopeRatingInfo")
+        .text("rating: " + course.rating + "  slope: " + course.slope);
+
     var legendRankingsSelect = d3.select(".recentRankings-ul").selectAll(".ranking")
         .data(containerData);
     var legendRankingsEnter = legendRankingsSelect.enter().append("li")
@@ -1872,9 +1984,6 @@ function updateCourseLegend(containerData, course) {
         .text("Recent Rankings");
 }
 
-function show_most_recent_ranking() {
-    show_single_ranking(most_recent_ranking);
-}
 
 function show_single_ranking(ranking) {
     $('#mapTitle').text(ranking);
@@ -1927,4 +2036,28 @@ function architectsToString(myArr) {
         returnStr += architect_map[myArr[i]].displayName;
     }
     return returnStr;
+}
+
+// compute difference between two arrays
+function arr_diff (a1, a2) {
+
+    var a = [], diff = [];
+
+    for (var i = 0; i < a1.length; i++) {
+        a[a1[i]] = true;
+    }
+
+    for (var i = 0; i < a2.length; i++) {
+        if (a[a2[i]]) {
+            delete a[a2[i]];
+        } else {
+            a[a2[i]] = true;
+        }
+    }
+
+    for (var k in a) {
+        diff.push(k);
+    }
+
+    return diff;
 }

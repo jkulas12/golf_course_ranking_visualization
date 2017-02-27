@@ -9,7 +9,7 @@
     position:absolute;
 
     width:100%;
-    height:80%;
+    height:70%;
     float:left;
 
 }
@@ -24,8 +24,8 @@
 }
 
 .courseInformationContainer {
-    top:64%;
-    height:35%;
+    top:69%;
+    height:29%;
     background-color: white;
     position:absolute;
     border:solid 1px #000000;
@@ -53,7 +53,7 @@
 }
 #chart > svg {
     background-color: white;
-    height:80%;
+    height:100%;
 
 }
 
@@ -137,6 +137,7 @@ html,body {
 .infoH {
     margin-top: 3px;
     margin-bottom:3px;
+    text-align: left;
 }
 
 .recentRankings-ul {
@@ -409,6 +410,35 @@ path {
     background-color:lightgrey;
 }
 
+.rankTooltip {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    pointer-events: none;
+    z-index: 10;
+    background-color:lightgrey;
+    font-size: 12px;
+    top: 0;
+}
+
+.chartTooltip {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    pointer-events: none;
+    z-index: 10;
+    background-color:lightgrey;
+    font-size: 12px;
+    top:0;
+
+}
+
 .course {
     width:94%;
     list-style-type: disc;
@@ -419,12 +449,12 @@ path {
     display: inline-block;
 }
 
-li.course:nth-child(even) {
-    background: #f7f7f7;
-}
-li.course:nth-child(odd) {
-    background: #f0f0f0;
-}
+/*li.course:nth-child(even) {*/
+    /*background: #f7f7f7;*/
+/*}*/
+/*li.course:nth-child(odd) {*/
+    /*background: #f0f0f0;*/
+/*}*/
 
 .courseList .ui-selecting, .architectList .ui-selecting { background: #FECA40; }
 .courseList .ui-selected, .architectList .ui-selected {background: lightblue  }

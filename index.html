@@ -106,9 +106,12 @@
 		<div id="courses" class =  "control control-right">
 			<div class = 'coursesHeadingDiv heading'>
 				<div class = 'courseHeadingTitleDiv' style="display: flex;">
-					<h2 class = 'courseHeading' style="width: 100%">
+					<h2 class = 'courseHeading' style="width: 60%">
 						<text>Courses</text></h2>
-					<!--<button id = 'mapClearButton', style="height: 20px;">Reset</button>-->
+					<button id = 'mapClearButton' onclick="reset_map()" style="height: 20px;">Reset Map</button>
+				</div>
+				<div id = 'courseListSearchBarDiv'>
+					<input style="width: 100%" id = 'courseListSearchInput'>
 				</div>
 				<div class = 'courseOrderDiv' style="display:flex;">
 					<div class = 'alphabeticalSortDiv active' style="width : 50%">Alphabetical
@@ -121,7 +124,7 @@
 			</div>
 		</div>
 		<div id="architects" class="control control-right">
-			<div class = 'archsHeadingDiv heading'>
+			<div class = 'archsHeading<svg>…</svg>Div heading'>
 				<h2 class = 'archsHeading'>Architects</h2>
 			</div>
 		</div>

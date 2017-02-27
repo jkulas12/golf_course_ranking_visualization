@@ -1,0 +1,385 @@
+ClassName,CourseName,City,State
+harbour_town,Harbour Town,Hilton Head Island,SC
+gray_plantation,Gray Plantation,Lake Charles,LA
+the_virtues_club,The VIrtues Club,Nashport,OH
+eugene_country_club,Eugene Country Club,Eugene,OR
+apache_stronghold,Apache Stronghold,San Carlos,AZ
+sutton_bay,Sutton Bay,Agar,SD
+the_quarry_at_la_quinta,The Quarry at La Quinta,La Quinta,CA
+peachtree,Peachtree,Atlanta,GA
+olympic_lake,Olympic (Lake),San Francisco,CA
+poipu_bay,Poipu Bay,Koloa,HI
+kapalua_resort_plantation,Kapalua Resort (Plantation),Lahaina,HI
+old_town_club,Old Town Club,Winston-Salem,NC
+kiva_dunes,Kiva Dunes,Gulf Shores,AL
+the_classic_at_maddens_resort,The Classic at Madden's Resort,Brainerd,MN
+the_bluffs_on_thompson_creek,The Bluffs on Thompson Creek,Saint Francisville,LA
+boston_golf_club,Boston Golf Club,Hingham,MA
+crooked_stick,Crooked Stick,Carmel,IN
+bellerive,Bellerive,St. Louis,MO
+kiawah_island_club_cassique,Kiawah Island Club (Cassique),Johns Island,SC
+the_prairie_clubpines,The Prairie Club(Pines),Valentine,NE
+grandfather,Grandfather,Linville,NC
+yale_university,Yale University,New Haven,CT
+camp_creek,Camp Creek,Panama City Beach,FL
+lehigh,Lehigh,Allentown,PA
+kiawah_island_ocean,Kiawah Island (Ocean),Kiawah Island,SC
+reflection_bay,Reflection Bay,Henderson,NV
+aronimink,Aronimink,Newton Square,PA
+chicago,Chicago,Wheaton,IL
+red_sky_ranch_golf_club_norman,Red Sky Ranch Golf Club (Norman),Edwards,CO
+baltimore_five_farms_east,Baltimore (Five Farms East),Lutherville-Timonium,MD
+oakmont,Oakmont,Plum,PA
+wolf_creek_golf_club,Wolf Creek Golf Club,Mesquite,NV
+briars_creek,Briar's Creek,Johns Island,SC
+circling_raven_golf_club,Circling Raven Golf Club,Worley,ID
+pine_hill,Pine Hill,Bedminster Township,NJ
+branson_creek,Branson Creek,Hollister,MO
+the_alotian_club,The Alotian Club,Roland,AR
+buffalo_ridge_golf_club,Buffalo Ridge Golf Club,Hollister,MO
+tidewater,Tidewater,North Myrtle Beach,SC
+osprey_meadows,Osprey Meadows,Donnelly,ID
+shoal_creek,Shoal Creek,Kansas City,MO
+riviera,Riviera,Los Angeles,CA
+quaker_ridge,Quaker Ridge,Scarsdale,NY
+the_greenbrier_old_white_tpc,The Greenbrier (Old White TPC),White Sulphur Springs,WV
+national_golf_links_of_america,National Golf Links of America,Southampton,NY
+crosswater_at_sunriver_resort,Crosswater at Sunriver Resort,Bend,OR
+olde_stonewall,Olde Stonewall,Ellwood City,PA
+tullymore_golf_resort,Tullymore Golf Resort,Canadian Lakes,MI
+nantucket,Nantucket,Nantucket,MA
+the_golf_courses_of_lawsonialinks,The Golf Courses of Lawsonia(Links),Green Lake,WI
+estancia,Estancia,Scottsdale,AZ
+sea_island_golf_clubseaside,Sea Island Golf Club(Seaside),Saint Simons Island,GA
+the_highland_course_at_primland_resort,The Highland Course at Primland Resort,Meadows of Dan,VA
+the_links_of_north_dakota,The Links of North Dakota,Tioga,ND
+fox_chapel,Fox Chapel,Pittsburgh,PA
+seminole,Seminole,Tallahassee,FL
+dallas_national,Dallas National,Dallas,TX
+tobacco_road_golf_club,Tobacco Road Golf Club,Sanford,NC
+sandpiper_golf_club,Sandpiper Golf Club,Goleta,CA
+reynolds_plantationoconee,Reynolds Plantation(Oconee),Greensboro,GA
+inverness,Inverness,Toledo,OH
+we_ko_pa_golf_club_saguaro,We-Ko-Pa Golf Club (Saguaro),Scottsdale,AZ
+shinnecock_hills,Shinnecock Hills,Southampton,NY
+southern_hills,Southern Hills,Tulsa,OK
+the_harvester_golf_club,The Harvester Golf Club,Rhodes,IA
+sage_valley,Sage Valley,Graniteville,SC
+tpc_deere_run,TPC Deere Run,East Moline,IL
+capitol_hilljudge,Capitol Hill(Judge),Prattville,AL
+makai_golf_club,Makai Golf Club,Princeville,HI
+hudson_national,Hudson National,Croton-on-Hudson,NY
+canyata,Canyata,Marshall,IL
+sugarloaf,Sugarloaf,Carrabassett Valley,ME
+innisbrook_resort_copperhead,Innisbrook Resort (Copperhead),Palm Harbor,FL
+bel_air,Bel-Air,Los Angeles,CA
+valhalla,Valhalla,Louisville,KY
+reynolds_plantation_great_waters,Reynolds Plantation (Great Waters),Greensboro,GA
+pine_needles_lodge_and_golf_club,Pine Needles Lodge and Golf Club,Southern Pines,NC
+talking_stick_north,Talking Stick (North),Scottsdale,AZ
+glen_mills,Glen Mills,Glen Mills,PA
+trump_national_golf_club_los_angeles,Trump National Golf Club Los Angeles,Rancho Palos Verdes,CA
+barefoot_resort_fazio,Barefoot Resort (Fazio),North Myrtle Beach,SC
+pine_meadow,Pine Meadow,Libertyville,IL
+lakota_canyon_ranch__golf_club,Lakota Canyon Ranch & Golf Club,New Castle,CO
+mayacama,Mayacama,Santa Rosa,CA
+winged_foot_west,Winged Foot (West),Mamaroneck,NY
+nemacolin_woodlands_mystic_rock,Nemacolin Woodlands (Mystic Rock),Farmington,PA
+wannamoisett,Wannamoisett,East Providence,RI
+kaluhyat_golf_club,Kaluhyat Golf Club,Verona,NY
+tpc_sawgrass_players_stadium,TPC Sawgrass (Players Stadium),Ponte Vedra Beach,FL
+limestone_springs,Limestone Springs,Oneonta,AL
+san_francisco_golf_club,San Francisco Golf Club,San Francisco,CA
+kingsmill_resort_river,Kingsmill Resort (River),Williamsburg,VA
+winged_foot_east,Winged Foot (East),Mamaroneck,NY
+wailea_golf_clubgold,Wailea Golf Club(Gold),Kihei,HI
+bulle_rock,Bulle Rock,Havre de Grace,MD
+pacific_dunes,Pacific Dunes,Bandon,OR
+grande_dunes,Grande Dunes,Myrtle Beach,SC
+french_lick_resort_pete_dye,French Lick Resort (Pete Dye),West Baden Springs,IN
+milwaukee,Milwaukee,River Hills,WI
+red_hawk,Red Hawk,East Tawas,MI
+the_golf_club_at_redlands_mesa,The Golf Club at Redlands Mesa,Grand Junction,CO
+raven_at_sabino_springs,Raven at Sabino Springs,Tucson,AZ
+wild_horse_golf_club,Wild Horse Golf Club,Gothenburg,NE
+pinon_hills,Pinon Hills,Farmington,NM
+ocean_forest,Ocean Forest,Sea Island,GA
+gamble_sands,Gamble Sands,Brewster,WA
+tpc_san_antonioatt_oaks,TPC San Antonio(AT&T Oaks),San Antonio,TX
+black_mesa,Black Mesa,Espa̱ola,NM
+whispering_pines,Whispering Pines,Trinity,TX
+la_quinta_resort_mountain,La Quinta Resort (Mountain),La Quinta,CA
+koolau,Koolau,Kaneohe,HI
+avalon_lakes,Avalon Lakes,Warren,OH
+scioto,Scioto,Upper Arlington,OH
+cordevalle,CordeValle,San Martin,CA
+shenandoah_at_turning_stone_resort,Shenandoah at Turning Stone Resort,Verona,NY
+beechtree,Beechtree,Aberdeen,MD
+mattaponi_springs,Mattaponi Springs,Ruther Glen,VA
+the_concession,The Concession,Bradenton,FL
+pinehurst_no2,Pinehurst (No.2),Pinehurst,NC
+congressional_blue,Congressional (Blue),Bethesda,MD
+the_prairie_club_dunes,The Prairie Club (Dunes),Valentine,NE
+prairie_dunes,Prairie Dunes,Hutchinson,KS
+trump_international,Trump International,West Palm Beach,FL
+bay_harbor_golf_club_links_quarry,Bay Harbor Golf Club (Links_Quarry),Petoskey,MI
+turtle_bay_palmer,Turtle Bay (Palmer),Kahuku,HI
+barefoot_resort_dye,Barefoot Resort (Dye),North Myrtle Beach,SC
+gold_mountain_golf_complex_olympic,Gold Mountain Golf Complex (Olympic),Bremerton,WA
+wilmington_south,Wilmington (South),Wilmington,DE
+hidden_creek,Hidden Creek,Egg Harbor Township,NJ
+hawks_ridge,Hawks Ridge,Cumming,GA
+lost_dunes,Lost Dunes,Bridgman,MI
+monterey_peninsula_shore,Monterey Peninsula (Shore),Del Monte Forest,CA
+rustic_canyon_golf_course,Rustic Canyon Golf Course,Moorpark,CA
+may_river_golf_club_at_palmetto_bluff,May River Golf Club at Palmetto Bluff,Bluffton,SC
+the_links_at_spanish_bay,The Links at Spanish Bay,Del Monte Forest,CA
+we_ko_pa_golf_club_cholla,We-Ko-Pa Golf Club (Cholla),Scottsdale,AZ
+coeur_dalene_resort,Coeur d'Alene Resort,Worley,ID
+bayside_resort,Bayside Resort,Selbyville,DE
+grayhawk_golf_club_raptor,Grayhawk Golf Club (Raptor),Scottsdale,AZ
+jupiter_hillshills,Jupiter Hills(Hills),Jupiter,FL
+canterbury,Canterbury,Beachwood,OH
+blackwolf_runmeadow_valleys,Blackwolf Run(Meadow Valleys),Kohler,WI
+rivers_edge,River's Edge,Shallotte,NC
+pinehills_golf_clubjones,Pinehills Golf Club(Jones),Plymouth,MA
+kauai_lagoonskiele,Kauai Lagoons(Kiele),Lihue,HI
+atlantic_city_country_club,Atlantic City Country Club,Northfield,NJ
+atlanta_country_club,Atlanta Country Club,Marietta,GA
+arnold_palmers_bay_hill_club_championship,Arnold Palmer's Bay Hill Club (Championship),Orlando,FL
+holston_hills,Holston Hills,Knoxville,TN
+ridgewood_west_east,Ridgewood (West_East),Paramus,NJ
+eastward_ho,Eastward Ho,Chatham,MA
+forest_dunes_golf_club,Forest Dunes Golf Club,Roscommon,MI
+olympiclake,Olympic(Lake),San Francisco,CA
+omni_homestead_cascades,Omni Homestead (Cascades),Hot Springs,VA
+whistling_straits_straits,Whistling Straits (Straits),Sheboygan,WI
+wilderness_at_fortune_bay,Wilderness at Fortune Bay,Tower,MN
+mauna_laninorth,Mauna Lani(North),Waimea,HI
+cog_hill_no_4,Cog Hill (No. 4),Lemont,IL
+hualalai_golf_course,Hualalai Golf Course,Kailua-Kona,HI
+grand_traverse_the_bear,Grand Traverse (The Bear),Williamsburg,MI
+pikewood_national,Pikewood National,Morgantown,WV
+the_quarry_at_giants_ridge,The Quarry at Giants Ridge,Aurora,MN
+belgrade_lakes_golf_course,Belgrade Lakes Golf Course,Belgrade,ME
+ncr_country_club_south,NCR Country Club (South),Kettering,OH
+baltusrol_lower,Baltusrol (Lower),Springfield Township,NJ
+great_river,Great River,Milford,CT
+spring_creek_golf_club,Spring Creek Golf Club,Gordonsville,VA
+boyne_highlands_heather,Boyne Highlands (Heather),Harbor Springs,MI
+the_rim,The Rim,Payson,AZ
+pronghorn_golf_club__resort_nicklaus,Pronghorn Golf Club & Resort (Nicklaus),Bend,OR
+old_works_golf_course,Old Works Golf Course,Anaconda,MT
+victoria_national,Victoria National,Boonville,IN
+kinloch,Kinloch,Manakin-Sabot,VA
+deacons_lodge_at_grand_view_lodge,Deacon's Lodge at Grand View Lodge,Breezy Point,MN
+the_broadmoor_east,The Broadmoor (East),Colorado Springs,CO
+world_woods_pine_barrens,World Woods (Pine Barrens),Brooksville,FL
+darkhorse,DarkHorse,Auburn,CA
+nanea,Nanea,Kailua-Kona,HI
+trump_national_doral_blue_monster,Trump National Doral (Blue Monster),Doral,FL
+trump_national_bedminister_old,Trump National Bedminister (Old),Bedminster Township,NJ
+black_diamond_ranchquarry,Black Diamond Ranch(Quarry),Alachua,FL
+the_links_at_lighthouse_sound,The Links at Lighthouse Sound,Bishopville,MD
+the_honors_course,The Honors Course,Ooltewah,TN
+lake_of_isles_north,Lake of Isles (North),North Stonington,CT
+ballyneal,Ballyneal,Holyoke,CO
+double_eagle,Double Eagle,Galena,OH
+sand_ridge,Sand Ridge,Chardon,OH
+iron_bridge,Iron Bridge,Glenwood Springs,CO
+essex_country_club,Essex Country Club,Manchester-by-the-Sea,MA
+olympia_fields_north,Olympia Fields (North),Olympia Fields,IL
+harding_park,Harding Park,San Francisco,CA
+fallen_oak_at_beau_rivage_resort,Fallen Oak at Beau Rivage Resort,Saucier,MS
+pine_valley,Pine Valley,Pine Valley,NJ
+torrey_pines_south,Torrey Pines (South),San Diego,CA
+dancing_rabbit_azaleas,Dancing Rabbit (Azaleas),Choctaw,MS
+east_lake,East Lake,Atlanta,GA
+black_lake,Black Lake,Onaway,MI
+arcadia_bluffs_golf_club,Arcadia Bluffs Golf Club,Arcadia,MI
+oak_tree_national,Oak Tree National,Edmond,OK
+old_greenwood,Old Greenwood,Truckee,CA
+sanctuary,Sanctuary,Sedalia,CO
+pinehills_golf_clubnicklaus,Pinehills Golf Club(Nicklaus),Plymouth,MA
+la_purisima,La Purisima,Lompoc,CA
+royal_new_kent_tradition,Royal New Kent (Tradition),Providence Forge,VA
+mid_pines_inn_and_golf_club,Mid Pines Inn and Golf Club,Southern Pines,NC
+kemper_lakes,Kemper Lakes,Kildeer,IL
+the_golf_club,The Golf Club,New Albany,OH
+bandon_dunes,Bandon Dunes,Bandon,OR
+barefoot_resort_love,Barefoot Resort (Love),North Myrtle Beach,SC
+eagle_eye,Eagle Eye,Bath Township,MI
+pga_west_tpc_stadium,PGA West (TPC Stadium),La Quinta,CA
+shoreacres,Shoreacres,Lake Bluff,IL
+kittansett,Kittansett,Marion,MA
+gozzer_ranch,Gozzer Ranch,Harrison,ID
+piping_rock,Piping Rock,Locust Valley,NY
+pebble_beach,Pebble Beach,Carmel-by-the-Sea,CA
+rock_creek_cattle_company,Rock Creek Cattle Company,Deer Lodge,MT
+trump_golf_links_at_ferry_point,Trump Golf Links at Ferry Point,Bronx,NY
+garden_city_golf_club,Garden City Golf Club,Garden City,NY
+stone_canyon,Stone Canyon,Oro Valley,AZ
+hammock_beach_resort_ocean,Hammock Beach Resort (Ocean),Palm Coast,FL
+camargo,Camargo,Cincinnati,OH
+grand_national_lake,Grand National (Lake),Opelika,AL
+saratoga_national,Saratoga National,Saratoga Springs,NY
+eagle_point,Eagle Point,Wilmington,NC
+whistling_straits_golf_club_irish,Whistling Straits Golf Club (Irish),Sheboygan,WI
+edgewood_tahoe,Edgewood Tahoe,Stateline,NV
+pine_tree,Pine Tree,Boynton Beach,FL
+shadow_creek,Shadow Creek,North Las Vegas,NV
+the_tribute,The Tribute,The Colony,TX
+sycamore_hills,Sycamore Hills,Fort Wayne,IN
+lost_canyonssky,Lost Canyons(Sky),Simi Valley,CA
+spring_hill_golf_club,Spring Hill Golf Club,Wayzata,MN
+spyglass_hill,Spyglass Hill,Del Monte Forest,CA
+butler_national,Butler National,Oak Brook,IL
+streamsong_resort_blue,Streamsong Resort (Blue),Bowling Green,FL
+old_sandwich,Old Sandwich,Plymouth,MA
+oakland_hillssouth,Oakland Hills(South),Bloomfield Township,MI
+shepherds_hollow,Shepherd's Hollow,Clarkston,MI
+paa_ko_ridge_golf_club,Paa-Ko Ridge Golf Club,Sandia Park,NM
+elk_ridge,Elk Ridge,Atlanta,MI
+wade_hampton,Wade Hampton,Cashiers,NC
+quarry_oaks,Quarry Oaks,Ashland,NE
+true_blue,True Blue,Pawleys Island,SC
+red_hawk_,Red Hawk ,East Tawas,MI
+galloway_national,Galloway National,Galloway,NJ
+troon_north_golf_club_monument,Troon North Golf Club (Monument),Scottsdale,AZ
+karsten_creek_golf_club,Karsten Creek Golf Club,Stillwater,OK
+grayhawk_golf_club_talon,Grayhawk Golf Club (Talon),Scottsdale,AZ
+laurel_valley,Laurel Valley,Ligonier,PA
+nemacolin_woodlands_galles,Nemacolin Woodlands (Galles),Farmington,PA
+indianwood_old,Indianwood (Old),Orion charter Township,MI
+cascata,Cascata,Boulder City,NV
+erin_hills_golf_course,Erin Hills Golf Course,Hartford,WI
+hawktree,Hawktree,Bismarck,ND
+rich_harvest_links,Rich Harvest Links,Sugar Grove,IL
+the_legend_at_giants_ridge,The Legend at Giants Ridge,Aurora,MN
+bethpageblack,Bethpage(Black),Farmingdale,NY
+firestonesouth,Firestone(South),Akron,OH
+yeamans_hall,Yeamans Hall,Hanahan,SC
+pilgrams_run,Pilgram's Run,Sand Lake,MI
+blackwolf_run_river,Blackwolf Run (River),Sheboygan Falls,WI
+longaberger,Longaberger,Nashport,OH
+oak_hill_east,Oak Hill (East),Rochester,NY
+chambers_bay,Chambers Bay,Tacoma,WA
+old_macdonald,Old Macdonald,Bandon,OR
+california_golf_clubs_of_san_francisco,California Golf Clubs of San Francisco,San Francisco,CA
+semiahmoo_loomis_trail,Semiahmoo (Loomis Trail),Blaine,WA
+sebonack,Sebonack,Southampton,NY
+point_owoods,Point O'Woods,Benton Harbor,MI
+myrtle_beach_national_kings_north,Myrtle Beach National (King's North),Myrtle Beach,SC
+salem,Salem,Peabody,MA
+linville_golf_club,Linville Golf Club,Linville,NC
+sahalee,Sahalee,Sammamish,WA
+the_heritage_club,The Heritage Club,Pawleys Island,SC
+ventana_canyonmountain,Ventana Canyon(Mountain),Tucson,AZ
+ak_chin_southern_dunes_golf_club,Ak-Chin Southern Dunes Golf Club,Maricopa,AZ
+stonewater,Stonewater,Highland Heights,OH
+cypress_point,Cypress Point,Del Monte Forest,CA
+the_creek_club,The Creek Club,Locust Valley,NY
+streamsong_resort_red,Streamsong Resort (Red),Bowling Green,FL
+maidstone,Maidstone,East Hampton,NY
+eagle_ridgegeneral,Eagle Ridge(General),Galena,IL
+new_seabury_blue,New Seabury (Blue),Mashpee,MA
+dormie_club,Dormie Club,West End,NC
+pinehurst_resortno_4,Pinehurst Resort(No. 4),Pinehurst,NC
+pete_dye_golf_club,Pete Dye Golf Club,Bridgeport,WV
+pinehurst_resortno_8,Pinehurst Resort(No. 8),Pinehurst,NC
+red_sky_ranch__golf_clubfazio,Red Sky Ranch & Golf Club(Fazio),Edwards,CO
+the_golf_club_at_black_rock,The Golf Club at Black Rock,Coeur d'Alene,ID
+granite_links_granite_milton,Granite Links (Granite_Milton),Milton,MA
+maderas_golf_club,Maderas Golf Club,Poway,CA
+atunyote_at_turning_stone_resort,Atunyote at Turning Stone Resort,Vernon,NY
+the_preserve,The Preserve,Carmel-by-the-Sea,CA
+coyote_springs_chase,Coyote Springs (Chase),Moapa,NV
+augusta_national,Augusta National,Augusta,GA
+myopia_hunt_club,Myopia Hunt Club,Wenham,MA
+tigers_eye,Tiger's Eye,Ocean Isle Beach,NC
+bully_pulpit,Bully Pulpit,Medora,ND
+weaverridge,WeaverRidge,Peoria,IL
+the_bull_at_pinehurst_farms,The Bull at Pinehurst Farms,Sheboygan Falls,WI
+taconic_golf_club,Taconic Golf Club,Williamstown,MA
+somerset_hills,Somerset Hills,Bernardsville,NJ
+omni_barton_creek_resort_fazio_foothills,Omni Barton Creek resort (Fazio Foothills),Austin,TX
+flint_hills,Flint Hills,Andover,KS
+the_prince_at_princeville,The Prince at Princeville,Princeville,HI
+medinah_no3,Medinah (No.3),Itasca,IL
+pelican_hill_golf_club_ocean_north,Pelican Hill Golf Club (Ocean North),Newport Beach,CA
+mountain_lake,Mountain Lake,Lake Wales,FL
+valley_club_of_montecito,Valley Club of Montecito,Montecito,CA
+crystal_downs,Crystal Downs,Frankfort,MI
+brickyard_crossing,Brickyard Crossing,Speedway,IN
+plainfield,Plainfield,Edison,NJ
+caves_valley,Caves Valley,Owings Mills,MD
+tpc_myrtle_beach,TPC Myrtle Beach,Murrells Inlet,SC
+sunday_river_golf_club,Sunday River Golf Club,Newry,ME
+jupiter_hills,Jupiter Hills,Jupiter,FL
+greenville_country_club_chanticleer,Greenville Country Club (Chanticleer),Greenville,SC
+the_boulders_clubsouth,The Boulders Club(South),Scottsdale,AZ
+the_country_clubclyde_squirrel,The Country Club(Clyde_Squirrel),Brookline,MA
+mountaintop,Mountaintop,Cashiers,NC
+forest_highlands,Forest Highlands,Flagstaff,AZ
+the_challenge_at_manele,The Challenge at Manele,Wailuku,HI
+fishers_island,Fishers Island,Fishers Island,NY
+sand_hills,Sand Hills,Mullen,NE
+lakewood_shoresgailes,Lakewood Shores(Gailes),Howell,MI
+old_waverly_golf_club,Old Waverly Golf Club,West Point,MS
+grand_bear,Grand Bear,Saucier,MS
+baltusrol_upper,Baltusrol (Upper),Springfield Township,NJ
+long_cove,Long Cove,Hilton Head Island,SC
+colonial,Colonial,Fort Worth,TX
+caledonia_golf__fish_club,Caledonia Golf & Fish Club,Pawleys Island,SC
+los_angelesnorth,Los Angeles(North),Los Angeles,CA
+newport,Newport,Newport,RI
+golden_horseshow_golf_club_gold,Golden Horseshow Golf Club (Gold),Williamsburg,VA
+the_dunes,The Dunes,New Buffalo,MI
+bandon_trails,Bandon Trails,Bandon,OR
+diamond_creek,Diamond Creek,Banner Elk,NC
+stanwich_club,Stanwich Club,Greenwich,CT
+the_bridge,The Bridge,Sag Harbor,NY
+mauna_kea_golf_course,Mauna Kea Golf Course,Waimea,HI
+grand_national_links,Grand National (Links),Opelika,AL
+blue_heron_pines_east,Blue Heron Pines (East),Egg Harbor City,NJ
+wynn_las_vegas,Wynn Las Vegas,Las Vegas,NV
+cambrian_ridgesherling_canyon,Cambrian Ridge(Sherling_Canyon),Greenville,AL
+sentryworld,SentryWorld,Stevens Point,WI
+donald_ross_course_at_french_lick,Donald Ross Course at French Lick,French Lick,IN
+primm_valley_lakes,Primm Valley (Lakes),Nipton,CA
+pelican_hill_golf_club_ocean_south,Pelican Hill Golf Club (Ocean South),Newport Beach,CA
+tradition_at_royal_new_kent,Tradition at Royal New Kent,Providence Forge,VA
+mystic_rock_at_newacolin_woodlands_resort,Mystic Rock at Newacolin Woodlands Resort,Farmington,PA
+the_glen_club,The Glen Club,Glenview,IL
+purgatory,Purgatory,Noblesville,IN
+tpc_louisiana,TPC Louisiana,Avondale,LA
+pasatiempo,Pasatiempo,Santa Cruz,CA
+desert_forest,Desert Forest,Carefree,AZ
+running_y_ranch,Running Y Ranch,Klamath Falls,OR
+castle_pines,Castle Pines,Castle Pines,CO
+atlantic,Atlantic,Water Mill,NY
+calusa_pines,Calusa Pines,Naples,FL
+troon_north_golf_club_pinnacle,Troon North Golf Club (Pinnacle),Scottsdale,AZ
+promontory_dye_canyon,Promontory (Dye Canyon),Park City,UT
+wild_dunes_links,Wild Dunes (Links),Isle of Palms,SC
+murfield_village,Murfield Village,Dublin,OH
+turtle_point,Turtle Point,Kiawah Island,SC
+pumpkin_ridge_golf_club_ghost_creek,Pumpkin Ridge Golf Club (Ghost Creek),North Plains,OR
+old_warson,Old Warson,St. Louis,MO
+dunes_golf_&_beach_club,Dunes Golf & Beach Club,Myrtle Beach,SC
+stonewall_palmer,Stonewall (Palmer),Weston,WV
+cordillera_summit,Cordillera (Summit),Edwards,CO
+wilderness_club,Wilderness Club,Eureka,MT
+twin_warriors,Twin Warriors,Bernalillo,NM
+the_golf_club_at_cuscowilla,The Golf Club at Cuscowilla,Eatonton,GA
+true_north,True North,Harbor Springs,MI
+hazeltine_national,Hazeltine National,Chaska,MN
+country_club_of_fairfield,Country Club of Fairfield,Fairfield,CT
+omni_barton_creek_resort_fazio_canyons,Omni Barton Creek resort (Fazio Canyons),Austin,TX
+cherry_hills,Cherry Hills,Cherry Hills Village,CO
+tetherow_golf_club,Tetherow Golf Club,Bend,OR
+crumpin_fox,Crumpin Fox,Bernardston,MA
+interlachen,Interlachen,Edina,MN
+friars_head,Friar's Head,Riverhead,NY
+merion_east,Merion (East),Ardmore,PA
+marquette_golf_club_greywalls,Marquette Golf Club (Greywalls),Marquette,MI

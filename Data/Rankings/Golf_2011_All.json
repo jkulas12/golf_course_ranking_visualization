@@ -596,7 +596,7 @@
 			  "Architect": "Alister MacKenzie_Tom Doak",
 			  "Year": "1929_2007",
 			  "Coordinates": "[37.0064,-122.03]",
-			  "Type": "private"
+			  "Type": "public"
 		  },
 		  {
 			  "CourseName": "Yeamans Hall",
@@ -812,7 +812,7 @@
 			  "Architect": "Tom Fazio",
 			  "Year": 1993,
 			  "Coordinates": "[28.68371,-82.479344]",
-			  "Type": "private"
+			  "Type": "public"
 		  },
 		  {
 			  "CourseName": "Kinloch",

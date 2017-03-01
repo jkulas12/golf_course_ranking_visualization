@@ -223,7 +223,7 @@ li.course span:first-child {
     border-radius:5px;
     padding: 0 2px;
 }
-#architects > ul, #courses > ul, #rankings > ul {
+#architects > ul,  #rankings > ul {
     padding: 0 6px;
     padding-bottom: 15px;
     font-size: 13px;
@@ -232,6 +232,14 @@ li.course span:first-child {
     height:99%;
 }
 
+#courses > ul {
+    padding: 0 6px;
+    padding-bottom: 8px;
+    font-size: 13px;
+    margin-top:1px;
+    overflow-x: scroll;
+    height : 340px;
+}
 
 
 .control.control-right {
@@ -449,12 +457,7 @@ path {
     display: inline-block;
 }
 
-/*li.course:nth-child(even) {*/
-    /*background: #f7f7f7;*/
-/*}*/
-/*li.course:nth-child(odd) {*/
-    /*background: #f0f0f0;*/
-/*}*/
+
 
 .courseList .ui-selecting, .architectList .ui-selecting { background: #FECA40; }
 .courseList .ui-selected, .architectList .ui-selected {background: lightblue  }

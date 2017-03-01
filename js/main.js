@@ -863,11 +863,18 @@ function initialize_selectable() {
             }
             descending = true;
         }
+
         if (descending) {
             sorted_courses = get_valid_courses().sort(function(a,b) { return a.displayName > b.displayName ? 1 : -1});
         } else {
             sorted_courses = get_valid_courses().sort(function(a,b) {return a.displayName <= b.displayName ? 1 : -1});
         }
+        var highlighted_courses = new Set(get_highlighted_courses().map(function(d) {return d.className}));
+        // check to make sure that we actually have some map courses to filter on
+        // if not we just take courses we already had
+        if (highlighted_courses.size > 0) {
+            sorted_courses = sorted_courses.filter(function(d) {return highlighted_courses.has(d.className)})
+        };
         update_course_list(sorted_courses)
 
     });
@@ -905,13 +912,34 @@ function initialize_selectable() {
             descending = true;
         }
         if (descending) {
-            sorted_courses = get_valid_courses().sort(function(a,b) { return composite_sort(a,b)});
+            sorted_courses = get_valid_courses().sort(function (a, b) {
+                return composite_sort(a, b)
+            });
         } else {
-            sorted_courses = get_valid_courses().sort(function(a,b) {return composite_sort(b,a)});
+            sorted_courses = get_valid_courses().sort(function (a, b) {
+                return composite_sort(b, a)
+            });
         }
-        update_course_list(sorted_courses)
 
-    });
+        var highlighted_courses = new Set(get_highlighted_courses().map(function (d) {
+            return d.className
+        }));
+        console.log(highlighted_courses);
+        console.log(highlighted_courses.size);
+        // check to make sure that we actually have some map courses to filter on
+        // if not we just take courses we already had
+        if (highlighted_courses.size > 0) {
+            sorted_courses = sorted_courses.filter(function (d) {
+                return highlighted_courses.has(d.className)
+            })
+            console.log('we have highlighted courses');
+        } else {
+            console.log('no highlighted courses');
+        }
+
+        console.log(sorted_courses);
+        update_course_list(sorted_courses)
+    })
 
     var courseNames = [];
     for (var c in course_map) {courseNames.push(course_map[c]['displayName'])}
@@ -1442,6 +1470,16 @@ function refresh_map() {
     update_architect_list(valid_courses);
 }
 
+function get_highlighted_courses() {
+    var highlighted_points = d3.selectAll('.highlighted_point')._groups[0];
+    var highlighted_courses = []
+    for (var node in highlighted_points) {
+        if (highlighted_points.hasOwnProperty(node)) {
+            highlighted_courses.push(highlighted_points[node].__data__);
+        }
+    }
+    return highlighted_courses
+}
 
 // generates list of valid courses based on publication type, pub_year and course year
 function get_valid_courses() {
@@ -1733,6 +1771,7 @@ function zoomMove() {
 
 // updates lists and map based on rubberbanding
 function endRubberBand() {
+
     var rb = annotG.selectAll('.rubberband').remove();
 
     var selectedCourses = [];
@@ -1747,7 +1786,7 @@ function endRubberBand() {
             if (cr.right >= w && cr.left <= e && cr.top <= s && cr.bottom >= n) {
                 selectedCourses.push(this.__data__);
             }
-        });
+        })
         refresh_points(selectedCourses);
         update_course_list(selectedCourses);
         update_architect_list(selectedCourses);
@@ -1758,21 +1797,6 @@ function endRubberBand() {
 
 }
 
-
-
-function interpolateZoom (translate, scale) {
-    var self = this;
-    return d3.transition().duration(350).tween("zoom", function () {
-        var iTranslate = d3.interpolate(zoom.translate(), translate),
-            iScale = d3.interpolate(zoom.scale(), scale);
-        return function (t) {
-            zoom
-                .scale(iScale(t))
-                .translate(iTranslate(t));
-            zoomed();
-        };
-    });
-}
 
 // clear chart of all text and plots
 function clearChart() {
@@ -1857,7 +1881,7 @@ function update_course_list(courses) {
                 if ($('.orderedSortDiv > span').hasClass('glyphicon-arrow-down')) {
                     return i + 1;
                 } else {
-                    return courseEnter.data().length + 2 - i;
+                    return courseEnter.data().length + 1 - i;
                 }
             })
             .attr('class', 'rankSpan')

@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be1a3c0b-0349-4300-888c-844cf1496732" name="Default" comment="random bug fixes&#10;click on map recenters&#10;changed point colors&#10;shifted chart so years align&#10;added tooltip to chart points&#10;added city and state data for courses">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/supplemental/course_location_info.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py/query_city_names.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/golf_viz_public.iml" afterPath="$PROJECT_DIR$/.idea/golf_viz_public.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2003_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2003_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2005_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2005_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2009_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2009_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2011_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2011_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2013_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2013_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2002_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2002_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2003_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2003_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2004_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2004_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2005_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2005_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2006_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2006_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2007_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2007_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2008_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2008_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2009_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2009_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2010_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2010_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2011_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2011_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2015_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2015_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2016_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2016_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/style.css" afterPath="$PROJECT_DIR$/js/vendor/style.css" />
     </list>
@@ -51,21 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1153" column="74" selection-start-line="1153" selection-start-column="74" selection-end-line="1153" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30478954">
-              <caret line="22" column="71" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.11756168">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -88,26 +53,6 @@
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bugs2_17.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Bugs2_17.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vendor/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.708333">
-              <caret line="407" column="25" selection-start-line="407" selection-start-column="25" selection-end-line="407" selection-end-column="25" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -163,8 +108,8 @@
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2015_All.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2016_Public.json" />
         <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/Bugs2_17.txt" />
         <option value="$PROJECT_DIR$/js/vendor/style.css" />
+        <option value="$PROJECT_DIR$/Bugs2_17.txt" />
       </list>
     </option>
   </component>
@@ -174,9 +119,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="728" />
+    <option name="x" value="262" />
     <option name="y" value="23" />
-    <option name="width" value="1220" />
+    <option name="width" value="1012" />
     <option name="height" value="831" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -204,6 +149,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -288,8 +235,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,14 +314,20 @@
       <option name="project" value="LOCAL" />
       <updated>1487618336187</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="random bug fixes&#10;click on map recenters&#10;changed point colors&#10;shifted chart so years align&#10;added tooltip to chart points&#10;added city and state data for courses">
+      <created>1488230145959</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1488230145959</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="728" y="23" width="1220" height="831" extended-state="0" />
+    <frame x="262" y="23" width="1012" height="831" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23102586" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1715439" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.669924" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -396,6 +347,27 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.669924" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928476" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1715439" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -404,7 +376,8 @@
     <MESSAGE value="updates" />
     <MESSAGE value="added 2017 ranking" />
     <MESSAGE value="updated ranking selection options&#10;improved chart&#10;added shading to ranking background&#10;added ranking clear button" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated ranking selection options&#10;improved chart&#10;added shading to ranking background&#10;added ranking clear button" />
+    <MESSAGE value="random bug fixes&#10;click on map recenters&#10;changed point colors&#10;shifted chart so years align&#10;added tooltip to chart points&#10;added city and state data for courses" />
+    <option name="LAST_COMMIT_MESSAGE" value="random bug fixes&#10;click on map recenters&#10;changed point colors&#10;shifted chart so years align&#10;added tooltip to chart points&#10;added city and state data for courses" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -856,34 +829,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/Bugs2_17.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1153" column="74" selection-start-line="1153" selection-start-column="74" selection-end-line="1153" selection-end-column="74" />
-          <folding />
+        <state vertical-scroll-proportion="0.33660588">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bugs2_17.txt">
+    <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.055427253">
+          <caret line="931" column="12" selection-start-line="931" selection-start-column="12" selection-end-line="931" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/vendor/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.708333">
-          <caret line="407" column="25" selection-start-line="407" selection-start-column="25" selection-end-line="407" selection-end-column="25" />
-          <folding />
+        <state vertical-scroll-proportion="0.26128265">
+          <caret line="236" column="21" selection-start-line="236" selection-start-column="21" selection-end-line="236" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30478954">
-          <caret line="22" column="71" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.11756168">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

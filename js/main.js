@@ -74,8 +74,8 @@ var course_type_colors = {
 var lineColors = {
 
     'GDigest_All' : "#0000E6",
-    'GDigest_Public' : "#E60000" ,
-    'Golf_All' : "#80B3ff",
+    'GDigest_Public' : "#80B3ff" ,
+    'Golf_All' : "#E60000",
     'Golf_Public' : "#FF8080"
 
 };
@@ -129,6 +129,7 @@ $(window).on("resize", function() {
     d3.select('#mapContainer')
         .style("width", resize_width + 'px')
         .style("height", resize_height + 'px');
+
 });
 $(window).on("load", function() {
     var h = $(window).height();
@@ -381,8 +382,8 @@ function populate_ranking_matrix() {
     var rankings = Object.keys(ranking_map);
     // kind of hacky...
     // empty object inserts to offset the pattern svg inserted for hatching
-    var golf_mag_rankings = [{},{}, {}, {}, {}, {}, {}];
-    var golf_digest_rankings = [{},{}, {}, {}, {}, {}, {}];
+    var golf_mag_rankings = [{},{}, {}, {}, {}, {}, {},{},{},{},{}];
+    var golf_digest_rankings = [{},{}, {}, {}, {}, {}, {},{},{},{},{}];
 
 
 
@@ -399,7 +400,7 @@ function populate_ranking_matrix() {
     }
     // add shading behind rankings
     // every 2 years?
-    var start_years = [2001,2005,2009,2013, 2017]
+    var start_years = [2001,2003,2005,2007, 2009, 2011, 2013, 2015, 2017]
     d3.select('#GDigestCoursesContainer > svg')
         .append('svg')
         .selectAll('rect')
@@ -407,9 +408,9 @@ function populate_ranking_matrix() {
         .enter()
         .append('rect')
         .attr('height', 96)
-        .attr('width', 20)
+        .attr('width', 2)
         .attr('x', function(d) {
-            return year_scale(d)
+            return year_scale(d) + 3
         })
         .attr('fill', 'gray')
         .style('opacity',.2);
@@ -420,9 +421,9 @@ function populate_ranking_matrix() {
         .enter()
         .append('rect')
         .attr('height', 96)
-        .attr('width', 20)
+        .attr('width', 2)
         .attr('x', function(d) {
-            return year_scale(d)
+            return year_scale(d) + 3
         })
         .attr('fill', 'gray')
         .style('opacity',.2);
@@ -464,7 +465,7 @@ function populate_ranking_matrix() {
         .attr('width', 8)
         .attr('height', 15)
         .attr('fill', function(d) {
-            return d['type'] == 'Public' ?  '#FF8080' : '#80B3ff';
+            return d['type'] == 'Public' ?  lineColors['Golf_Public'] : lineColors['Golf_All'];
         });
 
 
@@ -487,7 +488,7 @@ function populate_ranking_matrix() {
         .attr('width', 8)
         .attr('height', 15)
         .attr('fill', function(d) {
-            return d['type'] == 'Public' ?  '#E60000' : '#0000E6'
+            return d['type'] == 'Public' ?  lineColors['GDigest_Public'] : lineColors['GDigest_All']
         });
     d3.selectAll('.rankingRect')
         .on('click', function(d) {
@@ -704,7 +705,11 @@ function initialize_selectable() {
             // possible later error...make sure to not modify object
             var course = course_map[$(ui.selected.__data__)[0].className];
             // check to see if the previous selection was an architect
-            pan_to_course(course);
+            // TODO: should only do if only one course is selected... stil doesnt work
+            if ($('.courseList > .ui-selected').length < 2) {
+                console.log('panning');
+                pan_to_course(course);
+            }
             if (d3.selectAll('.prevArch')._groups[0].length != 0) {
 
                 selectCourses = [];
@@ -1143,7 +1148,7 @@ function refresh_chart(course) {
                 .duration(200)
                 .style("opacity", .9)
                 .style("background-color", 'lightgray');
-            chartTooltip.html(d['year'])
+            chartTooltip.html( d['rank']+ '<br>' + d['year'])
                 .style("left", (d3.event.pageX + 5) + "px")
                 .style("top", (d3.event.pageY - 28) + "px");
         })
@@ -1152,7 +1157,7 @@ function refresh_chart(course) {
                 .duration(500)
                 .style("opacity", 0);
         })
-        .attr('r', 3);
+        .attr('r', 4);
 
 
 
@@ -1236,12 +1241,12 @@ function initialize_chart() {
 
     var courseRecentRankings = infoContainer
         .append('div')
-        .attr('class', 'courseRecentRankingsDiv');
+        .attr('class', 'courseRecentRankingsDiv')
 
     // for title of course
     courseInfo.append('h3')
         .text("")
-        .attr('class', 'courseInfoHeader');
+        .attr('class', 'courseInfoHeader headingDiv');
 
     // for location and type
     // ex: Augusta, GA (private)
@@ -1267,7 +1272,7 @@ function initialize_chart() {
 
     courseRecentRankings.append("h3")
         .text("Recent Rankings")
-        .attr('class', 'recentRankingsHeader');
+        .attr('class', 'recentRankingsHeader headingDiv');
 
 
 
@@ -1313,8 +1318,8 @@ function clear_ranking_filter() {
     d3.selectAll('.rankingRect').classed('selected', true)
         .classed('unselected', false)
         .attr('fill', function(d) {
-            if (d['publication'] === 'Golf') {return d['type'] == 'Public' ?  '#FF8080' : '#80B3ff';}
-            if (d['publication'] === 'GDigest') {return d['type'] == 'Public' ?  '#E60000' : '#0000E6';}
+            if (d['publication'] === 'Golf') {return d['type'] == 'Public' ?  lineColors['Golf_Public'] : lineColors['Golf_All'];}
+            if (d['publication'] === 'GDigest') {return d['type'] == 'Public' ?  lineColors['GDigest_Public'] : lineColors['GDigest_All'];}
         });
     refresh_map();
 
@@ -1342,11 +1347,24 @@ function add_check_boxes() {
     }
     for (var t in types) {
         var type = types[t];
+        console.log(type)
         $('<input />', {type: 'checkbox', id: 'cb_type_' + type, class : 'cb_type', value:type, checked:true})
-            .appendTo($('#typeSelectDiv'));
-        $('<label />', {'for': 'cb_type_' + type, class: 'checkText', text: type})
-            .appendTo($('#typeSelectDiv'));
+            .appendTo($('#' + type  + 'SelectDiv'));
+        $('<label />', {'for': 'cb_type_' + type, class: 'checkText', text: ''})
+            .appendTo($('#' + type + 'SelectDiv'));
     }
+
+    d3.select('#publicSelectDiv')
+        .append('div')
+        .attr('class', 'publicTextDiv courseTypeTextDiv')
+        .append('text')
+        .text('public')
+
+    d3.select('#privateSelectDiv')
+        .append('div')
+        .attr('class', 'privateTextDiv courseTypeTextDiv')
+        .append('text')
+        .text('private')
 
     // bind event listeners to headers for each selection
     $('#pubSelectHeader').click(function() {
@@ -1553,12 +1571,11 @@ function refresh_points(courses) {
         .style("fill", function(c) {
             return course_type_colors[c.type];
         })
-        .style('opacity', function() {return courses.length > 0 ? .3 : 1})
         .attr('class', 'point non_highlighted_point')
         .on("mouseover", function(d) {
             tooltip.transition()
                 .duration(200)
-                .style("opacity", .9)
+                .style("opacity", 1)
                 .style("background-color", 'lightgray');
             tooltip.html(d.displayName + "<br/> " + d.yearCreated[0]
                     + ", " + architect_map[d.architects[0]].displayName + "<br/>")
@@ -1839,7 +1856,7 @@ function zoomed() {
 
     image.enter().append("image")
         .attr("xlink:href", function(d) {
-            return "http://" + "abc"[d[1] % 3] + ".tile.openstreetmap.org/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"})
+            return "http://" + "abc"[d[1] % 3] + ".basemaps.cartocdn.com/light_all/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"})
         .attr("x", function(d) { return d[0] * 256; })
         .attr("y", function(d) { return d[1] * 256; })
         .attr("width", 256)
@@ -1957,6 +1974,7 @@ function rightControlResize() {
 
     $("#courses").height(remainingSpace * 0.7);
     $("#architects").height(remainingSpace * 0.28);
+    $('.courseList').height(remainingSpace * 0.68)
 }
 
 

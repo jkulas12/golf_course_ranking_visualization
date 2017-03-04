@@ -46,7 +46,7 @@
 											 width="4" height="4"
 											 patternUnits="userSpaceOnUse"
 											 patternTransform="rotate(45)">>
-										<rect width="2" height="4" transform="translate(0,0)" fill="#E60000"></rect>
+										<rect width="2" height="4" transform="translate(0,0)" fill="#80B3ff"></rect>
 									</pattern>
 								</defs>
 							</svg>
@@ -65,7 +65,7 @@
 											 width="4" height="4"
 											 patternUnits="userSpaceOnUse"
 											 patternTransform="rotate(45)">
-										<rect width="2" height="4" transform="translate(0,0)" fill="#80B3ff"></rect>
+										<rect width="2" height="4" transform="translate(0,0)" fill="#E60000"></rect>
 									</pattern>
 									<pattern id="GolfPublic-pattern-stripe"
 											 width="4" height="4"
@@ -94,18 +94,22 @@
 		</div>
 		<div id = 'courseFilterDiv' class = 'control control-right'>
 			<h5 id = 'courseFilterHeader' style="margin-top:3px; margin-bottom:3px; text-align: center">Courses Filter</h5>
-			<div id = 'typeSelectDiv' class = 'selectDiv' >
-				<h2 id = 'typeSelectHeader' class = 'selectHeader'>Type</h2>
-			</div>
-			<div id = 'sliderDiv' style="width:175px">
-				<div id = "slider" style = "display:inline-block; width:125px;" ></div>
-				<label id = "sliderLabel" for="year" style="font-size: 12px">Courses built before:</label>
-				<input type="text" id="year" readonly style="border:0; color:#2b2b2b; width: 30px; font-size:12px">
+			<div id = 'courseFilterContainer'>
+				<div id = 'typeSelectDiv' class = 'selectDiv' style="width: 40%">
+					<h2 id = 'typeSelectHeader' class = 'selectHeader'>Type</h2>
+					<div id = 'publicSelectDiv'></div>
+					<div id = 'privateSelectDiv'></div>
+				</div>
+				<div id = 'sliderDiv' style="width:60%">
+					<div id = "slider" style = "display:inline-block; width:125px;" ></div>
+					<label id = "sliderLabel" for="year" style="font-size: 12px">Courses built before:</label>
+					<input type="text" id="year" readonly style="border:0; color:#2b2b2b; width: 30px; font-size:12px">
+				</div>
 			</div>
 		</div>
 		<div id="courses" class =  "control control-right">
 			<div class = 'coursesHeadingDiv heading'>
-				<div class = 'courseHeadingTitleDiv' style="display: flex;">
+				<div class = 'courseHeadingTitleDiv headingDiv' style="display: flex;">
 					<h2 class = 'courseHeading' style="width: 60%">
 						<text>Courses</text></h2>
 					<button id = 'mapClearButton' onclick="reset_map()" style="height: 20px;">Reset Map</button>
@@ -113,7 +117,7 @@
 				<div id = 'courseListSearchBarDiv'>
 					<input style="width: 100%" id = 'courseListSearchInput'>
 				</div>
-				<div class = 'courseOrderDiv' style="display:flex;">
+				<div class = 'courseOrderDiv headingDiv' style="display:flex;">
 					<div class = 'alphabeticalSortDiv active' style="width : 50%">Alphabetical
 						<span class="glyphicon glyphicon-arrow-down"></span>
 					</div>
@@ -124,7 +128,7 @@
 			</div>
 		</div>
 		<div id="architects" class="control control-right">
-			<div class = 'archsHeading<svg>…</svg>Div heading'>
+			<div class = 'archsHeading headingDiv'>
 				<h2 class = 'archsHeading'>Architects</h2>
 			</div>
 		</div>

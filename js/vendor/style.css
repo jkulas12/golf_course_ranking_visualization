@@ -14,6 +14,77 @@
 
 }
 
+
+#publicSelectDiv {
+    width: 50px;
+    height: 17px;
+    /*background: #ddd;*/
+    position: relative;
+    margin-left:3px;
+
+}
+
+#publicSelectDiv > input {
+    position: absolute;
+    left:0;
+    width:10px;
+    height:10px;
+}
+
+
+#publicSelectDiv label {
+    left:0;
+    top:0;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    background: repeating-linear-gradient(-45deg, #008837, #008837 2px, black 2px, black 4px);
+
+}
+
+#publicSelectDiv input[type=checkbox]:checked + label {
+    background: #008837;
+}
+
+#privateSelectDiv {
+    width: 50px;
+    height: 17px;
+    position: relative;
+    margin-top: 3px;
+    margin-left : 3px;
+    margin-bottom:3px;
+}
+#privateSelectDiv > input {
+    position: absolute;
+    left: 0;
+    width:10px;
+    height:10px;
+}
+
+#privateSelectDiv label {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 1;
+    background: repeating-linear-gradient(-45deg, #a6611a, #a6611a 2px, black 2px, black 4px);
+}
+
+#privateSelectDiv input[type=checkbox]:checked + label {
+    background: #a6611a;
+}
+
+.courseTypeTextDiv {
+    font-size: 13px;
+    margin-left: 20px;
+    margin-bottom: 3px;
+}
+
+
 .courseInformationContainer > ul {
     list-style: none;
 }
@@ -102,15 +173,31 @@ html,body {
     position: relative;
 }
 
-.heading {
+.headingDiv {
     text-align: center;
-    background-color: #BBBBBB;
+    /*background-color: #4a873a;*/
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#97bf8b, #b6dbab, #97bf8b); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#97bf8b, #b6dbab, #97bf8b);/* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#97bf8b, #b6dbab, #97bf8b); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#97bf8b, #b6dbab, #97bf8b); /* Standard syntax */
 }
 
 
-.courseInfoHeader, .recentRankingsHeader {
+
+.courseInfoHeader{
     margin-top:0px;
-    background-color: #BBBBBB;
+    margin-bottom: 5px;
+    border: solid 1px #333333;
+    border-radius: 3px;
+    height:20px;
+    top:0;
+    font-size : 15px;
+    font-weight : bold;
+}
+
+.recentRankingsHeader {
+    margin-top:0px;
     margin-bottom: 5px;
     border: solid 1px #333333;
     border-radius: 3px;
@@ -124,6 +211,9 @@ html,body {
     top: 250px;
 }
 
+.checkText:checked + label:after {
+    background-color: green;
+}
 
 .metro {
     stroke: black;
@@ -432,13 +522,17 @@ path {
     top: 0;
 }
 
+#chartSVG {
+    border: 1px solid black;
+}
+
 .chartTooltip {
     text-align: center;
     border: 1px solid black;
     border-radius: 3px;
     position: absolute;
     width: 40px;
-    height: 20px;
+    height: 34px;
     pointer-events: none;
     z-index: 10;
     background-color:lightgrey;

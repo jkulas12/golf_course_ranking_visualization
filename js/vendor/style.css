@@ -94,6 +94,24 @@
     width:130px;
 }
 
+
+.courseInfoContainer {
+    width : 45%;
+}
+
+.coursePicContainer {
+    width : 45%;
+    height: 100%;
+}
+
+.coursePicInfoContainer {
+    display: flex;
+}
+
+.coursePic {
+    width: 120px;
+}
+
 .courseInformationContainer {
     top:69%;
     height:29%;

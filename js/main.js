@@ -361,7 +361,6 @@ function load_all_rankings(rankings) {
                 chartTooltip = d3.select('body').append('div')
                     .attr('class', 'chartTooltip')
                     .style('opacity', 0)
-                console.log(course_map)
                 initialize_chart();
                 initialize_container_lists();
                 populate_ranking_matrix();
@@ -438,7 +437,7 @@ function populate_ranking_matrix() {
         .attr('width', 190);
 
     svg.append('g')
-        .attr('transform', 'translate(35,30)')
+        .attr('transform', 'translate(45,30)')
         .attr('class', 'rankingYearAxisGroup')
         .call(year_axis)
         .selectAll('text')
@@ -523,7 +522,6 @@ function populate_ranking_matrix() {
     ;
     $('.pubTextContainer')
         .click(function(d) {
-            console.log('GDigest clicketd')
             var pub_name = d.currentTarget.textContent;
             // if all rects with this pub name are selected, deselect all
             // else, select all
@@ -540,7 +538,6 @@ function populate_ranking_matrix() {
                 all_ranks = d3.selectAll('.Golf.rankingRect');
                 pub_class = '.Golf'
             }
-            console.log(pub_class);
 
             if (selected_ranks._groups[0].length === all_ranks._groups[0].length) {
                 // all previous selected, deselect all
@@ -625,7 +622,8 @@ function get_selected_rankings() {
     // class in format GDigest_2011_Public
     // GDigest or Golf
     for (var i in selected_rankings) {
-        if (selected_rankings.hasOwnProperty(i)) {
+
+        if (selected_rankings.hasOwnProperty(i) && i !== 'length') {
             var classes = selected_rankings[i].classList;
             if (classes[0] === 'Golf') {
                 selected_classes.push('Golf_' +
@@ -660,20 +658,20 @@ function reset_map() {
     var h = $(window).height();
     var w = $(window).width();
 
-    projection
-        .scale(1 / tau)
-        .translate([0, 0]);
-
-    var center = projection([-98.5, 39.5]);
-
-
-    svg.call(zoom)
-        .transition()
-        .duration(2000)
-        .call(zoom.transform, d3.zoomIdentity
-            .translate(w / 2, h / 2)
-            .scale(1 << 12)
-            .translate(-center[0], -center[1]));
+    //projection
+    //    .scale(1 / tau)
+    //    .translate([0, 0]);
+    //
+    //var center = projection([-98.5, 39.5]);
+    //
+    //
+    //svg.call(zoom)
+    //    .transition()
+    //    .duration(2000)
+    //    .call(zoom.transform, d3.zoomIdentity
+    //        .translate(w / 2, h / 2)
+    //        .scale(1 << 12)
+    //        .translate(-center[0], -center[1]));
 }
 
 // function to bind all selection handlers to list and headers
@@ -707,7 +705,6 @@ function initialize_selectable() {
             // check to see if the previous selection was an architect
             // TODO: should only do if only one course is selected... stil doesnt work
             if ($('.courseList > .ui-selected').length < 2) {
-                console.log('panning');
                 pan_to_course(course);
             }
             if (d3.selectAll('.prevArch')._groups[0].length != 0) {
@@ -742,8 +739,6 @@ function initialize_selectable() {
                 refresh_chart(course);
                 refresh_points(selectCourses);
                 $(ui.selected).addClass('prevCourse');
-            } else {
-                console.log("selected but not LI")
             }
         },
         unselected : function(event, ui) {
@@ -929,22 +924,17 @@ function initialize_selectable() {
         var highlighted_courses = new Set(get_highlighted_courses().map(function (d) {
             return d.className
         }));
-        console.log(highlighted_courses);
-        console.log(highlighted_courses.size);
+
         // check to make sure that we actually have some map courses to filter on
         // if not we just take courses we already had
         if (highlighted_courses.size > 0) {
             sorted_courses = sorted_courses.filter(function (d) {
                 return highlighted_courses.has(d.className)
             })
-            console.log('we have highlighted courses');
-        } else {
-            console.log('no highlighted courses');
         }
 
-        console.log(sorted_courses);
         update_course_list(sorted_courses)
-    })
+    });
 
     var courseNames = [];
     for (var c in course_map) {courseNames.push(course_map[c]['displayName'])}
@@ -1006,6 +996,55 @@ function initialize_selectable() {
                     .css('color', '#929292')
             }
         })
+
+    // add listeners for arrow keys
+    $(document).keydown(function(e) {
+        switch(e.which) {
+            case 38: // up
+                if ($('li.ui-selected').length === 1) {
+                    var first_index = $('li.ui-selected').index() + 1;
+                    if (first_index !== 1) {
+                        $(".courseList  li:nth-child(" + String(first_index) + ")").removeClass('ui-selected');
+                        $(".courseList  li:nth-child(" + String(first_index - 1) + ")").addClass('ui-selected');
+
+                        var displayName = $(".courseList  li:nth-child(" + String(first_index - 1) + ")").text();
+                        var course = course_map[createClassName(displayName)];
+                        refresh_chart(course);
+                        refresh_points([course]);
+                        var top = $('.course.course-' + course['className']).position().top;
+                        if (top < 65) {
+                            $('.courseList').animate({
+                                scrollTop: top + $('.courseList').scrollTop() - 65
+                            }, 500);
+                        }
+                    }
+                }
+                break;
+
+            case 40: // down
+                if ($('li.ui-selected').length === 1) {
+                    var first_index = $('li.ui-selected').index() + 1;
+                    if (first_index !== 1) {
+                        $(".courseList  li:nth-child(" + String(first_index) + ")").removeClass('ui-selected');
+                        $(".courseList  li:nth-child(" + String(first_index + 1) + ")").addClass('ui-selected');
+                        var displayName = $(".courseList  li:nth-child(" + String(first_index - 1) + ")").text();
+                        var course = course_map[createClassName(displayName)];
+                        refresh_chart(course);
+                        refresh_points([course]);
+                        var top = $('.course.course-' + course['className']).position().top;
+                        if (top > 315) {
+                            $('.courseList').animate({
+                                scrollTop: top + $('.courseList').scrollTop() - 65
+                            }, 500);
+                        }
+                    }
+                }
+                break;
+
+            default: return; // exit this handler for other keys
+        }
+        e.preventDefault(); // prevent the default action (scroll / move caret)
+    });
 }
 
 function composite_sort(a,b) {
@@ -1068,9 +1107,7 @@ function is_course_in_current_rankings(course) {
 
 }
 
-// TODO not done
 function refresh_chart(course) {
-    console.log(course);
     tooltip.transition()
         .duration(500)
         .style("opacity", 0)
@@ -1078,13 +1115,14 @@ function refresh_chart(course) {
 
     // if more than one course is selected, dont show chart
     if (d3.selectAll(".courseList > li.ui-selected")._groups[0].length > 1) {
-        console.log('not valid')
         clearChart();
         clearLegend();
         return
     }
 
     d3.selectAll(".chart > g svg").remove();
+    // remove old picture
+    $('.coursePic').remove();
     var chartData = course.chart_data;
 
     var containerData = [];
@@ -1143,7 +1181,6 @@ function refresh_chart(course) {
         .attr('class', function(d) {
         })
         .on("mouseover", function(d) {
-            console.log(d);
             chartTooltip.transition()
                 .duration(200)
                 .style("opacity", .9)
@@ -1159,8 +1196,11 @@ function refresh_chart(course) {
         })
         .attr('r', 4);
 
-
-
+    // add image
+    d3.select('.coursePicContainer')
+        .append('img')
+        .attr('class', 'coursePic')
+        .attr('src', 'Data/images/' + course['className'] + '.jpeg');
     updateCourseLegend(containerData, course);
 }
 
@@ -1248,24 +1288,37 @@ function initialize_chart() {
         .text("")
         .attr('class', 'courseInfoHeader headingDiv');
 
+    var courseInfoPicContainer = courseInfo
+        .append('div')
+        .attr('class', 'coursePicInfoContainer');
+
+
+    var courseInfoContainer = courseInfoPicContainer
+        .append('div')
+        .attr('class', 'courseInfoContainer');
+
+    var course_pic_container = courseInfoPicContainer
+        .append('div')
+        .attr('class', 'coursePicContainer');
+
     // for location and type
     // ex: Augusta, GA (private)
-    courseInfo.append('h3')
+    courseInfoContainer.append('h3')
         .text("")
         .attr("class", "courseLocTypeInfo infoH");
     // for architect and year
     // ex: Architect: Allister Mackenzie (1921)
-    courseInfo.append('h3')
+    courseInfoContainer.append('h3')
         .text("")
         .attr("class", "courseArchYearInfo infoH");
     // for yardage
     // ex: Yardage: 7445
-    courseInfo.append('h3')
+    courseInfoContainer.append('h3')
         .text("")
         .attr("class", "courseYardageInfo infoH");
     // for rating
     // ex: Rating: 76.2
-    courseInfo.append("h3")
+    courseInfoContainer.append("h3")
         .text("")
         .attr("class","courseSlopeRatingInfo infoH");
 
@@ -1311,6 +1364,7 @@ function clearLegend() {
         .text("");
     $(".legendRanking").remove();
     d3.selectAll(".chart > g svg").remove();
+    $('.coursePic').remove();
 
 }
 
@@ -1347,7 +1401,6 @@ function add_check_boxes() {
     }
     for (var t in types) {
         var type = types[t];
-        console.log(type)
         $('<input />', {type: 'checkbox', id: 'cb_type_' + type, class : 'cb_type', value:type, checked:true})
             .appendTo($('#' + type  + 'SelectDiv'));
         $('<label />', {'for': 'cb_type_' + type, class: 'checkText', text: ''})
@@ -1599,7 +1652,6 @@ function refresh_points(courses) {
 
             d3.selectAll(".courseList > li.ui-selected").classed('ui-selected', false)
             d3.select('.course-' + d['className']).classed('ui-selected', true);
-            pan_to_course(d);
             refresh_chart(d);
             scroll_courses_list(d);
             d3.event.stopPropagation();
@@ -1647,7 +1699,6 @@ function refresh_points(courses) {
                     return course_type_colors[c.type];
                 }).style('stroke-width', '3px')
                 .attr('r', 8);
-            pan_to_course(d);
             refresh_chart(d);
             scroll_courses_list(d);
             d3.event.stopPropagation();

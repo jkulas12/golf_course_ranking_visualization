@@ -74,7 +74,7 @@
           "State": "OR",
           "Architect": "Tom Doak",
           "Year": 2010,
-          "Coordinates": "[43.188221,-124.390174]",
+          "Coordinates": "[43.188221,-124.39517]",
           "Type": "public"
       },
       {
@@ -789,13 +789,13 @@
           "Type": "public"
       },
       {
-          "CourseName": "Southern Hills",
-          "Ranking": 87,
-          "State": "OK",
-          "Architect": "Perry Maxwell",
-          "Year": 1936,
-          "Coordinates": "[36.072636,-95.949658]",
-          "Type": "public"
+          "CourseName":"Ak-Chin Southern Dunes Golf Club",
+          "Ranking":87,
+          "State":"AZ",
+          "Architect":"Schmidt-Curley",
+          "Year":"2002",
+          "Coordinates":[33.085701,-112.0883],
+          "Type":"public"
       },
       {
           "CourseName": "Branson Creek",

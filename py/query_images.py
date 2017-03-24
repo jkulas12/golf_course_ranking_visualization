@@ -16,13 +16,29 @@ cx = '012127496796203121782:23djzwsbsue'
 
 
 # q is query string in human readable form (display name)
-def query_image(q):
-    q = q.replace(' ', '+')
+def query_image(course, isLogo):
+    if isLogo:
+        if 'golf' in course:
+            q = 'logo ' + course + ' logo'
+        else:
+            q = 'logo ' + course + 'golf course logo'
+        q = q.replace(' ', '+').replace('(','+').replace(')','+')
+    else:
+        if 'golf' not in course:
+            q = course + ' golf course'
+            q = q.replace(' ', '+')
+        else:
+            q = course.replace(' ', '+')
+    print(url.format(apiKey, cx, q))
     result = requests.get(url.format(apiKey, cx, q)).json()['items'][0]
     link = result['link']
     image = requests.get(link, stream = True)
     if image.status_code == 200:
-        filename = '../Data/images/' + create_class_name(q.replace('+', ' ')) + '.jpeg'
+        if isLogo:
+            data_path = '../Data/images/logos/'
+        else:
+            data_path = '../Data/images/course_pictures/'
+        filename = data_path + create_class_name(course.replace('+', ' ')) + '.jpeg'
         with open(filename, 'wb') as f:
             image.raw.decode_content = True
             shutil.copyfileobj(image.raw, f)
@@ -47,8 +63,13 @@ def load_course_names():
     return course_name_set
 
 if __name__ == '__main__':
+    last_course = "Wolf Creek Golf Club"
     courses = sorted(list(load_course_names()))
-    i = 0
-    for course in courses:
-        query_image(course)
+    start_index = courses.index(last_course) + 1
+    for i in range(start_index, len(courses)):
+        print('querying course: ' + courses[i])
+        try:
+            query_image(courses[i], False)
+        except:
+            print('failed')
 

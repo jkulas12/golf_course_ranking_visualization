@@ -129,6 +129,11 @@ $(window).on("resize", function() {
     d3.select('#mapContainer')
         .style("width", resize_width + 'px')
         .style("height", resize_height + 'px');
+    $('#chart').height(resize_height * .5);
+    initialize_chart();
+
+
+
 
 });
 $(window).on("load", function() {
@@ -139,7 +144,6 @@ $(window).on("load", function() {
     load_all_rankings(all_rankings);
 
     generate_map();
-    rightControlResize();
 
 });
 
@@ -369,6 +373,7 @@ function load_all_rankings(rankings) {
                 initialize_course_year_slider();
                 initialize_selectable()
                 refresh_map();
+                rightControlResize();
 
 
             });
@@ -982,6 +987,9 @@ function initialize_selectable() {
                 .css('color', '#929292');
             return false;
         }
+    }).focusout(function() {
+        $( "#courseListSearchInput").val(default_search_text)
+            .css('color', '#929292');
     });
     // set default value
     $('#courseListSearchInput').val(default_search_text)
@@ -999,51 +1007,59 @@ function initialize_selectable() {
 
     // add listeners for arrow keys
     $(document).keydown(function(e) {
-        switch(e.which) {
-            case 38: // up
-                if ($('li.ui-selected').length === 1) {
-                    var first_index = $('li.ui-selected').index() + 1;
-                    if (first_index !== 1) {
-                        $(".courseList  li:nth-child(" + String(first_index) + ")").removeClass('ui-selected');
-                        $(".courseList  li:nth-child(" + String(first_index - 1) + ")").addClass('ui-selected');
+        // variable to determine if autoselect should override arrow keys
+        // if true, autoselect should override and do not allow arrow keys to use list scroll
+        var autoSelectOverride = $('ul.ui-autocomplete').css('display') === 'none';
+        console.log(autoSelectOverride);
+        if (autoSelectOverride) {
+            switch(e.which) {
+                case 38: // up
+                    if ($('li.ui-selected').length === 1) {
+                        var first_index = $('li.ui-selected').index() + 1;
+                        if (first_index !== 1) {
+                            $(".courseList  li:nth-child(" + String(first_index) + ")").removeClass('ui-selected');
+                            $(".courseList  li:nth-child(" + String(first_index - 1) + ")").addClass('ui-selected');
 
-                        var displayName = $(".courseList  li:nth-child(" + String(first_index - 1) + ")").text();
-                        var course = course_map[createClassName(displayName)];
-                        refresh_chart(course);
-                        refresh_points([course]);
-                        var top = $('.course.course-' + course['className']).position().top;
-                        if (top < 65) {
-                            $('.courseList').animate({
-                                scrollTop: top + $('.courseList').scrollTop() - 65
-                            }, 500);
+                            var displayName = $(".courseList  li:nth-child(" + String(first_index - 1) + ")").text();
+                            var course = course_map[createClassName(displayName)];
+                            refresh_chart(course);
+                            refresh_points([course]);
+                            var top = $('.course.course-' + course['className']).position().top;
+                            if (top < 65) {
+                                $('.courseList').animate({
+                                    scrollTop: top + $('.courseList').scrollTop() - 65
+                                }, 500);
+                            }
                         }
                     }
-                }
-                break;
-
-            case 40: // down
-                if ($('li.ui-selected').length === 1) {
-                    var first_index = $('li.ui-selected').index() + 1;
-                    if (first_index !== 1) {
-                        $(".courseList  li:nth-child(" + String(first_index) + ")").removeClass('ui-selected');
-                        $(".courseList  li:nth-child(" + String(first_index + 1) + ")").addClass('ui-selected');
-                        var displayName = $(".courseList  li:nth-child(" + String(first_index - 1) + ")").text();
-                        var course = course_map[createClassName(displayName)];
-                        refresh_chart(course);
-                        refresh_points([course]);
-                        var top = $('.course.course-' + course['className']).position().top;
-                        if (top > 315) {
-                            $('.courseList').animate({
-                                scrollTop: top + $('.courseList').scrollTop() - 65
-                            }, 500);
+                    break;
+                // scroll down is always 2 off
+                // course used for chart is 2 above highlighted course
+                case 40: // down
+                    if ($('li.ui-selected').length === 1) {
+                        var first_index = $('li.ui-selected').index() + 1;
+                        if (first_index !== $('.courseList > li').length - 1) {
+                            $(".courseList  li:nth-child(" + String(first_index) + ")").removeClass('ui-selected');
+                            $(".courseList  li:nth-child(" + String(first_index + 1) + ")").addClass('ui-selected');
+                            var displayName = $(".courseList  li:nth-child(" + String(first_index + 1) + ")").text();
+                            var course = course_map[createClassName(displayName)];
+                            refresh_chart(course);
+                            refresh_points([course]);
+                            var top = $('.course.course-' + course['className']).position().top;
+                            if (top > 315) {
+                                $('.courseList').animate({
+                                    scrollTop: top + $('.courseList').scrollTop() - 65
+                                }, 500);
+                            }
                         }
                     }
-                }
-                break;
+                    break;
 
-            default: return; // exit this handler for other keys
+                default: return; // exit this handler for other keys
+            }
+            e.preventDefault(); // prevent the default action (scroll / move caret)
         }
-        e.preventDefault(); // prevent the default action (scroll / move caret)
+
     });
 }
 
@@ -1121,8 +1137,9 @@ function refresh_chart(course) {
     }
 
     d3.selectAll(".chart > g svg").remove();
-    // remove old picture
+    // remove old picture and logo
     $('.coursePic').remove();
+    $('.courseLogo').remove();
     var chartData = course.chart_data;
 
     var containerData = [];
@@ -1196,11 +1213,18 @@ function refresh_chart(course) {
         })
         .attr('r', 4);
 
-    // add image
+    // add logo
     d3.select('.coursePicContainer')
         .append('img')
+        .attr('class', 'courseLogo')
+        .attr('src', 'Data/images/logos/' + course['className'] + '.jpeg');
+
+    d3.select('#coursePictureDiv')
+        .append('img')
         .attr('class', 'coursePic')
-        .attr('src', 'Data/images/' + course['className'] + '.jpeg');
+        .attr('src', 'Data/images/course_pictures/' + course['className'] + '.jpeg');
+
+
     updateCourseLegend(containerData, course);
 }
 
@@ -1219,6 +1243,8 @@ function initialize_container_lists() {
 
 // function to initially draw chart and container
 function initialize_chart() {
+    $('#chart').empty();
+    $('.courseInformationContainer').empty();
     // chart size variables
     var margin = {top: 10, right: 10, bottom: 13, left: 15},
         width = 300 - margin.left - margin.right,
@@ -1344,6 +1370,14 @@ function initialize_chart() {
         .text('rank')
         .attr('class', 'recentRankingsUlHeadSpan rankSpan')
 
+
+    //// add course select text to left panel
+    //d3.select('#showCourseTextDiv')
+    //    .append('g')
+    //    .attr('transform', 'translate(2000,100)')
+    //    .append('text')
+    //    .text('Select a Course');
+
 }
 
 
@@ -1364,6 +1398,7 @@ function clearLegend() {
         .text("");
     $(".legendRanking").remove();
     d3.selectAll(".chart > g svg").remove();
+    $('.courseLogo').remove();
     $('.coursePic').remove();
 
 }
@@ -1514,8 +1549,15 @@ function initialize_course_year_slider() {
         max:2017,
         value:2017,
         slide: function(event, ui) {
-            refresh_map();
+            var year = $("#slider").slider("option","value");
+            $("#year").val(year);
+            if (parseInt(year) % 5 === 0) {
+                refresh_map();
+            }
+        },
+        stop: function(event, ui) {
             $("#year").val($("#slider").slider("option","value"));
+            refresh_map();
         }
     });
 
@@ -1645,10 +1687,17 @@ function refresh_points(courses) {
                 .style('fill', function(c) {
                     return course_type_colors[c.type];
                 })
-                .attr('r', 5);
+                .attr('r', 5)
+                .style('stroke', 'black')
+                .style('stroke-width','1px');
             d3.select(this)
                 .style('fill', '#ffdc16')
-                .attr('r', 7);
+                .attr('r', 8)
+                .style("stroke", function(c) {
+                    return course_type_colors[c.type];
+                })
+                .style('stroke-width', '3px')
+
 
             d3.selectAll(".courseList > li.ui-selected").classed('ui-selected', false)
             d3.select('.course-' + d['className']).classed('ui-selected', true);
@@ -1687,14 +1736,18 @@ function refresh_points(courses) {
                 .style("opacity", 0);
         })
         .on('click', function(d) {
-
+            console.log('click from refresh')
             d3.selectAll('.point')
                 .style('fill', function(c) {
                     return course_type_colors[c.type];
                 })
-                .attr('r', 5);
+                .attr('r', 5)
+                .style('stroke-width', '1px')
+                .style('stroke', 'black')
+
+
             d3.select(this)
-                .style('fill', '#yellow')
+                .style('fill', 'yellow')
                 .style('stroke', function(c) {
                     return course_type_colors[c.type];
                 }).style('stroke-width', '3px')
@@ -1854,7 +1907,11 @@ function endRubberBand() {
             if (cr.right >= w && cr.left <= e && cr.top <= s && cr.bottom >= n) {
                 selectedCourses.push(this.__data__);
             }
-        })
+        });
+
+        if (selectedCourses.length === 1) {
+            refresh_chart(selectedCourses[0])
+        }
         refresh_points(selectedCourses);
         update_course_list(selectedCourses);
         update_architect_list(selectedCourses);
@@ -2024,8 +2081,9 @@ function rightControlResize() {
 
 
     $("#courses").height(remainingSpace * 0.7);
+    // set size of interior list
+    $('.courseList').height(remainingSpace * 0.7 - 66);
     $("#architects").height(remainingSpace * 0.28);
-    $('.courseList').height(remainingSpace * 0.68)
 }
 
 
@@ -2045,9 +2103,14 @@ function updateCourseLegend(containerData, course) {
     d3.selectAll(".courseYardageInfo")
         .text("Yardage: " + course.yardage);
 
+    if (course.rating !== -1) {
+        d3.selectAll(".courseSlopeRatingInfo")
+            .text("rating: " + course.rating + "  slope: " + course.slope);
+    } else {
+        d3.selectAll(".courseSlopeRatingInfo")
+            .text("Slope and rating unavailable");
+    }
 
-    d3.selectAll(".courseSlopeRatingInfo")
-        .text("rating: " + course.rating + "  slope: " + course.slope);
 
     var legendRankingsSelect = d3.select(".recentRankings-ul").selectAll(".ranking")
         .data(containerData);
@@ -2078,15 +2141,6 @@ function updateCourseLegend(containerData, course) {
 }
 
 
-function show_single_ranking(ranking) {
-    $('#mapTitle').text(ranking);
-    var valid_courses = Object.keys(ranking_map[ranking].courses).map(function(d) {
-        return course_map[createClassName(d)];
-    });
-    refresh_points(valid_courses);
-    update_course_list(valid_courses);
-    update_architect_list(valid_courses);
-}
 
 
 

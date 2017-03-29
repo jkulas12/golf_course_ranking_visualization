@@ -1198,6 +1198,7 @@ function refresh_chart(course) {
         .attr('class', function(d) {
         })
         .on("mouseover", function(d) {
+            console.log('mouseover')
             chartTooltip.transition()
                 .duration(200)
                 .style("opacity", .9)

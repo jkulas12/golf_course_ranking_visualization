@@ -123,6 +123,7 @@ $(window).on("resize", function() {
     $("#main").height(resize_height)
         .width(resize_width);
     rightControlResize();
+    leftControlResize();
     d3.select('#map')
         .style("width", resize_width)
         .style("height", resize_height);
@@ -1010,7 +1011,6 @@ function initialize_selectable() {
         // variable to determine if autoselect should override arrow keys
         // if true, autoselect should override and do not allow arrow keys to use list scroll
         var autoSelectOverride = $('ul.ui-autocomplete').css('display') === 'none';
-        console.log(autoSelectOverride);
         if (autoSelectOverride) {
             switch(e.which) {
                 case 38: // up
@@ -1020,7 +1020,7 @@ function initialize_selectable() {
                             $(".courseList  li:nth-child(" + String(first_index) + ")").removeClass('ui-selected');
                             $(".courseList  li:nth-child(" + String(first_index - 1) + ")").addClass('ui-selected');
 
-                            var displayName = $(".courseList  li:nth-child(" + String(first_index - 1) + ")").text();
+                            var displayName = $(".courseList  li:nth-child(" + String(first_index - 1) + ") > span").last().text();
                             var course = course_map[createClassName(displayName)];
                             refresh_chart(course);
                             refresh_points([course]);
@@ -1038,11 +1038,13 @@ function initialize_selectable() {
                 case 40: // down
                     if ($('li.ui-selected').length === 1) {
                         var first_index = $('li.ui-selected').index() + 1;
+                        console.log(first_index);
                         if (first_index !== $('.courseList > li').length - 1) {
                             $(".courseList  li:nth-child(" + String(first_index) + ")").removeClass('ui-selected');
                             $(".courseList  li:nth-child(" + String(first_index + 1) + ")").addClass('ui-selected');
-                            var displayName = $(".courseList  li:nth-child(" + String(first_index + 1) + ")").text();
+                            var displayName = $(".courseList  li:nth-child(" + String(first_index + 1) + ") > span").last().text();
                             var course = course_map[createClassName(displayName)];
+                            console.log(displayName)
                             refresh_chart(course);
                             refresh_points([course]);
                             var top = $('.course.course-' + course['className']).position().top;
@@ -1198,7 +1200,6 @@ function refresh_chart(course) {
         .attr('class', function(d) {
         })
         .on("mouseover", function(d) {
-            console.log('mouseover')
             chartTooltip.transition()
                 .duration(200)
                 .style("opacity", .9)
@@ -1215,10 +1216,10 @@ function refresh_chart(course) {
         .attr('r', 4);
 
     // add logo
-    d3.select('.coursePicContainer')
-        .append('img')
-        .attr('class', 'courseLogo')
-        .attr('src', 'Data/images/logos/' + course['className'] + '.jpeg');
+    //d3.select('.coursePicContainer')
+    //    .append('img')
+    //    .attr('class', 'courseLogo')
+    //    .attr('src', 'Data/images/logos/' + course['className'] + '.jpeg');
 
     d3.select('#coursePictureDiv')
         .append('img')
@@ -1245,7 +1246,7 @@ function initialize_container_lists() {
 // function to initially draw chart and container
 function initialize_chart() {
     $('#chart').empty();
-    $('.courseInformationContainer').empty();
+    $('.courseInformationContainer').remove();
     // chart size variables
     var margin = {top: 10, right: 10, bottom: 13, left: 15},
         width = 300 - margin.left - margin.right,
@@ -1357,10 +1358,9 @@ function initialize_chart() {
 
 
 
-    var recentRankingsUl = courseRecentRankings.append("ul")
-        .attr("class","recentRankings-ul");
-    var recentRankingsUlHeader = recentRankingsUl.append('li')
-        .attr('class', 'recentRankingsUlHeader');
+
+    var recentRankingsUlHeader = d3.select('.courseRecentRankingsDiv').append('div')
+        .attr('class', 'recentRankingsListHeader');
     recentRankingsUlHeader.append('span')
         .text('publication')
         .attr('class', 'recentRankingsUlHeadSpan pubSpan');
@@ -1369,7 +1369,10 @@ function initialize_chart() {
         .attr('class', 'recentRankingsUlHeadSpan yearSpan');
     recentRankingsUlHeader.append('span')
         .text('rank')
-        .attr('class', 'recentRankingsUlHeadSpan rankSpan')
+        .attr('class', 'recentRankingsUlHeadSpan rankSpan');
+
+    d3.select('.courseRecentRankingsDiv').append('ul')
+        .attr('class', 'recentRankings-ul');
 
 
     //// add course select text to left panel
@@ -1737,7 +1740,6 @@ function refresh_points(courses) {
                 .style("opacity", 0);
         })
         .on('click', function(d) {
-            console.log('click from refresh')
             d3.selectAll('.point')
                 .style('fill', function(c) {
                     return course_type_colors[c.type];
@@ -2075,22 +2077,34 @@ function update_architect_list(courses) {
 
 // function to resize right panel on load or resizing viz
 function rightControlResize() {
+
+    // ranking select, course filter and architect list take contant size, courses list will shrink and grow
+    // as the window is resized
+
     var windowHeight = $(window).height();
     $("#rankingCourseSelectDiv").height(180);
+    $('#courseFilterDiv').height(80);
+    $('#architects').height(100);
 
-    var remainingSpace = windowHeight - 200;
+    $('#courses').height(windowHeight - 380);
+    $('.courseList').height(windowHeight - 380 - 66)
+}
 
 
-    $("#courses").height(remainingSpace * 0.7);
-    // set size of interior list
-    $('.courseList').height(remainingSpace * 0.7 - 66);
-    $("#architects").height(remainingSpace * 0.28);
+function leftControlResize() {
+
+    var windowHeight = $(window).height();
+    $('#coursePictureDiv').height(130);
+    $('#courseInformationContainer').height(180);
+    $('#chartSVG').height(windowHeight - 310);
+
+
 }
 
 
 function updateCourseLegend(containerData, course) {
 
-    $(".recentRankings-ul > li").not("li:first").remove();
+    $(".recentRankings-ul > li").remove();
     d3.selectAll(".legend")
         .data(containerData);
     d3.select(".courseInfoHeader")

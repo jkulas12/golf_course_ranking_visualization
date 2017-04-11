@@ -131,7 +131,7 @@ $(window).on("resize", function() {
         .style("width", resize_width + 'px')
         .style("height", resize_height + 'px');
     $('#chart').height(resize_height * .5);
-    initialize_chart();
+
 
 
 
@@ -145,9 +145,10 @@ $(window).on("load", function() {
     load_all_rankings(all_rankings);
 
     generate_map();
-
 });
-
+$(document).ready(function() {
+    tl.pg.init({});
+});
 
 
 
@@ -561,7 +562,6 @@ function populate_ranking_matrix() {
                     .classed('unselected', false).classed('selected', true);
             }
             refresh_map();
-            // get all selected rankings
         });
 
     $('.rankingTextDiv')
@@ -652,8 +652,6 @@ function bring_back_all_courses() {
 function reset_map() {
     // reset selection
     $('.ui-selected').removeClass('ui-selected').addClass('ui-unselecting');
-    //$('.courseList').data('ui-selectable')._mouseStop(null);
-    //$('.architectList').data('ui-selectable')._mouseStop(null);
     courseCount = {};
     archCount = {};
     selectCourses = [];
@@ -664,20 +662,7 @@ function reset_map() {
     var h = $(window).height();
     var w = $(window).width();
 
-    //projection
-    //    .scale(1 / tau)
-    //    .translate([0, 0]);
-    //
-    //var center = projection([-98.5, 39.5]);
-    //
-    //
-    //svg.call(zoom)
-    //    .transition()
-    //    .duration(2000)
-    //    .call(zoom.transform, d3.zoomIdentity
-    //        .translate(w / 2, h / 2)
-    //        .scale(1 << 12)
-    //        .translate(-center[0], -center[1]));
+
 }
 
 // function to bind all selection handlers to list and headers
@@ -806,6 +791,7 @@ function initialize_selectable() {
                     return course_map[d];
                 });
                 refresh_points(selectCourses);
+                update_course_list(selectCourses);
             }
         },
         unselected: function(event, ui) {
@@ -889,6 +875,7 @@ function initialize_selectable() {
     $('.orderedSortDiv').click(function(d) {
         var sorted_courses;
         var descending;
+        var valid_rankings = get_selected_rankings();
         // if list was previously sorted ordered
         if ($('.orderedSortDiv').hasClass('active')) {
             var span = $('.orderedSortDiv > span');
@@ -919,11 +906,11 @@ function initialize_selectable() {
         }
         if (descending) {
             sorted_courses = get_valid_courses().sort(function (a, b) {
-                return composite_sort(a, b)
+                return composite_sort(a, b, valid_rankings)
             });
         } else {
             sorted_courses = get_valid_courses().sort(function (a, b) {
-                return composite_sort(b, a)
+                return composite_sort(b, a, valid_rankings)
             });
         }
 
@@ -1023,6 +1010,7 @@ function initialize_selectable() {
                             var displayName = $(".courseList  li:nth-child(" + String(first_index - 1) + ") > span").last().text();
                             var course = course_map[createClassName(displayName)];
                             refresh_chart(course);
+                            bring_course_to_view(course);
                             refresh_points([course]);
                             var top = $('.course.course-' + course['className']).position().top;
                             if (top < 65) {
@@ -1038,17 +1026,17 @@ function initialize_selectable() {
                 case 40: // down
                     if ($('li.ui-selected').length === 1) {
                         var first_index = $('li.ui-selected').index() + 1;
-                        console.log(first_index);
+                        var bottom_of_list = $('.courseList').height() + 50;
                         if (first_index !== $('.courseList > li').length - 1) {
                             $(".courseList  li:nth-child(" + String(first_index) + ")").removeClass('ui-selected');
                             $(".courseList  li:nth-child(" + String(first_index + 1) + ")").addClass('ui-selected');
                             var displayName = $(".courseList  li:nth-child(" + String(first_index + 1) + ") > span").last().text();
                             var course = course_map[createClassName(displayName)];
-                            console.log(displayName)
                             refresh_chart(course);
+                            bring_course_to_view(course);
                             refresh_points([course]);
                             var top = $('.course.course-' + course['className']).position().top;
-                            if (top > 315) {
+                            if (top > bottom_of_list) {
                                 $('.courseList').animate({
                                     scrollTop: top + $('.courseList').scrollTop() - 65
                                 }, 500);
@@ -1065,30 +1053,33 @@ function initialize_selectable() {
     });
 }
 
-function composite_sort(a,b) {
+function composite_sort(a,b, valid_rankings) {
+    //TODO: modify for only rankings shown
 
     // most recent public publication for a
     var a_recent_pub = Object.keys(a.rankings).filter(function(c) {
-        return c.split('_')[2] === 'Public';
+        return c.split('_')[2] === 'Public' && valid_rankings.indexOf(c) !== -1;
     }).sort(function(cA,cB) {
         return +cA.split('_')[1] - (+cB.split('_')[1]);
     }).slice(-1)[0];
+
+
     // most recent public publication for b
     var b_recent_pub =  Object.keys(b.rankings).filter(function(c) {
-        return c.split('_')[2] === 'Public';
+        return c.split('_')[2] === 'Public' && valid_rankings.indexOf(c) !== -1;
     }).sort(function(cA,cB) {
         return +cA.split('_')[1] - (+cB.split('_')[1]);
     }).slice(-1)[0];
 
     // most recent All publication for a
     var a_recent_all =  Object.keys(a.rankings).filter(function(c) {
-        return c.split('_')[2] === 'All';
+        return c.split('_')[2] === 'All' && valid_rankings.indexOf(c) !== -1;
     }).sort(function(cA,cB) {
         return +cA.split('_')[1] - (+cB.split('_')[1]);
     }).slice(-1)[0];
     // most recent All publication for b
     var b_recent_all =  Object.keys(b.rankings).filter(function(c) {
-        return c.split('_')[2] === 'All';
+        return c.split('_')[2] === 'All' && valid_rankings.indexOf(c) !== -1;
     }).sort(function(cA,cB) {
         return +cA.split('_')[1] - (+cB.split('_')[1]);
     }).slice(-1)[0];
@@ -1126,6 +1117,7 @@ function is_course_in_current_rankings(course) {
 }
 
 function refresh_chart(course) {
+
     tooltip.transition()
         .duration(500)
         .style("opacity", 0)
@@ -1197,7 +1189,7 @@ function refresh_chart(course) {
         .attr('cy', function(d) {
             return yScale(d.rank); })
         .style('fill', function(d) {return  lineColors[d.className]})
-        .attr('class', function(d) {
+        .attr('class', function(d) {return 'chartDot'
         })
         .on("mouseover", function(d) {
             chartTooltip.transition()
@@ -1215,19 +1207,35 @@ function refresh_chart(course) {
         })
         .attr('r', 4);
 
-    // add logo
-    //d3.select('.coursePicContainer')
-    //    .append('img')
-    //    .attr('class', 'courseLogo')
-    //    .attr('src', 'Data/images/logos/' + course['className'] + '.jpeg');
+
 
     d3.select('#coursePictureDiv')
         .append('img')
         .attr('class', 'coursePic')
         .attr('src', 'Data/images/course_pictures/' + course['className'] + '.jpeg');
-
+    var el = $('.' + course.className + '.point');
 
     updateCourseLegend(containerData, course);
+}
+
+// function to center on course if it is out of view
+function bring_course_to_view(course) {
+
+    var el = $('.' + course.className + '.point');
+
+    // if course is out of view, pan to it. if not see if it is behind a list
+    if (!isElementInViewport(el)) {
+        pan_to_course(course);
+    } else {
+        // course is behind a list if it is in left x pixels or right y pixels
+        var coords = projection(course.geometry.coordinates);
+        var left_chart_end = 315;
+        var right_chart_start = $(window).width() - 295;
+        if (coords[0] < left_chart_end || coords[0] > right_chart_start) {
+            pan_to_course(course);
+        }
+    }
+
 }
 
 function scroll_courses_list(course) {
@@ -1570,19 +1578,23 @@ function initialize_course_year_slider() {
 }
 // updates map, courses and architects list
 function refresh_map() {
-    var valid_courses = get_valid_courses().sort( function(a,b)  {return a.displayName > b.displayName ? 1 : -1});
-    if (!$('.alphabeticalSortDiv').hasClass('active')) {
-        $('.alphabeticalSortDiv').removeClass('inactive')
+    // defaults to alphabetical...
+    var valid_rankings = get_selected_rankings();
+    var valid_courses = get_valid_courses().sort( function(a,b)  {return composite_sort(a,b, valid_rankings)});
+    if (!$('.orderedSortDiv').hasClass('active')) {
+        $('.orderedSortDiv').removeClass('inactive')
             .addClass('active')
-        $('.orderedSortDiv').addClass('inactive').removeClass('active')
+        $('.alphabeticalSortDiv').addClass('inactive').removeClass('active')
     } else {
-        if (!$('.alphabeticalSortDiv > svg').hasClass('glyphicon-arrow-down')) {
-            $('.alphabeticalSortDiv > svg').removeClass('glyphicon-arrow-up')
+        if (!$('.orderedSortDiv > svg').hasClass('glyphicon-arrow-down')) {
+            $('.orderedSortDiv > svg').removeClass('glyphicon-arrow-up')
                 .addClass('glyphicon-arrow-down')
         }
     }
 
     refresh_points([]);
+    clearChart();
+    clearLegend();
     update_course_list(valid_courses);
     update_architect_list(valid_courses);
 }
@@ -1670,7 +1682,7 @@ function refresh_points(courses) {
         .style("fill", function(c) {
             return course_type_colors[c.type];
         })
-        .attr('class', 'point non_highlighted_point')
+        .attr('class', function(d) {return d.className + ' point non_highlighted_point'})
         .on("mouseover", function(d) {
             tooltip.transition()
                 .duration(200)
@@ -1692,6 +1704,7 @@ function refresh_points(courses) {
                     return course_type_colors[c.type];
                 })
                 .attr('r', 5)
+                .attr('class', function(d) {return 'point ' + d.className})
                 .style('stroke', 'black')
                 .style('stroke-width','1px');
             d3.select(this)
@@ -1701,6 +1714,7 @@ function refresh_points(courses) {
                     return course_type_colors[c.type];
                 })
                 .style('stroke-width', '3px')
+                .attr('class', function(d) {return d.className +  ' point highlighted_point'});
 
 
             d3.selectAll(".courseList > li.ui-selected").classed('ui-selected', false)
@@ -1723,7 +1737,7 @@ function refresh_points(courses) {
             return course_type_colors[c.type];
         }).style('stroke-width', '3px')
         .attr('r', 8)
-        .attr('class', 'point highlighted_point')
+        .attr('class', function(d) {return d.className + ' point highlighted_point'})
         .on("mouseover", function(d) {
             tooltip.transition()
                 .duration(200)
@@ -1933,6 +1947,9 @@ function clearChart() {
     $(".legend-architects").text("");
     $(".legend-year").text("");
     $(".legend-type").text("");
+
+    // deselect course from list if selected
+    $(".ui-selected").removeClass('ui-selected');
 }
 
 
@@ -1981,7 +1998,6 @@ function zoomUp() {
 
 // function to update course list
 function update_course_list(courses) {
-
     $('.courseHeading > text').text('Courses (' + courses.length + ' shown)')
 
     // select the courses list
@@ -2087,7 +2103,16 @@ function rightControlResize() {
     $('#architects').height(100);
 
     $('#courses').height(windowHeight - 380);
-    $('.courseList').height(windowHeight - 380 - 66)
+    $('.courseList').height(windowHeight - 380 - 66);
+    initialize_chart();
+
+    var highlighted_points = d3.selectAll('.highlighted_point')._groups;
+    if (highlighted_points[0][0] && highlighted_points[0].length == 1) {
+        refresh_chart(highlighted_points[0][0].__data__);
+
+    }
+
+
 }
 
 
@@ -2222,4 +2247,21 @@ function arr_diff (a1, a2) {
     }
 
     return diff;
+}
+
+function isElementInViewport (el) {
+
+    //special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+    );
 }

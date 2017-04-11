@@ -1,0 +1,30 @@
+{
+  "name": "pageguide",
+  "version": "1.3.2",
+  "homepage": "https://github.com/tracelytics/pageguide",
+  "authors": [
+    "Ari Rizzitano <arizzitano@gmail.com>",
+    "Brian Fleming <brianfleming@gmail.com>",
+    "Dan Riti <dmriti@gmail.com>"
+  ],
+  "description": "An interactive guide for web page elements using jQuery and CSS3",
+  "main": "js/pageguide.js",
+  "keywords": [
+    "interactive",
+    "web",
+    "guide",
+    "contextual help",
+    "onboarding"
+  ],
+  "license": "LICENSE.txt",
+  "dependencies": {
+    "jquery": "2.0.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

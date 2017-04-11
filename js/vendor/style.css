@@ -5,6 +5,10 @@
 #main {
     position:relative;
 }
+#tlyPageGuideMessages {
+    width: 50%;
+    left: 20%;
+}
 #chart {
     position:absolute;
 

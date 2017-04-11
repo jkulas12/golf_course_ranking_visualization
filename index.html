@@ -8,8 +8,11 @@
 <script src="js/vendor/jquery.layout.js"></script>
 <script src="js/vendor/d3.carto.map.js"></script>
 
-<head>
 
+<head>
+	<link rel="icon"
+		  type="image/png"
+		  href="Data/images/logos/overview_favicon.png">
 </head>
 
 
@@ -20,14 +23,14 @@
 <div id="main">
 
 	<div class = "container container-right">
-		<div id="rankingCourseSelectDiv" class="control control-right">
+		<div id="rankingCourseSelectDiv" class="control control-right ">
 			<div id = 'rankingSelectDiv'>
 				<h2 id = "rankingHeader">Ranking Select</h2>
 				<div id = 'rankingYearContainer' style="height:35px; display: flex">
 					<svg id = 'rankingYearsSVG'></svg>
 					<button style="font-size: 13px; width: 80px" onclick="clear_ranking_filter()">Clear Filter</button>
 				</div>
-				<div id = 'rankingMatrixContainer' style=" border: 1px solid black;">
+				<div id = 'rankingMatrixContainer' class="data-block first_element_to_target" style=" border: 1px solid black;">
 					<div id = 'GDigestRankContainer' class = 'rankContainer' style="border: 1px solid black;">
 						<div id = 'GDigestRankTypeTextContainer' style="width:40px;">
 							<div id = 'GDigestAllTextContainer' class = 'rankingTextDiv'>All</div>
@@ -92,7 +95,7 @@
 			</div>
 
 		</div>
-		<div id = 'courseFilterDiv' class = 'control control-right'>
+		<div id = 'courseFilterDiv' class = 'control control-right data-block second_element_to_target'>
 			<h5 id = 'courseFilterHeader' style="margin-top:3px; margin-bottom:3px; text-align: center">Courses Filter</h5>
 			<div id = 'courseFilterContainer'>
 				<div id = 'typeSelectDiv' class = 'selectDiv' style="width: 40%">
@@ -107,7 +110,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="courses" class =  "control control-right">
+		<div id="courses" class =  "control control-right data-block third_element_to_target">
 			<div class = 'coursesHeadingDiv heading'>
 				<div class = 'courseHeadingTitleDiv headingDiv' style="display: flex;">
 					<h2 class = 'courseHeading' style="width: 60%">
@@ -115,7 +118,9 @@
 					<button id = 'mapClearButton' onclick="reset_map()" style="height: 20px;">Reset Map</button>
 				</div>
 				<div id = 'courseListSearchBarDiv'>
-					<input style="width: 100%" id = 'courseListSearchInput'>
+					<span class = 'glyphicon glyphicon-search'></span>
+					<input style="width: 92%" id = 'courseListSearchInput'>
+
 				</div>
 				<div class = 'courseOrderDiv headingDiv' style="display:flex;">
 					<div class = 'alphabeticalSortDiv active' style="width : 50%">Alphabetical
@@ -127,7 +132,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="architects" class="control control-right">
+		<div id="architects" class="control control-right data-block fourth_element_to_target">
 			<div class = 'archsHeading headingDiv'>
 				<h2 class = 'archsHeading'>Architects</h2>
 			</div>
@@ -138,7 +143,7 @@
 		<div id = 'coursePictureDiv'></div>
 	</div>
 
-	<div id = 'mapContainer' class = 'mapContainer'>
+	<div id = 'mapContainer' class = 'mapContainer data-block fifth_element_to_target' >
 		<svg id = 'map'></svg>
 	</div>
 
@@ -153,6 +158,7 @@
 
 
 	<link rel="stylesheet" href="js/vendor/jquery-ui.min.css">
+	<link rel="stylesheet" href="js/vendor/pageguide/dist/css/pageguide.min.css">
 	<script src="js/vendor/jquery.layout.js"></script>
 	<script src="js/vendor/d3.v4.0.0-rc.1.min.js"></script>
 	<script src="//d3js.org/d3-tile.v0.0.min.js"></script>
@@ -168,7 +174,35 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="js/vendor/pageguide/js/pageguide.js"></script>
 
 </footer>
+<!--For pageguide-->
+<ul id="tlyPageGuide" data-tourtitle="Click for help">
+	<!-- use these classes to indicate where each number bubble should be
+    positioned. data-tourtarget should contain the selector for the element to
+    which you want to attach this pageguide step. -->
+	<li class="tlypageguide_left" data-tourtarget=".first_element_to_target">
+		Displayed courses can be filtered by the rankings they appear in. To toggle rankings
+		the ranking rectangle can be clicked. Clicking the "All" or "Public" text will toggle that criteria
+		And clicking "Golf Digest" or "Golf Mag." will do the same.
+	</li>
+	<li class="tlypageguide_left" data-tourtarget=".second_element_to_target">
+		Individual courses can be filtered by their type or by year completed
+	</li>
+	<li class="tlypageguide_left" data-tourtarget=".third_element_to_target" >
+		Individual courses can be selected here. Courses can be sorted alphabetically or by a composite rank.
+		Courses can be selected by name by using the "Search Courses" bar. Clicking and dragging the list will
+		highlight a selection of courses on the map
+	</li>
+	<li class="tlypageguide_left" data-tourtarget=".fourth_element_to_target">
+		All courses for a given architect can be shown by clicking on an architect
+	</li>
+	<!--<li class="tlypageguide_left" data-tourtarget=".fifth_element_to_target">-->
+		<!--Clicking on a course on the map will display more information in the chart on the left. To highlight a-->
+		<!--group of courses you can hold down the shift key and drag a box to encompass multiple courses-->
+	<!--</li>-->
+
+</ul>
 </body>
 </html>

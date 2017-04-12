@@ -132,6 +132,9 @@ $(window).on("resize", function() {
         .style("height", resize_height + 'px');
     $('#chart').height(resize_height * .5);
 
+    var help_x_pos = $(window).width() - 375
+    $('#tlyPageGuideToggles').css("left", help_x_pos);
+
 
 
 
@@ -148,6 +151,8 @@ $(window).on("load", function() {
 });
 $(document).ready(function() {
     tl.pg.init({});
+    var help_x_pos = $(window).width() - 375
+    $('#tlyPageGuideToggles').css("left", help_x_pos);
 });
 
 
@@ -356,7 +361,7 @@ function load_all_rankings(rankings) {
                 ////////// Code here for events after data is loaded /////////////
                 //////////////////////////////////////////////////////////////////
 
-                tooltip = d3.select("#mapContainer").append("div")
+                tooltip = d3.select("body").append("div")
                     .attr("class", "tooltip")
                     .style("opacity", 0);
 

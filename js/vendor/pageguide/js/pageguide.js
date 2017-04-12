@@ -83,7 +83,7 @@ tl.pg.interval = {};
         'handle_doc_switch': null,
         'custom_open_button': null,
         'pg_caption' : 'Help?',
-        'tourtitle': 'Open Page Guide for help',
+        'tourtitle': '',
         'check_welcome_dismissed': function () {
             var key = 'tlypageguide_welcome_shown_' + tl.pg.hashUrl();
             // first, try to use localStorage
@@ -137,7 +137,7 @@ tl.pg.interval = {};
     tl.pg.toggle_markup =
         '<div class="tlypageguide_toggle" title="Launch Page Guide">' +
             '<div><span class="tlypageguide_toggletitle"></span></div>' +
-            '<a href="#" class="tlypageguide_close" title="close guide">close guide &raquo;</a>' +
+            '<a href="#" class="tlypageguide_close" title="close guide"></a>' +
         '</div>';
 
     /**
@@ -175,6 +175,7 @@ tl.pg.interval = {};
             var $toggle = $(tl.pg.toggle_markup)
                 .attr('id', ('tlyPageGuideToggle' + uuid))
                 .prepend(preferences.pg_caption);
+            //$toggle.append('<span class = "glyphicon glyphicon-question-sign"></span>');
 
             $toggle.find('.tlypageguide_toggletitle').text(tourtitle);
             $wrapper.find('#tlyPageGuideToggles').append($toggle);
@@ -196,7 +197,7 @@ tl.pg.interval = {};
             }
             pg.setup_handlers();
             // TODO: update to come from top
-            pg.$base.find(".tlypageguide_toggle").animate({ "right": "-120px" }, 250);
+            //pg.$base.find(".tlypageguide_toggle").animate({ "right": "-120px" }, 250);
             if (typeof(preferences.ready_callback) === 'function') {
                 preferences.ready_callback();
             }

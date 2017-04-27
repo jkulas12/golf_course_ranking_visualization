@@ -2,39 +2,381 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be1a3c0b-0349-4300-888c-844cf1496732" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/course_pictures/golden_horseshow_golf_club_gold.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/golden_horseshow_golf_club_gold.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/ak_chin_southern_dunes_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/apache_stronghold.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/arcadia_bluffs_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/arnold_palmers_bay_hill_club_championship.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/aronimink.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/atlanta_country_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/atlantic.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/atlantic_city_country_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/atunyote_at_turning_stone_resort.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/augusta_national.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/avalon_lakes.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/ballyneal.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/baltimore_five_farms_east.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/baltusrol_lower.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/baltusrol_upper.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/bandon_dunes.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/bandon_trails.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/barefoot_resort_dye.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/barefoot_resort_fazio.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/barefoot_resort_love.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/bay_harbor_golf_club_links_quarry.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/bayside_resort.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/beechtree.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/bel_air.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/belgrade_lakes_golf_course.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/bellerive.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/bethpageblack.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/black_diamond_ranchquarry.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/black_lake.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/black_mesa.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/blackwolf_run_river.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/blackwolf_runmeadow_valleys.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/blue_heron_pines_east.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/boston_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/boyne_highlands_heather.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/branson_creek.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/briars_creek.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/brickyard_crossing.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/buffalo_ridge_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/bulle_rock.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/bully_pulpit.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/butler_national.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/caledonia_golf__fish_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/calusa_pines.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/camargo.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/cambrian_ridgesherling_canyon.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/camp_creek.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/canterbury.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/canyata.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/capitol_hilljudge.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/cascata.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/castle_pines.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/caves_valley.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/chambers_bay.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/cherry_hills.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/chicago.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/circling_raven_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/cog_hill_no_4.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/colonial.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/congressional_blue.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/cordevalle.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/cordillera_summit.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/country_club_of_fairfield.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/coyote_springs_chase.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/crooked_stick.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/crosswater_at_sunriver_resort.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/crumpin_fox.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/crystal_downs.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/cypress_point.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/dallas_national.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/dancing_rabbit_azaleas.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/darkhorse.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/deacons_lodge_at_grand_view_lodge.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/desert_forest.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/diamond_creek.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/donald_ross_course_at_french_lick.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/dormie_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/double_eagle.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/dunes_golf__beach_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/eagle_eye.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/eagle_point.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/eagle_ridgegeneral.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/east_lake.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/eastward_ho.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/edgewood_tahoe.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/elk_ridge.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/erin_hills_golf_course.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/essex_country_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/estancia.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/eugene_country_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/fallen_oak_at_beau_rivage_resort.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/firestonesouth.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/fishers_island.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/flint_hills.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/forest_highlands.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/fox_chapel.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/french_lick_resort_pete_dye.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/friars_head.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/galloway_national.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/gamble_sands.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/garden_city_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/glen_mills.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/gold_mountain_golf_complex_olympic.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/gozzer_ranch.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/grand_bear.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/grand_national_lake.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/grand_national_links.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/grand_traverse_the_bear.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/grande_dunes.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/grandfather.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/granite_links_granite_milton.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/gray_plantation.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/grayhawk_golf_club_raptor.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/grayhawk_golf_club_talon.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/great_river.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/greenville_country_club_chanticleer.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/hammock_beach_resort_ocean.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/harbour_town.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/harding_park.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/hawks_ridge.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/hawktree.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/hazeltine_national.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/hidden_creek.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/holston_hills.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/hualalai_golf_course.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/hudson_national.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/indianwood_old.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/innisbrook_resort_copperhead.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/interlachen.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/inverness.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/iron_bridge.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/jupiter_hills.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/jupiter_hillshills.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/kaluhyat_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/kapalua_resort_plantation.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/karsten_creek_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/kauai_lagoonskiele.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/kemper_lakes.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/kiawah_island_club_cassique.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/kingsmill_resort_river.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/kinloch.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/kittansett.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/kiva_dunes.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/koolau.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/la_purisima.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/la_quinta_resort_mountain.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/lake_of_isles_north.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/lakewood_shoresgailes.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/lakota_canyon_ranch__golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/laurel_valley.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/lehigh.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/limestone_springs.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/linville_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/long_cove.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/longaberger.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/los_angelesnorth.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/lost_canyonssky.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/lost_dunes.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/maderas_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/maidstone.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/makai_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/marquette_golf_club_greywalls.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/mattaponi_springs.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/mauna_kea_golf_course.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/mauna_laninorth.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/may_river_golf_club_at_palmetto_bluff.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/mayacama.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/medinah_no3.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/merion_east.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/mid_pines_inn_and_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/milwaukee.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/monterey_peninsula_shore.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/mountain_lake.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/mountaintop.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/murfield_village.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/myopia_hunt_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/myrtle_beach_national_kings_north.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/nanea.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/nantucket.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/national_golf_links_of_america.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/ncr_country_club_south.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/nemacolin_woodlands_galles.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/new_seabury_blue.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/newport.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/oak_hill_east.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/oak_tree_national.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/oakland_hillssouth.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/oakmont.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/ocean_forest.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/old_greenwood.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/old_macdonald.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/old_sandwich.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/old_town_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/old_warson.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/old_waverly_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/old_works_golf_course.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/olde_stonewall.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/olympia_fields_north.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/olympic_lake.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/omni_barton_creek_resort_fazio_canyons.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/omni_barton_creek_resort_fazio_foothills.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/omni_homestead_cascades.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/osprey_meadows.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/paa_ko_ridge_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pacific_dunes.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pasatiempo.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/peachtree.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pebble_beach.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pelican_hill_golf_club_ocean_north.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pelican_hill_golf_club_ocean_south.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pete_dye_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pga_west_tpc_stadium.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pikewood_national.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pilgrams_run.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pine_hill.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pine_meadow.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pine_tree.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pine_valley.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pinehills_golf_clubjones.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pinehills_golf_clubnicklaus.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pinehurst_no2.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pinehurst_resortno_4.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pinehurst_resortno_8.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pinon_hills.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/piping_rock.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/plainfield.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/point_owoods.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/poipu_bay.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/prairie_dunes.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/primm_valley_lakes.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/promontory_dye_canyon.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/pronghorn_golf_club__resort_nicklaus.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/quaker_ridge.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/quarry_oaks.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/raven_at_sabino_springs.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/red_hawk.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/red_hawk_.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/red_sky_ranch__golf_clubfazio.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/red_sky_ranch_golf_club_norman.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/reflection_bay.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/reynolds_plantation_great_waters.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/reynolds_plantationoconee.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/rich_harvest_links.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/ridgewood_west_east.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/rivers_edge.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/riviera.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/running_y_ranch.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/rustic_canyon_golf_course.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/sage_valley.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/sahalee.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/salem.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/san_francisco_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/sanctuary.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/sand_hills.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/sand_ridge.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/sandpiper_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/saratoga_national.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/scioto.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/sea_island_golf_clubseaside.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/sebonack.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/semiahmoo_loomis_trail.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/seminole.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/sentryworld.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/shadow_creek.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/shenandoah_at_turning_stone_resort.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/shepherds_hollow.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/shinnecock_hills.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/shoal_creek.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/shoreacres.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/somerset_hills.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/spring_creek_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/spring_hill_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/spyglass_hill.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/stanwich_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/stone_canyon.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/stonewall_palmer.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/stonewater.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/streamsong_resort_blue.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/streamsong_resort_red.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/sugarloaf.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/sunday_river_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/sutton_bay.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/sycamore_hills.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/taconic_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/talking_stick_north.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/tetherow_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_alotian_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_bluffs_on_thompson_creek.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_boulders_clubsouth.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_bridge.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_broadmoor_east.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_bull_at_pinehurst_farms.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_challenge_at_manele.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_classic_at_maddens_resort.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_concession.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_country_clubclyde_squirrel.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_creek_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_dunes.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_glen_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_golf_club_at_black_rock.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_golf_club_at_cuscowilla.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_golf_club_at_redlands_mesa.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_golf_courses_of_lawsonialinks.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_harvester_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_heritage_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_highland_course_at_primland_resort.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_honors_course.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_legend_at_giants_ridge.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_links_at_lighthouse_sound.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_links_at_spanish_bay.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_links_of_north_dakota.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_prairie_club_dunes.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_prairie_clubpines.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_preserve.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_prince_at_princeville.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_quarry_at_giants_ridge.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_quarry_at_la_quinta.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/the_rim.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/tidewater.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/tigers_eye.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/tobacco_road_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/torrey_pines_south.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/tpc_deere_run.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/tpc_myrtle_beach.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/tpc_san_antonioatt_oaks.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/tpc_sawgrass_players_stadium.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/tradition_at_royal_new_kent.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/troon_north_golf_club_monument.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/troon_north_golf_club_pinnacle.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/true_blue.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/true_north.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/trump_golf_links_at_ferry_point.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/trump_international.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/trump_national_bedminister_old.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/trump_national_doral_blue_monster.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/trump_national_golf_club_los_angeles.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/tullymore_golf_resort.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/turtle_bay_palmer.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/twin_warriors.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/valhalla.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/valley_club_of_montecito.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/ventana_canyonmountain.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/victoria_national.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/wade_hampton.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/wailea_golf_clubgold.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/wannamoisett.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/we_ko_pa_golf_club_cholla.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/we_ko_pa_golf_club_saguaro.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/weaverridge.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/whispering_pines.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/whistling_straits_golf_club_irish.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/whistling_straits_straits.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/wild_dunes_links.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/wild_horse_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/wilderness_at_fortune_bay.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/wilderness_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/wilmington_south.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/winged_foot_east.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/winged_foot_west.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/wolf_creek_golf_club.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/world_woods_pine_barrens.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/wynn_las_vegas.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/yale_university.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/logos/yeamans_hall.jpeg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2005_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2005_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2009_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2009_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2011_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2011_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2013_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2013_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2015_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2015_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2015_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2015_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2017_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2017_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2002_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2002_Public.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2003_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2003_All.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2005_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2005_All.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2007_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2007_All.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2009_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2009_All.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2011_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2011_All.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2013_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2013_All.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2003_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2003_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2004_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2004_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2005_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2005_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2006_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2006_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2007_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2007_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2008_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2008_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2009_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2009_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2010_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2010_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2011_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2011_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2012_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2012_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2013_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2013_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2014_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2014_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2015_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2015_All.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2016_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2016_Public.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/supplemental/course_location_info.csv" afterPath="$PROJECT_DIR$/Data/supplemental/course_location_info.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/supplemental/slopeRatingData.csv" afterPath="$PROJECT_DIR$/Data/supplemental/slopeRatingData.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/supplemental/slopeRatingYardageData.csv" afterPath="$PROJECT_DIR$/Data/supplemental/slopeRatingYardageData.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/pageguide/dist/css/pageguide.min.css" afterPath="$PROJECT_DIR$/js/vendor/pageguide/dist/css/pageguide.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/pageguide/js/pageguide.js" afterPath="$PROJECT_DIR$/js/vendor/pageguide/js/pageguide.js" />
     </list>
     <ignored path="golf_viz_public.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,121 +392,41 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/js/vendor/style.css">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0">
-                    <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/index.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.55508476">
-                    <caret line="187" column="67" selection-start-line="187" selection-start-column="67" selection-end-line="187" selection-end-column="67" />
-                    <folding>
-                      <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="3">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="Bugs2_17.txt" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/Bugs2_17.txt">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.07786885">
-                    <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="golf_viz_public" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33378747">
-              <caret line="363" column="37" selection-start-line="363" selection-start-column="37" selection-end-line="363" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.14711033">
+              <caret line="167" column="55" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
               <folding>
-                <marker date="1491948446000" expanded="true" signature="2241:2672" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pageguide.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vendor/pageguide/dist/css/pageguide.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pageguide.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vendor/pageguide/js/pageguide.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="177" column="35" selection-start-line="177" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,16 +447,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2005_All.json" />
-        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2007_All.json" />
-        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2011_All.json" />
         <option value="$PROJECT_DIR$/Data/supplemental/slopeRatingData.csv" />
         <option value="$PROJECT_DIR$/Data/supplemental/course_location_info.csv" />
         <option value="$PROJECT_DIR$/py/query_city_names.py" />
-        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json" />
-        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2003_All.json" />
-        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2013_All.json" />
-        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2009_All.json" />
         <option value="$PROJECT_DIR$/py/query_images.py" />
         <option value="$PROJECT_DIR$/js/vendor/pageguide/example/index.html" />
         <option value="$PROJECT_DIR$/js/vendor/example/index.html" />
@@ -216,7 +471,6 @@
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2009_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2005_Public.json" />
-        <option value="$PROJECT_DIR$/Data/Rankings/Golf_2003_All.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2005_All.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2007_All.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2009_All.json" />
@@ -229,6 +483,14 @@
         <option value="$PROJECT_DIR$/js/vendor/pageguide/dist/css/pageguide.min.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/Data/Rankings/Golf_2003_All.json" />
+        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2013_All.json" />
+        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2011_All.json" />
+        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2009_All.json" />
+        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2007_All.json" />
+        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2003_All.json" />
+        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2005_All.json" />
+        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json" />
       </list>
     </option>
   </component>
@@ -238,10 +500,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="186" />
+    <option name="x" value="184" />
     <option name="y" value="23" />
     <option name="width" value="1221" />
-    <option name="height" value="831" />
+    <option name="height" value="692" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -269,7 +531,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -298,180 +559,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="py" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pageguide" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pageguide" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pageguide" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pageguide" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rankings" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -680,14 +774,20 @@
       <option name="project" value="LOCAL" />
       <updated>1491881248779</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Some data corrections&#10;Moved help icon to top of window&#10;">
+      <created>1491962761828</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1491962761828</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="186" y="23" width="1221" height="831" extended-state="0" />
+    <frame x="184" y="23" width="1221" height="692" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21703522" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21703522" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32611638" sideWeight="0.50344825" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -747,7 +847,8 @@
     <MESSAGE value="fixed resize issues on left and right panels&#10;fixed composite ranking arrow key functionality&#10;fixed some naming errors" />
     <MESSAGE value="added pageguide&#10;fixed composite sort to reflected only selected rankings&#10;Updated architect selection issues&#10;Added pan functionality when course isn't in view&#10;" />
     <MESSAGE value="slight change to help option text" />
-    <option name="LAST_COMMIT_MESSAGE" value="slight change to help option text" />
+    <MESSAGE value="Some data corrections&#10;Moved help icon to top of window&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some data corrections&#10;Moved help icon to top of window&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -822,66 +923,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api_key.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="60" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/supplemental/course_location_info.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2003_All.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.254902">
-          <caret line="913" column="14" selection-start-line="913" selection-start-column="14" selection-end-line="913" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2005_All.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.490196">
-          <caret line="620" column="19" selection-start-line="620" selection-start-column="18" selection-end-line="620" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2007_All.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.490196">
-          <caret line="720" column="20" selection-start-line="720" selection-start-column="18" selection-end-line="720" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="772" column="29" selection-start-line="772" selection-start-column="29" selection-end-line="772" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2013_All.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44561934">
-          <caret line="448" column="41" selection-start-line="448" selection-start-column="41" selection-end-line="448" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2011_All.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3323263">
-          <caret line="809" column="20" selection-start-line="809" selection-start-column="19" selection-end-line="809" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2009_All.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.01726122">
-          <caret line="258" column="13" selection-start-line="258" selection-start-column="13" selection-end-line="258" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -899,29 +944,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/images/logos/world_woods_pine_barrens.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/py/query_images.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7559607">
           <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api_key.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="60" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/vendor/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5575843">
-          <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1037,13 +1063,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/Golf_2003_All.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4368482">
-          <caret line="553" column="15" selection-start-line="553" selection-start-column="8" selection-end-line="553" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/Rankings/Golf_2005_All.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4368482">
@@ -1100,24 +1119,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/vendor/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/vendor/pageguide/js/pageguide.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="177" column="35" selection-start-line="177" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/vendor/pageguide/dist/css/pageguide.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1126,28 +1127,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/vendor/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33378747">
-          <caret line="363" column="37" selection-start-line="363" selection-start-column="37" selection-end-line="363" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.7567185">
+          <caret line="1239" column="30" selection-start-line="1239" selection-start-column="30" selection-end-line="1239" selection-end-column="30" />
           <folding>
             <marker date="1491948446000" expanded="true" signature="2241:2672" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bugs2_17.txt">
+    <entry file="file://$PROJECT_DIR$/js/vendor/pageguide/js/pageguide.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07786885">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.020435967">
+          <caret line="177" column="35" selection-start-line="177" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/Golf_2003_All.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55514705">
+          <caret line="872" column="36" selection-start-line="872" selection-start-column="15" selection-end-line="872" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2013_All.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47058824">
+          <caret line="646" column="41" selection-start-line="646" selection-start-column="19" selection-end-line="646" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2011_All.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47058824">
+          <caret line="652" column="42" selection-start-line="652" selection-start-column="42" selection-end-line="652" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2009_All.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47058824">
+          <caret line="502" column="36" selection-start-line="502" selection-start-column="36" selection-end-line="502" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2007_All.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47058824">
+          <caret line="502" column="36" selection-start-line="502" selection-start-column="36" selection-end-line="502" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2003_All.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47058824">
+          <caret line="642" column="36" selection-start-line="642" selection-start-column="36" selection-end-line="642" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2005_All.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47058824">
+          <caret line="492" column="36" selection-start-line="492" selection-start-column="36" selection-end-line="492" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38786766">
+          <caret line="679" column="13" selection-start-line="679" selection-start-column="13" selection-end-line="679" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55508476">
-          <caret line="187" column="67" selection-start-line="187" selection-start-column="67" selection-end-line="187" selection-end-column="67" />
+        <state vertical-scroll-proportion="0.14711033">
+          <caret line="167" column="55" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

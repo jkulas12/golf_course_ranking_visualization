@@ -2,24 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be1a3c0b-0349-4300-888c-844cf1496732" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/missing_course_pictures" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/images/course_pictures/black_lake.jpeg" afterPath="$PROJECT_DIR$/Data/images/course_pictures/black_lake.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/images/course_pictures/dunes_golf__beach_club.jpeg" afterPath="$PROJECT_DIR$/Data/images/course_pictures/dunes_golf__beach_club.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/images/course_pictures/nemacolin_woodlands_galles.jpeg" afterPath="$PROJECT_DIR$/Data/images/course_pictures/nemacolin_woodlands_galles.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/images/course_pictures/new_seabury_blue.jpeg" afterPath="$PROJECT_DIR$/Data/images/course_pictures/new_seabury_blue.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/images/course_pictures/oak_hill_east.jpeg" afterPath="$PROJECT_DIR$/Data/images/course_pictures/oak_hill_east.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/images/course_pictures/old_town_club.jpeg" afterPath="$PROJECT_DIR$/Data/images/course_pictures/old_town_club.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/images/course_pictures/scioto.jpeg" afterPath="$PROJECT_DIR$/Data/images/course_pictures/scioto.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/images/course_pictures/stonewater.jpeg" afterPath="$PROJECT_DIR$/Data/images/course_pictures/stonewater.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/images/course_pictures/the_links_of_north_dakota.jpeg" afterPath="$PROJECT_DIR$/Data/images/course_pictures/the_links_of_north_dakota.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/images/course_pictures/torrey_pines_south.jpeg" afterPath="$PROJECT_DIR$/Data/images/course_pictures/torrey_pines_south.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/images/course_pictures/tullymore_golf_resort.jpeg" afterPath="$PROJECT_DIR$/Data/images/course_pictures/tullymore_golf_resort.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/images/course_pictures/whispering_pines.jpeg" afterPath="$PROJECT_DIR$/Data/images/course_pictures/whispering_pines.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/arcadia_bluffs_golf_club.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/blackwolf_run_river.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/coeur_dalene_resort.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/dark_horse.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/dormie_club.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/erin_hills_golf_course.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/golden_horseshoe_golf_club_gold.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/kiawah_island_ocean.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/mystic_rock_at_newacolin_woodlands_resort.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/oakland_hillssouth.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/old_greenwood.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/pumpkin_ridge_golf_club_ghost_creek.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/purgatory.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/rock_creek_cattle_company.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/southern_hills.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/the_greenbrier_old_white_tpc.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/tobacco_road.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/tpc_louisiana.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/turtle_point.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/weaver_ridge.jpeg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2011_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2011_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2013_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2013_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2015_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2015_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/py/query_images.py" afterPath="$PROJECT_DIR$/py/query_images.py" />
     </list>
     <ignored path="golf_viz_public.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -216,6 +219,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course_pictures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -450,15 +457,22 @@
       <option name="project" value="LOCAL" />
       <updated>1493312306475</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Fixed course pictures">
+      <created>1493759079458</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1493759079458</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="328" y="23" width="1112" height="831" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39252338" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39252338" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32523617" sideWeight="0.50344825" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928476" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -467,7 +481,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -519,7 +532,8 @@
     <MESSAGE value="slight change to help option text" />
     <MESSAGE value="Some data corrections&#10;Moved help icon to top of window&#10;" />
     <MESSAGE value="FIxed shoal creek location&#10;Removed logos" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIxed shoal creek location&#10;Removed logos" />
+    <MESSAGE value="Fixed course pictures" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed course pictures" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

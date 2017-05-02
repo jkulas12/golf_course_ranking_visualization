@@ -42,6 +42,8 @@ def query_image(course, isLogo):
         with open(filename, 'wb') as f:
             image.raw.decode_content = True
             shutil.copyfileobj(image.raw, f)
+    else:
+        print(image.status_code)
 
 
 
@@ -63,13 +65,18 @@ def load_course_names():
     return course_name_set
 
 if __name__ == '__main__':
-    last_course = "Wolf Creek Golf Club"
-    courses = sorted(list(load_course_names()))
-    start_index = courses.index(last_course) + 1
-    for i in range(start_index, len(courses)):
-        print('querying course: ' + courses[i])
-        try:
-            query_image(courses[i], False)
-        except:
-            print('failed')
+    # last_course = "Wolf Creek Golf Club"
+    # courses = sorted(list(load_course_names()))
+    # start_index = courses.index(last_course) + 1
 
+
+
+    # for i in range(start_index, len(courses)):
+    #     print('querying course: ' + courses[i])
+    #     try:
+    #         query_image(courses[i], False)
+    #     except:
+    #         print('failed')
+
+    course_name = "Oakland Hills(South)"
+    query_image(course_name, False)

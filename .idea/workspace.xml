@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be1a3c0b-0349-4300-888c-844cf1496732" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/arcadia_bluffs_golf_club.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/blackwolf_run_river.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/coeur_dalene_resort.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/dark_horse.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/dormie_club.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/erin_hills_golf_course.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/golden_horseshoe_golf_club_gold.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/kiawah_island_ocean.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/mystic_rock_at_newacolin_woodlands_resort.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/oakland_hillssouth.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/old_greenwood.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/pumpkin_ridge_golf_club_ghost_creek.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/purgatory.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/rock_creek_cattle_company.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/southern_hills.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/the_greenbrier_old_white_tpc.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/tobacco_road.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/tpc_louisiana.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/turtle_point.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/weaver_ridge.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2017_Public.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/k" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path="golf_viz_public.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,9 +20,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/golf_viz_public$query_images.coverage" NAME="query_images Coverage Results" MODIFIED="1493753306230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/py" />
-  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -47,11 +29,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="missing_course_pictures" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/missing_course_pictures">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33755276">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.875">
+              <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GDigest_2007_Public.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7875">
+              <caret line="104" column="1" selection-start-line="104" selection-start-column="1" selection-end-line="104" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GDigest_2017_Public.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2017_Public.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="732" column="15" selection-start-line="732" selection-start-column="8" selection-end-line="732" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GDigest_2001_All.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="2" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -90,7 +102,6 @@
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2004_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2002_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2009_Public.json" />
-        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2005_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2005_All.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2007_All.json" />
@@ -103,7 +114,6 @@
         <option value="$PROJECT_DIR$/js/vendor/pageguide/js/pageguide.js" />
         <option value="$PROJECT_DIR$/js/vendor/pageguide/dist/css/pageguide.min.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2003_All.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2013_All.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2011_All.json" />
@@ -111,12 +121,16 @@
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2007_All.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2003_All.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2005_All.json" />
-        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json" />
         <option value="$PROJECT_DIR$/py/query_images.py" />
-        <option value="$PROJECT_DIR$/missing_course_pictures" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2013_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2011_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2015_Public.json" />
+        <option value="$PROJECT_DIR$/missing_course_pictures" />
+        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json" />
+        <option value="$PROJECT_DIR$/js/k" />
+        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2017_Public.json" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json" />
       </list>
     </option>
   </component>
@@ -126,9 +140,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="328" />
+    <option name="x" value="48" />
     <option name="y" value="23" />
-    <option name="width" value="1112" />
+    <option name="width" value="1284" />
     <option name="height" value="831" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -156,8 +170,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -200,7 +214,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Data" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -215,14 +229,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="course_pictures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -261,26 +267,27 @@
       <recent name="$PROJECT_DIR$/js/vendor" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.query_images">
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -295,6 +302,18 @@
       <command value="run-script" />
       <scripts />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
       <method />
     </configuration>
     <configuration default="false" name="query_city_names" type="PythonConfigurationType" factoryName="Python">
@@ -333,10 +352,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Python.query_city_names" />
-      <item index="1" class="java.lang.String" itemvalue="Python.query_images" />
-    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -463,30 +478,36 @@
       <option name="project" value="LOCAL" />
       <updated>1493759079458</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="adding course pictures that got missed">
+      <created>1493759220935</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1493759220935</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="328" y="23" width="1112" height="831" extended-state="0" />
-    <editor active="false" />
+    <frame x="48" y="23" width="1284" height="831" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39252338" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23052959" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32523617" sideWeight="0.50344825" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928476" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16141732" sideWeight="0.50311524" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32523617" sideWeight="0.49655172" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928476" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939634" sideWeight="0.49688473" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -533,7 +554,8 @@
     <MESSAGE value="Some data corrections&#10;Moved help icon to top of window&#10;" />
     <MESSAGE value="FIxed shoal creek location&#10;Removed logos" />
     <MESSAGE value="Fixed course pictures" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed course pictures" />
+    <MESSAGE value="adding course pictures that got missed" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding course pictures that got missed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -542,29 +564,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/py/query_images.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
-          <folding>
-            <element signature="e#1#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="169" column="0" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/missing_course_pictures">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -581,7 +584,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1491948446000" expanded="true" signature="2241:2672" placeholder="{...}" />
+            <marker date="1496341095000" expanded="true" signature="2323:2754" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -613,7 +616,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1203" column="0" selection-start-line="1203" selection-start-column="0" selection-end-line="1203" selection-end-column="0" />
           <folding>
-            <marker date="1491948446000" expanded="true" signature="2241:2672" placeholder="{...}" />
+            <marker date="1496341095000" expanded="true" signature="2323:2754" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -716,13 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33256084">
-          <caret line="847" column="30" selection-start-line="847" selection-start-column="30" selection-end-line="847" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2005_Public.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33256084">
@@ -779,13 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2017_All.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4368482">
-          <caret line="872" column="15" selection-start-line="872" selection-start-column="15" selection-end-line="872" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/vendor/pageguide/dist/css/pageguide.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -797,16 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7567185">
-          <caret line="1239" column="30" selection-start-line="1239" selection-start-column="30" selection-end-line="1239" selection-end-column="30" />
-          <folding>
-            <marker date="1491948446000" expanded="true" signature="2241:2672" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -866,28 +845,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38786766">
-          <caret line="679" column="13" selection-start-line="679" selection-start-column="13" selection-end-line="679" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/py/query_images.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
-          <folding>
-            <element signature="e#1#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.958333">
-          <caret line="185" column="92" selection-start-line="185" selection-start-column="92" selection-end-line="185" selection-end-column="92" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -895,7 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.909091">
           <caret line="813" column="26" selection-start-line="813" selection-start-column="26" selection-end-line="813" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -903,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.0392156">
           <caret line="716" column="1" selection-start-line="716" selection-start-column="1" selection-end-line="716" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -911,14 +870,68 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20524018">
           <caret line="812" column="18" selection-start-line="812" selection-start-column="18" selection-end-line="812" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/missing_course_pictures">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33755276">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2017_All.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="872" column="15" selection-start-line="872" selection-start-column="15" selection-end-line="872" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/k">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8621746">
+          <caret line="296" column="2" selection-start-line="296" selection-start-column="2" selection-end-line="296" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5155483">
+          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+          <folding>
+            <marker date="1496341095000" expanded="true" signature="2323:2754" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2017_Public.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="732" column="15" selection-start-line="732" selection-start-column="8" selection-end-line="732" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7875">
+          <caret line="104" column="1" selection-start-line="104" selection-start-column="1" selection-end-line="104" selection-end-column="1" />
           <folding />
         </state>
       </provider>

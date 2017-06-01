@@ -22,7 +22,9 @@ var mapCourses;
 ///////////////////////////
 // global data variables //
 ///////////////////////////
-
+//var all_rankings = [
+//    'GDigest_2017_Public'
+//];
 var RANKINGS_PATH = 'Data/Rankings/';
 // all datasets to be loaded
 var all_rankings = [
@@ -55,7 +57,8 @@ var all_rankings = [
     "GDigest_2013_Public",
     "GDigest_2015_All",
     "GDigest_2015_Public",
-    'GDigest_2017_All'
+    'GDigest_2017_All',
+    'GDigest_2017_Public'
 ];
 
 var most_recent_ranking = 'GDigest_2017_All';
@@ -187,6 +190,7 @@ function load_all_rankings(rankings) {
                 type : json.Type,
                 courses : {}
             };
+
             // iterate through all courses in a ranking
             json.Courses.forEach(function(c) {
                 // create class name for given course
@@ -291,6 +295,10 @@ function load_all_rankings(rankings) {
                 ranking.courses[c.CourseName] = c.Ranking;
                 // TODO: go through courses in an architect and remove duplicates
             });
+            console.log(ranking_name)
+            console.log(Object.keys(ranking.courses).length)
+            console.log(ranking.courses)
+            console.log('-----------------')
             ranking_map[ranking_name] = ranking;
         });
         // check to see if we have visited every ranking
@@ -318,6 +326,8 @@ function load_all_rankings(rankings) {
                         if (Object.keys(course_map).indexOf(course_class_name) !== -1) {
                             course_map[course_class_name]['city'] = c.City;
                             course_map[course_class_name]['state'] = c.State;
+                        } else {
+                            console.log("couldn't find course: " + course_class_name);
                         }
                     })
                 })
@@ -372,6 +382,10 @@ function load_all_rankings(rankings) {
                 chartTooltip = d3.select('body').append('div')
                     .attr('class', 'chartTooltip')
                     .style('opacity', 0)
+                //for (var ranking in ranking_map) {
+                //    console.log(ranking);
+                //    console.log(Object.keys(ranking_map[ranking]['courses']).length)
+                //}
                 initialize_chart();
                 initialize_container_lists();
                 populate_ranking_matrix();
@@ -1640,6 +1654,7 @@ function get_valid_courses() {
     if (filtered_rankings.length === 0) {
         return [];
     }
+    console.log(ranking_map)
 
     var valid_courses = uniq(filtered_rankings.map(function(r) {
         return Object.keys(ranking_map[r]['courses'])

@@ -295,10 +295,6 @@ function load_all_rankings(rankings) {
                 ranking.courses[c.CourseName] = c.Ranking;
                 // TODO: go through courses in an architect and remove duplicates
             });
-            console.log(ranking_name)
-            console.log(Object.keys(ranking.courses).length)
-            console.log(ranking.courses)
-            console.log('-----------------')
             ranking_map[ranking_name] = ranking;
         });
         // check to see if we have visited every ranking
@@ -924,13 +920,9 @@ function initialize_selectable() {
             descending = true;
         }
         if (descending) {
-            sorted_courses = get_valid_courses().sort(function (a, b) {
-                return composite_sort(a, b, valid_rankings)
-            });
+            sorted_courses = composite_sort(get_valid_courses());
         } else {
-            sorted_courses = get_valid_courses().sort(function (a, b) {
-                return composite_sort(b, a, valid_rankings)
-            });
+            sorted_courses = composite_sort(get_valid_courses());
         }
 
         var highlighted_courses = new Set(get_highlighted_courses().map(function (d) {
@@ -1072,58 +1064,101 @@ function initialize_selectable() {
     });
 }
 
-function composite_sort(a,b, valid_rankings) {
-    //TODO: modify for only rankings shown
-
-    // most recent public publication for a
-    var a_recent_pub = Object.keys(a.rankings).filter(function(c) {
-        return c.split('_')[2] === 'Public' && valid_rankings.indexOf(c) !== -1;
-    }).sort(function(cA,cB) {
-        return +cA.split('_')[1] - (+cB.split('_')[1]);
-    }).slice(-1)[0];
-
-
-    // most recent public publication for b
-    var b_recent_pub =  Object.keys(b.rankings).filter(function(c) {
-        return c.split('_')[2] === 'Public' && valid_rankings.indexOf(c) !== -1;
-    }).sort(function(cA,cB) {
-        return +cA.split('_')[1] - (+cB.split('_')[1]);
-    }).slice(-1)[0];
-
-    // most recent All publication for a
-    var a_recent_all =  Object.keys(a.rankings).filter(function(c) {
-        return c.split('_')[2] === 'All' && valid_rankings.indexOf(c) !== -1;
-    }).sort(function(cA,cB) {
-        return +cA.split('_')[1] - (+cB.split('_')[1]);
-    }).slice(-1)[0];
-    // most recent All publication for b
-    var b_recent_all =  Object.keys(b.rankings).filter(function(c) {
-        return c.split('_')[2] === 'All' && valid_rankings.indexOf(c) !== -1;
-    }).sort(function(cA,cB) {
-        return +cA.split('_')[1] - (+cB.split('_')[1]);
-    }).slice(-1)[0];
-
-    // ranking types for a course
-    var a_types = uniq( Object.keys(a.rankings).map(function(c) {
-        return c.split('_')[2];
-    }));
-    var b_types = uniq( Object.keys(b.rankings).map(function(c) {
-        return c.split('_')[2];
-    }));
-
-    if (a_types.indexOf('All') !== -1 && b_types.indexOf('All') !== -1) {
-        // compare most recent all ranking
-        return a.rankings[a_recent_all] - b.rankings[b_recent_all];
-    } else if (a_types.indexOf('All') !== -1 && b_types.indexOf('All') === -1) {
-        return -1
-    } else if (a_types.indexOf('All') === -1 && b_types.indexOf('All') !== -1) {
-        return 1
-    } else {
-        return a.rankings[a_recent_pub] - b.rankings[b_recent_pub];
-    }
-
+function sort_rankings(rankings) {
+    return rankings.sort(function(a, b) {
+        var a_year = parseInt(a.split('_')[1]);
+        var b_year = parseInt(b.split('_')[1]);
+        return  a_year - b_year
+    })
 }
 
+// get composite points for a given course
+function get_course_composite_points(course) {
+
+    var valid_rankings = get_selected_rankings();
+    var all_rankings = sort_rankings(valid_rankings.filter(function(rank) {return rank.indexOf('All') !== -1})).reverse();
+    var public_rankings = sort_rankings(valid_rankings.filter(function(rank) {return rank.indexOf('Public') !== -1})).reverse();
+
+    var rankings_all_years = get_unique_list(all_rankings.map(function(c) {return parseInt(c.split('_')[1])})).reverse();
+    var rankings_public_years = get_unique_list(public_rankings.map(function(c) {return parseInt(c.split('_')[1])})).reverse();
+    // sort list of rankings by year
+    var decay_ratio = [.5,.3,.15,.05,.05,.05];
+
+    var all_ranks = Object.keys(course.rankings).filter(function(rank) {return rank.indexOf('All') !== -1});
+
+    var valid_all_years = rankings_all_years;
+    if (rankings_all_years.length > 6) { valid_all_years = rankings_all_years.slice(0,6)}
+
+    var valid_public_years = rankings_public_years
+    if (rankings_public_years.length > 6) { valid_public_years = rankings_public_years.slice(0,6)}
+
+
+    var total_points = 0;
+    var is_all;
+    // has all_ranks, so use all rankings
+    if (all_ranks.length > 0) {
+        // only years that will be considered in points (last 6)
+        for (var y in valid_all_years) {
+            var year = valid_all_years[y];
+            var decay_pct = decay_ratio[valid_all_years.indexOf(year)];
+            total_points += decay_pct * get_ranking_points(course,'GDigest_' + year + '_All');
+            total_points += decay_pct * get_ranking_points(course, 'Golf_' + year + '_All');
+        }
+        is_all = true;
+    } else {
+        // only use public_ranks
+        for (var y in valid_public_years) {
+            var year = valid_public_years[y];
+            var decay_pct = decay_ratio[valid_public_years.indexOf(year)];
+            total_points += decay_pct * get_ranking_points(course,'GDigest_' + year + '_Public');
+            total_points += decay_pct * get_ranking_points(course, 'Golf_' + year + '_Public');
+        }
+        is_all = false;
+    }
+    return [total_points, is_all]
+}
+
+
+function composite_sort(courses) {
+
+
+    // list of (course, points) tuple for both types of courses
+    var all_course_points_list = [];
+    var public_course_points_list = [];
+
+    for (var c in courses) {
+        var course = courses[c];
+        var course_point_list = get_course_composite_points(course);
+        if (course_point_list[1]) {
+            all_course_points_list.push([course,course_point_list[0]])
+        } else {
+            public_course_points_list.push([course, course_point_list[0]])
+        }
+
+    }
+    public_course_points_list.sort(function(a,b) {return b[1] - a[1]})
+    all_course_points_list.sort(function(a,b) {return b[1] - a[1]})
+    var course_list = all_course_points_list.concat(public_course_points_list);
+
+    return course_list.map(function(c) {return c[0]});
+}
+
+// function to get points for a course in a ranking. if course doesnt exist return 0
+function get_ranking_points(course, ranking) {
+    if (ranking in course.rankings) {
+        return 101 - course.rankings[ranking];
+    } else {
+        return 0
+    }
+}
+
+function get_unique_list(l) {
+    var ul = [];
+    $.each(l, function(i, el){
+        if($.inArray(el, ul) === -1) ul.push(el);
+    });
+    return ul.sort();
+}
 // function to check if course is in current rankings being shown
 // returns boolean value
 function is_course_in_current_rankings(course) {
@@ -1597,9 +1632,11 @@ function initialize_course_year_slider() {
 }
 // updates map, courses and architects list
 function refresh_map() {
-    // defaults to alphabetical...
+
+    var valid_courses = composite_sort(get_valid_courses())
     var valid_rankings = get_selected_rankings();
-    var valid_courses = get_valid_courses().sort( function(a,b)  {return composite_sort(a,b, valid_rankings)});
+
+    // defaults to alphabetical...
     if (!$('.orderedSortDiv').hasClass('active')) {
         $('.orderedSortDiv').removeClass('inactive')
             .addClass('active')
@@ -1654,7 +1691,6 @@ function get_valid_courses() {
     if (filtered_rankings.length === 0) {
         return [];
     }
-    console.log(ranking_map)
 
     var valid_courses = uniq(filtered_rankings.map(function(r) {
         return Object.keys(ranking_map[r]['courses'])
@@ -2016,7 +2052,7 @@ function zoomUp() {
     endRubberBand();
 }
 
-// function to update course list
+// function to update course list8
 function update_course_list(courses) {
     $('.courseHeading > text').text('Courses (' + courses.length + ' shown)')
 
@@ -2043,9 +2079,9 @@ function update_course_list(courses) {
         courseEnter.append('span')
             .text(function(d,i) {
                 if ($('.orderedSortDiv > span').hasClass('glyphicon-arrow-down')) {
-                    return i + 1;
+                    return '(' + parseInt(i + 1)  + "  " + get_course_composite_points(d)[0].toFixed(2) + '):';
                 } else {
-                    return courseEnter.data().length + 1 - i;
+                    return '(' + parseInt(courseEnter.data().length + 1 - i) + '  ' + get_course_composite_points(d)[0].toFixed(2) + "):";
                 }
             })
             .attr('class', 'rankSpan')

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="be1a3c0b-0349-4300-888c-844cf1496732" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2002_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2002_Public.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path="golf_viz_public.iws" />
@@ -28,8 +29,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5">
-              <caret line="51" column="84" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
+            <state vertical-scroll-proportion="-8.125">
+              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -38,10 +39,10 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46061644">
-              <caret line="2075" column="0" selection-start-line="2075" selection-start-column="0" selection-end-line="2075" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.28082192">
+              <caret line="323" column="77" selection-start-line="323" selection-start-column="77" selection-end-line="323" selection-end-column="77" />
               <folding>
-                <marker date="1496598999000" expanded="true" signature="2323:2754" placeholder="{...}" />
+                <marker date="1496633838000" expanded="true" signature="2323:2754" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -78,7 +79,6 @@
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2008_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2006_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2004_Public.json" />
-        <option value="$PROJECT_DIR$/Data/Rankings/Golf_2002_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2009_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2005_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2005_All.json" />
@@ -108,6 +108,7 @@
         <option value="$PROJECT_DIR$/js/k" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2017_Public.json" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json" />
+        <option value="$PROJECT_DIR$/Data/Rankings/Golf_2002_Public.json" />
         <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
@@ -118,9 +119,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="48" />
+    <option name="x" value="46" />
     <option name="y" value="23" />
-    <option name="width" value="1284" />
+    <option name="width" value="1393" />
     <option name="height" value="831" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -468,14 +469,20 @@
       <option name="project" value="LOCAL" />
       <updated>1496355925702</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added Golf DIgest 2017 public ranking">
+      <created>1496599059756</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1496599059756</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="23" width="1284" height="831" extended-state="0" />
+    <frame x="46" y="23" width="1393" height="831" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23052959" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21249102" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16141732" sideWeight="0.50311524" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -569,7 +576,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1496598999000" expanded="true" signature="2323:2754" placeholder="{...}" />
+            <marker date="1496633838000" expanded="true" signature="2323:2754" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -601,7 +608,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1203" column="0" selection-start-line="1203" selection-start-column="0" selection-end-line="1203" selection-end-column="0" />
           <folding>
-            <marker date="1496598999000" expanded="true" signature="2323:2754" placeholder="{...}" />
+            <marker date="1496633838000" expanded="true" signature="2323:2754" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -680,20 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33256084">
           <caret line="477" column="30" selection-start-line="477" selection-start-column="30" selection-end-line="477" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/Golf_2004_Public.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33256084">
-          <caret line="447" column="30" selection-start-line="447" selection-start-column="30" selection-end-line="447" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/Golf_2002_Public.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33256084">
-          <caret line="398" column="30" selection-start-line="398" selection-start-column="30" selection-end-line="398" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -883,7 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="732" column="15" selection-start-line="732" selection-start-column="8" selection-end-line="732" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -891,7 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="2" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -899,24 +890,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33049405">
           <caret line="78" column="12" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/Golf_2002_Public.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46607143">
+          <caret line="893" column="31" selection-start-line="893" selection-start-column="31" selection-end-line="893" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/Golf_2004_Public.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4020443">
+          <caret line="487" column="25" selection-start-line="487" selection-start-column="14" selection-end-line="487" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5">
-          <caret line="51" column="84" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
+        <state vertical-scroll-proportion="-8.125">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46061644">
-          <caret line="2075" column="0" selection-start-line="2075" selection-start-column="0" selection-end-line="2075" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.28082192">
+          <caret line="323" column="77" selection-start-line="323" selection-start-column="77" selection-end-line="323" selection-end-column="77" />
           <folding>
-            <marker date="1496598999000" expanded="true" signature="2323:2754" placeholder="{...}" />
+            <marker date="1496633838000" expanded="true" signature="2323:2754" placeholder="{...}" />
           </folding>
         </state>
       </provider>

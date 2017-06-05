@@ -436,11 +436,11 @@
 }
 ,
 {
-"CourseName":"The Greenbrier (Old White TPC)",
+"CourseName":"The Greenbrier (Greenbrier)",
 "Ranking":44,
 "State":"WV",
-"Architect":"C.B. Macdonald",
-"Year":"1914",
+"Architect":"Seth Raynor_Jack Nicklaus",
+"Year":"1924",
 "Coordinates":[37.783509,-80.31688],
 "Type":"public"
 }
@@ -456,13 +456,13 @@
 }
 ,
 {
-"CourseName":"World Woods (Pine Barrens)",
+"CourseName":"World Woods (Rolling Oaks)",
 "Ranking":46,
 "State":"FL",
 "Architect":"Tom Fazio",
 "Year":"1993",
-"Coordinates":[28.68371,-82.47934],
-"Type":"private"
+"Coordinates":[28.670,-82.478],
+"Type":"public"
 }
 ,
 {
@@ -886,12 +886,12 @@
 }
 ,
 {
-"CourseName":"The Boulders Club(South)",
+"CourseName":"The Boulders Club(North)",
 "Ranking":89,
 "State":"AZ",
 "Architect":"Jay Morrish",
-"Year":"1984",
-"Coordinates":[33.803251,-111.91823],
+"Year":"1985",
+"Coordinates":[33.803251,-111.71823],
 "Type":"public"
 }
 ,

@@ -326,7 +326,7 @@ function load_all_rankings(rankings) {
                             console.log("couldn't find course: " + course_class_name);
                         }
                     })
-                })
+                });
                 /////////////////////////////////////////////
                 /// compute and integrate chart data ////////
                 /////////////////////////////////////////////
@@ -1070,68 +1070,37 @@ function sort_rankings(rankings) {
 }
 
 // get composite points for a given course
-function get_course_composite_points(course, all_rankings, public_rankings) {
-
-
-    var rankings_all_years = get_unique_list(all_rankings.map(function(c) {return parseInt(c.split('_')[1])})).reverse();
-    var rankings_public_years = get_unique_list(public_rankings.map(function(c) {return parseInt(c.split('_')[1])})).reverse();
-    // sort list of rankings by year
-    var decay_ratio = [.5,.3,.15,.05,.05,.05];
-
-    var course_all_ranks = Object.keys(course.rankings).filter(function(rank) {return rank.indexOf('All') !== -1});
-    var course_public_ranks = Object.keys(course.rankings).filter(function(rank) {return rank.indexOf('All') === -1});
-
-    var course_all_years = get_unique_list(course_all_ranks.map(function(c) {return parseInt(c.split('_')[1])})).reverse();
-    var course_public_years = get_unique_list(course_public_ranks.map(function(c) {return parseInt(c.split('_')[1])})).reverse();
-
-    var valid_all_years = rankings_all_years;
-    if (rankings_all_years.length > 6) { valid_all_years = rankings_all_years.slice(0,6)}
-
-    var valid_public_years = rankings_public_years;
-    if (rankings_public_years.length > 6) { valid_public_years = rankings_public_years.slice(0,6)}
-
+// rank_decay_map: map of rankings to their decay value. ex: {rank : decay_value}
+// only contains keys for rankigns that are currently selected
+function get_course_composite_points(course, rank_decay_map) {
+    // need to ultimately find the decay factor for a given ranking
+    // for each ranking a course is ranked in, map to a decay pct as a function of that ranking's index in the all and
+    // public rankings selected
+    // valid_all_ranks is intersection of valid_all_ranks and all_ranks that course is ranked in
+    var valid_all_ranks = Object.keys(course.rankings)
+        .filter(function(r) {return (r in rank_decay_map) && r.indexOf('All') !== -1});
 
     var total_points = 0;
     var is_all;
-
-    var all_rankings_set = new Set(all_rankings);
-    var public_rankings_set = new Set(public_rankings);
-
-    // TODO: doesnt check if the individual ranking is valid, just the year.
-    // for example if Golf DIgest 2015 All was selected buty Golf 2015 all was not, would
-    // still look for 2015 all
-    // check to see if a course has an all ranking and there are all rankings selected, if yes, use all
-
-    if (course_all_years.length > 0 && all_rankings.length > 0) {
+    if (valid_all_ranks.length > 0) {
         // only years that will be considered in points (last 6)
-        for (var y in valid_all_years) {
-            var year = valid_all_years[y];
+        for (var r in valid_all_ranks) {
+            var rank = valid_all_ranks[r];
 
-            var decay_pct = decay_ratio[valid_all_years.indexOf(year)];
-            if (all_rankings_set.has('GDigest_' + year + '_All')) {
-                total_points += decay_pct * get_ranking_points(course,'GDigest_' + year + '_All');
-            }
-            if (all_rankings_set.has('Golf_' + year + '_All')) {
-                total_points += decay_pct * get_ranking_points(course, 'Golf_' + year + '_All');
-            }
+            total_points += rank_decay_map[rank] * get_ranking_points(course, rank);
+
         }
         is_all = true;
     } else {
         // only use public_ranks
-        for (var y in valid_public_years) {
-            var year = valid_public_years[y];
-            var decay_pct = decay_ratio[valid_public_years.indexOf(year)];
-            if (public_rankings_set.has('GDigest_' + year + '_Public')) {
-                total_points += decay_pct * get_ranking_points(course,'GDigest_' + year + '_Public');
-            }
-            if (public_rankings_set.has('Golf_' + year + '_Public')) {
-                total_points += decay_pct * get_ranking_points(course, 'Golf_' + year + '_Public');
-            }
-
-
-
+        var valid_public_ranks = Object.keys(course.rankings)
+            .filter(function(r) {return (r in rank_decay_map) && r.indexOf('Public') !== -1});
+        for (var r in valid_public_ranks) {
+            var rank = valid_public_ranks[r];
+            total_points += rank_decay_map[rank] * get_ranking_points(course, rank);
         }
         is_all = false;
+
     }
     return [total_points, is_all]
 }
@@ -1149,9 +1118,12 @@ function composite_sort(courses) {
     var public_rankings = sort_rankings(valid_rankings.filter(function(rank) {return rank.indexOf('Public') !== -1})).reverse();
 
 
+    var ranking_decay_map = gen_ranking_decay_maps();
+
+
     for (var c in courses) {
         var course = courses[c];
-        var course_point_list = get_course_composite_points(course, all_rankings, public_rankings);
+        var course_point_list = get_course_composite_points(course, ranking_decay_map);
         if (course_point_list[1]) {
             all_course_points_list.push([course,course_point_list[0]])
         } else {
@@ -1161,9 +1133,61 @@ function composite_sort(courses) {
     public_course_points_list.sort(function(a,b) {return b[1] - a[1]})
     all_course_points_list.sort(function(a,b) {return b[1] - a[1]})
     var course_list = all_course_points_list.concat(public_course_points_list);
-
     return course_list.map(function(c) {return c[0]});
 }
+
+// generates and returns ranking_decay_maps for all and public rankings
+// in form {ranking_name : decay_pct}
+// NOT specific to a single course, for all selected rankings
+function gen_ranking_decay_maps() {
+    var valid_rankings = get_selected_rankings();
+    // generate sorted lists of each ranking
+    var gDigest_All = valid_rankings.filter(function(rank) {
+        var split_rank = rank.split('_');
+        return split_rank[0] == 'GDigest' && split_rank[2] == 'All';
+    }).sort(function(a,b) {
+        return parseInt(b.split('_')[1]) - parseInt(a.split('_')[1]);
+    });
+    var gDigest_Public = valid_rankings.filter(function(rank) {
+        var split_rank = rank.split('_');
+        return split_rank[0] == 'GDigest' && split_rank[2] == 'Public';
+    }).sort(function(a,b) {
+        return parseInt(b.split('_')[1]) - parseInt(a.split('_')[1]);
+    });
+    var golf_All = valid_rankings.filter(function(rank) {
+        var split_rank = rank.split('_');
+        return split_rank[0] == 'Golf' && split_rank[2] == 'All';
+    }).sort(function(a,b) {
+        return parseInt(b.split('_')[1]) - parseInt(a.split('_')[1]);
+    });
+    var golf_Public = valid_rankings.filter(function(rank) {
+        var split_rank = rank.split('_');
+        return split_rank[0] == 'Golf' && split_rank[2] == 'Public';
+    }).sort(function(a,b) {
+        return parseInt(b.split('_')[1]) - parseInt(a.split('_')[1]);
+    });
+
+    var decay_amounts = [1,.8,.6,.4,.2,.1,.05,.03,.01];
+
+    var rank_map = {};
+    for (var r in valid_rankings) {
+        if (valid_rankings.hasOwnProperty(r)) {
+            var rank = valid_rankings[r];
+            if (rank.split('_')[0] == 'GDigest' && rank.split('_')[2] == 'All') {
+                rank_map[rank] = decay_amounts[gDigest_All.indexOf(rank)]
+            } else if (rank.split('_')[0] == 'GDigest' && rank.split('_')[2] == 'Public') {
+                rank_map[rank] = decay_amounts[gDigest_Public.indexOf(rank)]
+            } else if (rank.split('_')[0] == 'Golf' && rank.split('_')[2] == 'All') {
+                rank_map[rank] = decay_amounts[golf_All.indexOf(rank)]
+            } else if (rank.split('_')[0] == 'Golf' && rank.split('_')[2] == 'Public') {
+                rank_map[rank] = decay_amounts[golf_Public.indexOf(rank)]
+            }
+        }
+    }
+    return rank_map
+
+}
+
 
 // function to get points for a course in a ranking. if course doesnt exist return 0
 function get_ranking_points(course, ranking) {
@@ -2097,17 +2121,14 @@ function update_course_list(courses) {
         .style('float', 'left')
         .style("border", "none");
 
-    var valid_rankings = get_selected_rankings();
-    var all_rankings = sort_rankings(valid_rankings.filter(function(rank) {return rank.indexOf('All') !== -1})).reverse();
-    var public_rankings = sort_rankings(valid_rankings.filter(function(rank) {return rank.indexOf('Public') !== -1})).reverse();
-
+    var rank_decay_map = gen_ranking_decay_maps();
 
     // add course rank if in composite rank
     if ($('.orderedSortDiv').hasClass('active')) {
         courseEnter.append('span')
             .attr('class', 'rankSpan')
             .text(function(d,i) {
-                var points = get_course_composite_points(d, all_rankings,public_rankings)[0].toFixed(2)
+                var points = get_course_composite_points(d, rank_decay_map)[0].toFixed(2)
                 if ($('.orderedSortDiv > span').hasClass('glyphicon-arrow-down')) {
                     return '(' + parseInt(class_map[d.className])  + "  " + points + '):';
                 } else {
@@ -2117,7 +2138,7 @@ function update_course_list(courses) {
         courseEnter.merge(courseSelect)
             .selectAll('.rankSpan')
             .text(function(d,i) {
-                var points = get_course_composite_points(d, all_rankings, public_rankings)[0].toFixed(2)
+                var points = get_course_composite_points(d, rank_decay_map)[0].toFixed(2)
                 if ($('.orderedSortDiv > span').hasClass('glyphicon-arrow-down')) {
                     return '(' + parseInt(class_map[d.className])  + "  " + points + '):';
                 } else {

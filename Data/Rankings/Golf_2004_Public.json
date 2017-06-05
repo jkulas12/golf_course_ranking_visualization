@@ -471,21 +471,21 @@
 "Architect":"Baxter Spann",
 "Year":"2003",
 "Coordinates":[35.960313,-106.053594],
-"Type":"Public"
+"Type":"public"
 }
 ,
 {
-"CourseName":"The Greenbrier (Old White TPC)",
+"CourseName":"The Greenbrier (Greenbrier)",
 "Ranking":48,
 "State":"WV",
-"Architect":"C.B. Macdonald",
-"Year":"1914",
+"Architect":"Seth Raynor_Jack Nicklaus",
+"Year":"1924",
 "Coordinates":[37.783509,-80.31688],
 "Type":"public"
 }
 ,
 {
-"CourseName":"World Woods (Pine Barrens)",
+"CourseName":"World Woods (Rolling Oaks)",
 "Ranking":49,
 "State":"FL",
 "Architect":"Tom Fazio",
@@ -695,7 +695,7 @@
 }
 ,
 {
-"CourseName":"Grand National (Lake)",
+"CourseName":"Grand National (Links)",
 "Ranking":70,
 "State":"AL",
 "Architect":"Robert Trent Jones Sr.",

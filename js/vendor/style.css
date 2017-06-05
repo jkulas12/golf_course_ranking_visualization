@@ -139,7 +139,7 @@
 
 .courseInformationContainer {
     top:69%;
-    height:180px;
+    height:210px;
     background-color: white;
     position:absolute;
     border:solid 1px #000000;
@@ -283,7 +283,7 @@ html,body {
     text-align: left;
     font-size: 13px;
     padding-left: 2px;
-    height: 50px;
+    height: 70px;
     overflow-y: auto;
 }
 .point {
@@ -385,7 +385,7 @@ li.course span:first-child {
 
 #courses > ul {
     padding: 0 6px;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
     font-size: 13px;
     margin-top:1px;
     overflow-y: auto;
@@ -561,6 +561,7 @@ path {
 }
 
 .tooltip {
+    top:0;
     text-align: center;
     border: 1px solid black;
     border-radius: 3px;

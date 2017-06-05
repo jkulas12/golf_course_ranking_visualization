@@ -351,7 +351,7 @@
 "Architect":"Baxter Spann",
 "Year":"2003",
 "Coordinates":[35.960313,-106.053594],
-"Type":"Public"
+"Type":"public"
 }
 ,
 {
@@ -745,11 +745,11 @@
 }
 ,
 {
-"CourseName":"Whistling Straits (Straits)",
+"CourseName":"Whistling Straits Golf Club (Irish)",
 "Ranking":75,
 "State":"WI",
 "Architect":"Pete Dye",
-"Year":"1998",
+"Year":"2000",
 "Coordinates":[43.851,-87.73],
 "Type":"public"
 }

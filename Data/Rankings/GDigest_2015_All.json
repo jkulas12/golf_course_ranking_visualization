@@ -104,15 +104,15 @@
 "Type":"private"
 }
 ,
-{
-"CourseName":"Old Sandwich",
-"Ranking":11,
-"State":"MS",
-"Architect":"Bill Coore",
-"Year":"2004",
-"Coordinates":[41.904594,-70.60651],
-"Type":"private"
-}
+  {
+    "CourseName":"Sand Hills",
+    "Ranking":9,
+    "State":"NE",
+    "Architect":"Bill Coore",
+    "Year":"1994",
+    "Coordinates":[41.8833,-101.04],
+    "Type":"private"
+  }
 ,
 {
 "CourseName":"Seminole",

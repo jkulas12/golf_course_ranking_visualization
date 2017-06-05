@@ -28,7 +28,7 @@ bellerive,Bellerive,St. Louis,MO
 bethpageblack,Bethpage(Black),Farmingdale,NY
 black_diamond_ranchquarry,Black Diamond Ranch(Quarry),Alachua,FL
 black_lake,Black Lake,Onaway,MI
-black_mesa,Black Mesa,Espaí±ola,NM
+black_mesa,Black Mesa,Espanola,NM
 blackwolf_run_river,Blackwolf Run (River),Sheboygan Falls,WI
 blackwolf_runmeadow_valleys,Blackwolf Run(Meadow Valleys),Kohler,WI
 blue_heron_pines_east,Blue Heron Pines (East),Egg Harbor City,NJ
@@ -72,7 +72,7 @@ crystal_downs,Crystal Downs,Frankfort,MI
 cypress_point,Cypress Point,Del Monte Forest,CA
 dallas_national,Dallas National,Dallas,TX
 dancing_rabbit_azaleas,Dancing Rabbit (Azaleas),Choctaw,MS
-darkhorse,DarkHorse,Auburn,CA
+dark_horse,Dark Horse,Auburn,CA
 deacons_lodge_at_grand_view_lodge,Deacon's Lodge at Grand View Lodge,Breezy Point,MN
 desert_forest,Desert Forest,Carefree,AZ
 diamond_creek,Diamond Creek,Banner Elk,NC
@@ -105,7 +105,7 @@ gamble_sands,Gamble Sands,Brewster,WA
 garden_city_golf_club,Garden City Golf Club,Garden City,NY
 glen_mills,Glen Mills,Glen Mills,PA
 gold_mountain_golf_complex_olympic,Gold Mountain Golf Complex (Olympic),Bremerton,WA
-golden_horseshoe_golf_club_gold,Golden Horseshow Golf Club (Gold),Williamsburg,VA
+golden_horseshoe_golf_club_gold,Golden Horseshoe Golf Club (Gold),Williamsburg,VA
 gozzer_ranch,Gozzer Ranch,Harrison,ID
 grand_bear,Grand Bear,Saucier,MS
 grand_national_lake,Grand National (Lake),Opelika,AL
@@ -135,7 +135,6 @@ interlachen,Interlachen,Edina,MN
 inverness,Inverness,Toledo,OH
 iron_bridge,Iron Bridge,Glenwood Springs,CO
 jupiter_hills,Jupiter Hills,Jupiter,FL
-jupiter_hillshills,Jupiter Hills(Hills),Jupiter,FL
 kaluhyat_golf_club,Kaluhyat Golf Club,Verona,NY
 kapalua_resort_plantation,Kapalua Resort (Plantation),Lahaina,HI
 karsten_creek_golf_club,Karsten Creek Golf Club,Stillwater,OK
@@ -205,7 +204,6 @@ old_works_golf_course,Old Works Golf Course,Anaconda,MT
 olde_stonewall,Olde Stonewall,Ellwood City,PA
 olympia_fields_north,Olympia Fields (North),Olympia Fields,IL
 olympic_lake,Olympic (Lake),San Francisco,CA
-olympiclake,Olympic(Lake),San Francisco,CA
 omni_barton_creek_resort_fazio_canyons,Omni Barton Creek resort (Fazio Canyons),Austin,TX
 omni_barton_creek_resort_fazio_foothills,Omni Barton Creek resort (Fazio Foothills),Austin,TX
 omni_homestead_cascades,Omni Homestead (Cascades),Hot Springs,VA
@@ -257,7 +255,6 @@ ridgewood_west_east,Ridgewood (West_East),Paramus,NJ
 rivers_edge,River's Edge,Shallotte,NC
 riviera,Riviera,Los Angeles,CA
 rock_creek_cattle_company,Rock Creek Cattle Company,Deer Lodge,MT
-royal_new_kent_tradition,Royal New Kent (Tradition),Providence Forge,VA
 running_y_ranch,Running Y Ranch,Klamath Falls,OR
 rustic_canyon_golf_course,Rustic Canyon Golf Course,Moorpark,CA
 sage_valley,Sage Valley,Graniteville,SC
@@ -274,7 +271,7 @@ sea_island_golf_clubseaside,Sea Island Golf Club(Seaside),Saint Simons Island,GA
 sebonack,Sebonack,Southampton,NY
 semiahmoo_loomis_trail,Semiahmoo (Loomis Trail),Blaine,WA
 seminole,Seminole,Tallahassee,FL
-sentryworld,SentryWorld,Stevens Point,WI
+sentry world,Sentry World,Stevens Point,WI
 shadow_creek,Shadow Creek,North Las Vegas,NV
 shenandoah_at_turning_stone_resort,Shenandoah at Turning Stone Resort,Verona,NY
 shepherds_hollow,Shepherd's Hollow,Clarkston,MI
@@ -334,7 +331,6 @@ the_quarry_at_giants_ridge,The Quarry at Giants Ridge,Aurora,MN
 the_quarry_at_la_quinta,The Quarry at La Quinta,La Quinta,CA
 the_rim,The Rim,Payson,AZ
 the_tribute,The Tribute,The Colony,TX
-the_virtues_club,The VIrtues Club,Nashport,OH
 tidewater,Tidewater,North Myrtle Beach,SC
 tigers_eye,Tiger's Eye,Ocean Isle Beach,NC
 tobacco_road_golf_club,Tobacco Road Golf Club,Sanford,NC
@@ -367,7 +363,7 @@ wailea_golf_clubgold,Wailea Golf Club(Gold),Kihei,HI
 wannamoisett,Wannamoisett,East Providence,RI
 we_ko_pa_golf_club_cholla,We-Ko-Pa Golf Club (Cholla),Scottsdale,AZ
 we_ko_pa_golf_club_saguaro,We-Ko-Pa Golf Club (Saguaro),Scottsdale,AZ
-weaverridge,WeaverRidge,Peoria,IL
+weaver_ridge,Weaver Ridge,Peoria,IL
 whispering_pines,Whispering Pines,Trinity,TX
 whistling_straits_golf_club_irish,Whistling Straits Golf Club (Irish),Sheboygan,WI
 whistling_straits_straits,Whistling Straits (Straits),Sheboygan,WI
@@ -383,3 +379,9 @@ world_woods_pine_barrens,World Woods (Pine Barrens),Brooksville,FL
 wynn_las_vegas,Wynn Las Vegas,Las Vegas,NV
 yale_university,Yale University,New Haven,CT
 yeamans_hall,Yeamans Hall,Hanahan,SC
+poppy_hills,Poppy Hills,Pebble Beach,CA
+troy_burne_golf_course,Troy Burne Golf Course,Hudson,WI
+quintero,Quintero,Peoria,AZ
+the_greenbrier_greenbrier,The Greenbrier (Greenbrier),White Sulphur Springs,WI
+world_woods_rolling_oaks,World Woods (Rolling Oaks),Brooksville,FL
+the_boulders_club_north,The Boulders Club(North),Scottsdale,AZ

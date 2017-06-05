@@ -1,0 +1,13 @@
+Occasionally when clicking on a course on the list, the charts on left dont update. Using arrow keys
+    Always seems to remedy this. Solution is probably making the code to handle the two events the same
+
+
+
+On Firefox the map tiles occasionally disappear
+
+
+
+* Clicking on a course will bring back a plethora of previously selected courses... probably related to Dr. Staskos earlier comment
+
+
+

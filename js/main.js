@@ -313,7 +313,7 @@ function load_all_rankings(rankings) {
                         course_map[course_class_name]['yardage'] = +c.yardage;
                     } else {
                         // TODO: figure out why this is happening and courses arent visited
-                        console.log("couldn't find course: " + course_class_name);
+                        console.log("couldn't find course in slope rating data: " + course_class_name);
                     }
                 });
                 d3.csv('Data/supplemental/course_location_info.csv', function(locationData) {
@@ -323,7 +323,7 @@ function load_all_rankings(rankings) {
                             course_map[course_class_name]['city'] = c.City;
                             course_map[course_class_name]['state'] = c.State;
                         } else {
-                            console.log("couldn't find course: " + course_class_name);
+                            console.log("couldn't find course in location data: " + course_class_name);
                         }
                     })
                 });
@@ -873,13 +873,20 @@ function initialize_selectable() {
         } else {
             sorted_courses = get_valid_courses().sort(function(a,b) {return a.displayName <= b.displayName ? 1 : -1});
         }
-        var highlighted_courses = new Set(get_highlighted_courses().map(function(d) {return d.className}));
+        var highlighted_courses = get_highlighted_courses().map(function(d) {return d.className});
         // check to make sure that we actually have some map courses to filter on
         // if not we just take courses we already had
-        if (highlighted_courses.size > 0) {
-            sorted_courses = sorted_courses.filter(function(d) {return highlighted_courses.has(d.className)})
+
+        update_course_list(sorted_courses);
+        if (highlighted_courses.length == 1) {
+            console.log('here');
+            setTimeout(function() {
+                scroll_courses_list(course_map[highlighted_courses[0]]);
+                d3.select('li.course-' + course_map[highlighted_courses[0]].className).classed('ui-selected', true);
+            }, 1000);
+
         };
-        update_course_list(sorted_courses)
+
 
     });
 
@@ -919,22 +926,23 @@ function initialize_selectable() {
         if (descending) {
             sorted_courses = composite_sort(get_valid_courses());
         } else {
-            sorted_courses = composite_sort(get_valid_courses());
+            sorted_courses = composite_sort(get_valid_courses()).reverse();
         }
 
-        var highlighted_courses = new Set(get_highlighted_courses().map(function (d) {
-            return d.className
-        }));
 
+        var highlighted_courses = get_highlighted_courses().map(function(d) {return d.className});
         // check to make sure that we actually have some map courses to filter on
         // if not we just take courses we already had
-        if (highlighted_courses.size > 0) {
-            sorted_courses = sorted_courses.filter(function (d) {
-                return highlighted_courses.has(d.className)
-            })
-        }
 
-        update_course_list(sorted_courses)
+        update_course_list(sorted_courses);
+        if (highlighted_courses.length == 1) {
+            console.log('here');
+            setTimeout(function() {
+                scroll_courses_list(course_map[highlighted_courses[0]]);
+                d3.select('li.course-' + course_map[highlighted_courses[0]].className).classed('ui-selected', true);
+            }, 1000);
+
+        };
     });
 
     var courseNames = [];
@@ -945,9 +953,8 @@ function initialize_selectable() {
         source : courseNames,
         select: function(event, ui) {
             // reset selected courses
-            selectCourses = []
-            var course = course_map[createClassName($("#courseListSearchInput").val())];
-
+            selectCourses = [];
+            var course = course_map[createClassName(ui.item.label)];
             pan_to_course(course);
             if (d3.selectAll('.prevArch')._groups[0].length != 0) {
 
@@ -981,7 +988,6 @@ function initialize_selectable() {
             $(ui.selected).addClass('prevCourse');
             $('#courseListSearchInput').val(default_search_text)
                 .css('color', '#929292');
-            return false;
         }
     }).focusout(function() {
         $( "#courseListSearchInput").val(default_search_text)
@@ -1012,6 +1018,9 @@ function initialize_selectable() {
                     if ($('li.ui-selected').length === 1) {
                         var first_index = $('li.ui-selected').index() + 1;
                         if (first_index !== 1) {
+                            // deselect all highlighted courses
+
+                            d3.selectAll('.highlighted_point').classed('highlighted_point', false);
                             $(".courseList  li:nth-child(" + String(first_index) + ")").removeClass('ui-selected');
                             $(".courseList  li:nth-child(" + String(first_index - 1) + ")").addClass('ui-selected');
 
@@ -1020,6 +1029,7 @@ function initialize_selectable() {
                             refresh_chart(course);
                             bring_course_to_view(course);
                             refresh_points([course]);
+                            d3.selectAll('.highlighted_point').classed('highlighted_point',false);
                             var top = $('.course.course-' + course['className']).position().top;
                             if (top < 65) {
                                 $('.courseList').animate({
@@ -1059,6 +1069,11 @@ function initialize_selectable() {
         }
 
     });
+}
+
+function update_autocomplete_source() {
+    var valid_courses = get_valid_courses().map(function(c) {return c.displayName});
+    $('#courseListSearchInput').autocomplete('option','source',valid_courses);
 }
 
 function sort_rankings(rankings) {
@@ -1699,6 +1714,7 @@ function refresh_map() {
     clearLegend();
     update_course_list(valid_courses);
     update_architect_list(valid_courses);
+    update_autocomplete_source();
 }
 
 function get_highlighted_courses() {
@@ -1778,8 +1794,10 @@ function refresh_points(courses) {
         .data(non_highlighted_courses)
         .enter()
         .append('circle')
-        .attr('cx', function(d) {return projection(d.geometry.coordinates)[0]})
-        .attr('cy', function(d) {return projection(d.geometry.coordinates)[1]})
+        .attr('cx', function(d) {
+            return projection(d.geometry.coordinates)[0]})
+        .attr('cy', function(d) {
+            return projection(d.geometry.coordinates)[1]})
         .attr('r', 5)
         .style("fill", function(c) {
             return course_type_colors[c.type];
@@ -1831,8 +1849,10 @@ function refresh_points(courses) {
         .data(highlighted_courses)
         .enter()
         .append('circle')
-        .attr('cx', function(d) {return projection(d.geometry.coordinates)[0]})
-        .attr('cy', function(d) {return projection(d.geometry.coordinates)[1]})
+        .attr('cx', function(d) {
+            return projection(d.geometry.coordinates)[0]})
+        .attr('cy', function(d) {
+            return projection(d.geometry.coordinates)[1]})
         .attr('r', 8)
         .style("fill",'yellow')
         .style('stroke', function(c) {
@@ -2061,7 +2081,6 @@ function clearChart() {
 // TODO: add functionality to update points if they exist
 function zoomed() {
 
-    var THUNDERFOREST_API_KEY = 'da810a2ed98e498e84b33ffb8bee9af1';
     var transform = d3.event.transform;
     zoom_scale = transform.k
     var tiles = tile
@@ -2128,21 +2147,19 @@ function update_course_list(courses) {
         courseEnter.append('span')
             .attr('class', 'rankSpan')
             .text(function(d,i) {
-                var points = get_course_composite_points(d, rank_decay_map)[0].toFixed(2)
                 if ($('.orderedSortDiv > span').hasClass('glyphicon-arrow-down')) {
-                    return '(' + parseInt(class_map[d.className])  + "  " + points + '):';
+                    return parseInt(class_map[d.className]);
                 } else {
-                    return '(' + parseInt(courseEnter.data().length - class_map[d.className]) + '  ' + points + "):";
+                    return parseInt(courseEnter.data().length - class_map[d.className] + 2);
                 }
         });
         courseEnter.merge(courseSelect)
             .selectAll('.rankSpan')
             .text(function(d,i) {
-                var points = get_course_composite_points(d, rank_decay_map)[0].toFixed(2)
                 if ($('.orderedSortDiv > span').hasClass('glyphicon-arrow-down')) {
-                    return '(' + parseInt(class_map[d.className])  + "  " + points + '):';
+                    return parseInt(class_map[d.className]);
                 } else {
-                    return '(' + parseInt(courseEnter.data().length - class_map[d.className]) + '  ' + points + "):";
+                    return parseInt(courseEnter.data().length - class_map[d.className] + 2);
                 }
             });
 
@@ -2223,7 +2240,7 @@ function rightControlResize() {
     $('#architects').height(100);
 
     $('#courses').height(windowHeight - 380);
-    $('.courseList').height(windowHeight - 380 - 66);
+    $('.courseList').height(windowHeight - 380 - 75);
     initialize_chart();
 
     var highlighted_points = d3.selectAll('.highlighted_point')._groups;

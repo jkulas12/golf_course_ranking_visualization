@@ -1498,12 +1498,7 @@ function initialize_chart() {
         .attr('class', 'recentRankings-ul');
 
 
-    //// add course select text to left panel
-    //d3.select('#showCourseTextDiv')
-    //    .append('g')
-    //    .attr('transform', 'translate(2000,100)')
-    //    .append('text')
-    //    .text('Select a Course');
+
 
 }
 
@@ -1910,6 +1905,8 @@ function generate_map() {
         .translate([0, 0]);
     tile = d3.tile()
         .size([w, h]);
+    console.log(tile);
+
     zoom = d3.zoom()
         .scaleExtent([1 << 11, 1 << 19])
         .on("zoom", zoomed)
@@ -2082,6 +2079,7 @@ function clearChart() {
 function zoomed() {
 
     var transform = d3.event.transform;
+    console.log(transform);
     zoom_scale = transform.k
     var tiles = tile
         .scale(transform.k)
@@ -2330,6 +2328,8 @@ function updateCourseLegend(containerData, course) {
 // translate: amount to translate
 // return: string version of translation
 function stringify(scale, translate) {
+    console.log(scale);
+    console.log(translate);
     var k = scale / 256, r = scale % 1 ? Number : Math.round;
     return "translate(" + r(translate[0] * scale) + "," + r(translate[1] * scale) + ") scale(" + k + ")";
 }

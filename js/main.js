@@ -174,8 +174,6 @@ function load_all_rankings(rankings) {
 
         // load specific ranking
         d3.json(ranking_path + ".json", function(json) {
-            console.log("iterating through: " + d);
-            console.log('loading: ' + ranking_path);
             // array of all courses in this ranking
             var ranking_courses = [];
 
@@ -300,7 +298,6 @@ function load_all_rankings(rankings) {
                 // TODO: go through courses in an architect and remove duplicates
             });
             ranking_map[ranking_name] = ranking;
-            console.log(ranking_name);
             // check to see if we have visited every ranking
             if (all_rankings.indexOf(ranking_name) === all_rankings.length - 1) {
                 ///////////////////////////////////////////////
@@ -402,8 +399,6 @@ function populate_ranking_matrix() {
     var golf_mag_rankings = [{},{}, {}, {}, {}, {}, {},{},{},{},{}];
     var golf_digest_rankings = [{},{}, {}, {}, {}, {}, {},{},{},{},{}];
 
-
-
     for (var r in rankings) {
         var ranking = rankings[r].split('_');
         var rank_obj = {'publication' : ranking[0],
@@ -415,9 +410,7 @@ function populate_ranking_matrix() {
             golf_digest_rankings.push(rank_obj)
         }
     }
-    // add shading behind rankings
-    // every 2 years?
-    var start_years = [2001,2003,2005,2007, 2009, 2011, 2013, 2015, 2017]
+    var start_years = [2001,2003,2005,2007, 2009, 2011, 2013, 2015, 2017];
     d3.select('#GDigestCoursesContainer > svg')
         .append('svg')
         .selectAll('rect')
@@ -1689,17 +1682,7 @@ function refresh_map() {
     var valid_courses = composite_sort(get_valid_courses())
     var valid_rankings = get_selected_rankings();
 
-    // defaults to alphabetical...
-    if (!$('.orderedSortDiv').hasClass('active')) {
-        $('.orderedSortDiv').removeClass('inactive')
-            .addClass('active')
-        $('.alphabeticalSortDiv').addClass('inactive').removeClass('active')
-    } else {
-        if (!$('.orderedSortDiv > svg').hasClass('glyphicon-arrow-down')) {
-            $('.orderedSortDiv > svg').removeClass('glyphicon-arrow-up')
-                .addClass('glyphicon-arrow-down')
-        }
-    }
+
 
     refresh_points([]);
     clearChart();

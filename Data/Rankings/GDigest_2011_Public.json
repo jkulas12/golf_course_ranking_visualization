@@ -1,5 +1,4 @@
-﻿
-{
+﻿{ 
 "Publication":"Golf Digest",
 "Year":2011,
 "Type":"Public",
@@ -329,7 +328,7 @@
 "Ranking":33,
 "State":"MI",
 "Architect":"Jim Engh",
-"Year":"2003",
+"Year":"2004",
 "Coordinates":[45.513532,-84.988466],
 "Type":"public"
 }
@@ -400,7 +399,7 @@
 "State":"MN",
 "Architect":"Jeff Brauer",
 "Year":"2004",
-"Coordinates":[47.827720,-92.30769],
+"Coordinates":[47.82772,-92.30769],
 "Type":"public"
 }
 ,
@@ -475,22 +474,22 @@
 }
 ,
 {
-"CourseName":"Pine Needles Lodge and Golf Club",
-"Ranking":48,
-"State":"NC",
-"Architect":"Donald Ross",
-"Year":"1927",
-"Coordinates":[35.196281,-79.38911],
-"Type":"public"
-}
-,
-{
 "CourseName":"Camp Creek",
-"Ranking":49,
+"Ranking":48,
 "State":"FL",
 "Architect":"Tom Fazio",
 "Year":"2001",
 "Coordinates":[30.294298,-86.040399],
+"Type":"public"
+}
+,
+{
+"CourseName":"Pine Needles Lodge and Golf Club",
+"Ranking":49,
+"State":"NC",
+"Architect":"Donald Ross",
+"Year":"1927",
+"Coordinates":[35.196281,-79.38911],
 "Type":"public"
 }
 ,
@@ -520,7 +519,7 @@
 "State":"AZ",
 "Architect":"Jay Morrish_Tom Weiskopf",
 "Year":"1999",
-"Coordinates":[34.245890,-111.279248],
+"Coordinates":[34.24589,-111.279248],
 "Type":"public"
 }
 ,
@@ -535,12 +534,12 @@
 }
 ,
 {
-"CourseName":"Longaberger",
+"CourseName":"Eagle Eye",
 "Ranking":54,
-"State":"OH",
-"Architect":"Arthur Hills",
-"Year":"1999",
-"Coordinates":[40.088689,-82.23459],
+"State":"MI",
+"Architect":"Chris Lutzke",
+"Year":"2004",
+"Coordinates":[42.79039,-84.485736],
 "Type":"public"
 }
 ,
@@ -690,7 +689,7 @@
 "State":"MI",
 "Architect":"Jerry Matthews",
 "Year":"1991",
-"Coordinates":[45.085911,-84.185450],
+"Coordinates":[45.085911,-84.18545],
 "Type":"public"
 }
 ,
@@ -700,7 +699,7 @@
 "State":"VA",
 "Architect":"Ed Carton",
 "Year":"2006",
-"Coordinates":[37.992032, -78.21257],
+"Coordinates":[37.992032,-78.21257],
 "Type":"public"
 }
 ,
@@ -745,12 +744,12 @@
 }
 ,
 {
-"CourseName":"Atunyote at Turning Stone Resort",
+"CourseName":"Wailea Golf Club(Gold)",
 "Ranking":75,
-"State":"NY",
-"Architect":"Tom Fazio",
-"Year":"2004",
-"Coordinates":[43.094481,-75.53739],
+"State":"HI",
+"Architect":"Robert Trent Jones Jr.",
+"Year":"1993",
+"Coordinates":[20.685727,-156.437],
 "Type":"public"
 }
 ,
@@ -770,7 +769,7 @@
 "State":"CA",
 "Architect":"Jack Nicklaus",
 "Year":"2004",
-"Coordinates":[39.343289,-120.142672],
+"Coordinates":[39.343289,-120.1426],
 "Type":"public"
 }
 ,
@@ -789,8 +788,8 @@
 "Ranking":79,
 "State":"VA",
 "Architect":"Pete Dye",
-"Year":"1974_2004",
-"Coordinates":[37.226260,-76.670635],
+"Year":"1974",
+"Coordinates":[37.22626,-76.670635],
 "Type":"public"
 }
 ,
@@ -810,7 +809,7 @@
 "State":"MI",
 "Architect":"Jack Nicklaus",
 "Year":"1984",
-"Coordinates":[44.778829,-85.486250],
+"Coordinates":[44.778829,-85.48625],
 "Type":"public"
 }
 ,
@@ -852,16 +851,15 @@
 "Year":"1995",
 "Coordinates":[39.799167,-79.52694],
 "Type":"public"
-}
-,
+},
 {
 "CourseName":"Black Mesa",
 "Ranking":86,
-"State":"NM",
+"State":"WI",
 "Architect":"Baxter Spann",
 "Year":"2003",
-"Coordinates":[35.960313,-106.053594],
-"Type":"public"
+"Coordinates":[35.960313,-106.0535],
+"Type":"public"	
 }
 ,
 {
@@ -878,7 +876,7 @@
 "CourseName":"Bayside Resort",
 "Ranking":88,
 "State":"DE",
-"Architect":"Jack NIcklaus",
+"Architect":"Jack Nicklaus",
 "Year":"2005",
 "Coordinates":[38.464714,-75.109403],
 "Type":"public"
@@ -960,7 +958,7 @@
 "State":"NV",
 "Architect":"Jack Nicklaus",
 "Year":"2008",
-"Coordinates":[36.799462,-114.927368],
+"Coordinates":[36.799,-114.9273],
 "Type":"public"
 }
 ,
@@ -975,11 +973,11 @@
 }
 ,
 {
-"CourseName":"The Greenbrier (Old White TPC)",
+"CourseName":"The Greenbrier (Greenbrier)",
 "Ranking":98,
 "State":"WV",
-"Architect":"C.B. Macdonald",
-"Year":"1914",
+"Architect":"Seth Raynor",
+"Year":"1924",
 "Coordinates":[37.783509,-80.31688],
 "Type":"public"
 }
@@ -990,7 +988,7 @@
 "State":"IN",
 "Architect":"Donald Ross",
 "Year":"1922",
-"Coordinates":[38.528313, -86.64629],
+"Coordinates":[38.528313,-86.64629],
 "Type":"public"
 }
 ,
@@ -1000,7 +998,7 @@
 "State":"LA",
 "Architect":"Pete Dye",
 "Year":"2004",
-"Coordinates":[29.000098,-90.193224],
+"Coordinates":[29.00,-90.193224],
 "Type":"public"
 }
 

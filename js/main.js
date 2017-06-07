@@ -1678,10 +1678,28 @@ function initialize_course_year_slider() {
 }
 // updates map, courses and architects list
 function refresh_map() {
+    // determine how to sort courses...
+    var valid_courses;
+    if (d3.select('.alphabeticalSortDiv').classed('active')) {
+        valid_courses = get_valid_courses().sort(function(a,b) {
+            if (a.displayName > b.displayName) {
+                return 1
+            } else {
+                return -1
+            }});
+        if (!$('.alphabeticalSortDiv > span').hasClass('glyphicon-arrow-down')) {
+            valid_courses = valid_courses.reverse()
+        }
 
-    var valid_courses = composite_sort(get_valid_courses())
+    } else {
+        valid_courses = composite_sort(get_valid_courses())
+        if (!$('.orderedSortDiv > span').hasClass('glyphicon-arrow-down')) {
+            valid_courses = valid_courses.reverse()
+        }
+    }
+
+
     var valid_rankings = get_selected_rankings();
-
 
 
     refresh_points([]);

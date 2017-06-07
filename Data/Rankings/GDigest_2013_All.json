@@ -522,7 +522,7 @@
     "Type":"public"
   },
   {
-    "CourseName":"The Golf Club at Black Rock",
+    "CourseName":"Black Rock",
     "Ranking":58,
     "State":"ID",
     "Architect":"Jim Engh",
@@ -792,7 +792,7 @@
     "Type":"private"
   },
   {
-    "CourseName":"The Quarry at La Quinta",
+    "CourseName":"La Quinta (Quarry)",
     "Ranking":88,
     "State":"CA",
     "Architect":"Tom Fazio",

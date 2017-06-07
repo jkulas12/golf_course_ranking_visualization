@@ -265,7 +265,7 @@
 }
 ,
 {
-"CourseName":"The Golf Club at Black Rock",
+"CourseName":"Black Rock",
 "Ranking":27,
 "State":"ID",
 "Architect":"Jim Engh",
@@ -435,7 +435,7 @@
 }
 ,
 {
-"CourseName":"The Quarry at La Quinta",
+"CourseName":"La Quinta (Quarry)",
 "Ranking":44,
 "State":"CA",
 "Architect":"Tom Fazio",
@@ -665,7 +665,7 @@
 }
 ,
 {
-"CourseName":"The Prince at Princeville",
+"CourseName":"Princeville (Prince)",
 "Ranking":67,
 "State":"HI",
 "Architect":"Robert Trent Jones Jr.",

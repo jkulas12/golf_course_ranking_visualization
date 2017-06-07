@@ -115,7 +115,7 @@
 }
 ,
 {
-"CourseName":"The Prince at Princeville",
+"CourseName":"Princeville (Prince)",
 "Ranking":12,
 "State":"HI",
 "Architect":"Robert Trent Jones Jr.",
@@ -195,7 +195,7 @@
 }
 ,
 {
-"CourseName":"The Quarry at Giants Ridge",
+"CourseName":"Giants Ridge (Quarry)",
 "Ranking":20,
 "State":"MN",
 "Architect":"Jeff Brauer",
@@ -225,7 +225,7 @@
 }
 ,
 {
-"CourseName":"The Broadmoor (East)",
+"CourseName":"Broadmoor (East)",
 "Ranking":23,
 "State":"CO",
 "Architect":"Donald Ross",
@@ -265,7 +265,7 @@
 }
 ,
 {
-"CourseName":"The Golf Club at Redlands Mesa",
+"CourseName":"Redlands Mesa",
 "Ranking":27,
 "State":"CO",
 "Architect":"Jim Engh",
@@ -325,7 +325,7 @@
 }
 ,
 {
-"CourseName":"The Heritage Club",
+"CourseName":"Heritage Club",
 "Ranking":33,
 "State":"SC",
 "Architect":"Dan Maples",
@@ -345,7 +345,7 @@
 }
 ,
 {
-"CourseName":"The Challenge at Manele",
+"CourseName":"Challenge at Manele",
 "Ranking":35,
 "State":"HI",
 "Architect":"Jack Nicklaus",
@@ -355,7 +355,7 @@
 }
 ,
 {
-"CourseName":"The Harvester Golf Club",
+"CourseName":"Harvester Golf Club",
 "Ranking":36,
 "State":"IA",
 "Architect":"Keith Foster",
@@ -385,7 +385,7 @@
 }
 ,
 {
-"CourseName":"The Golf Club at Cuscowilla",
+"CourseName":"Cuscowilla",
 "Ranking":39,
 "State":"GA",
 "Architect":"Bill Coore",
@@ -395,7 +395,7 @@
 }
 ,
 {
-"CourseName":"The Classic at Madden's Resort",
+"CourseName":"Madden's Resort (Classic)",
 "Ranking":40,
 "State":"MN",
 "Architect":"Scott Hoffmann",
@@ -515,7 +515,7 @@
 }
 ,
 {
-"CourseName":"The Links at Spanish Bay",
+"CourseName":"Links at Spanish Bay",
 "Ranking":52,
 "State":"CA",
 "Architect":"Robert Trent Jones Jr.",
@@ -525,7 +525,7 @@
 }
 ,
 {
-"CourseName":"The Links of North Dakota",
+"CourseName":"Links of North Dakota",
 "Ranking":53,
 "State":"ND",
 "Architect":"Stephen Kay",
@@ -715,7 +715,7 @@
 }
 ,
 {
-"CourseName":"The Legend at Giants Ridge",
+"CourseName":"Giants Ridge (Legend)",
 "Ranking":72,
 "State":"MN",
 "Architect":"Jeff Brauer",

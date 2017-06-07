@@ -141,7 +141,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Prince at Princeville",
+          "CourseName": "Princeville (Prince)",
           "Ranking": 16,
           "State": "HI",
           "Architect": "Robert Trent Jones Jr.",
@@ -312,7 +312,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Golf Club at Cuscowilla",
+          "CourseName": "Cuscowilla",
           "Ranking": 35,
           "State": "GA",
           "Architect": "Bill Coore_Ben Crenshaw",
@@ -321,7 +321,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Highland Course at Primland Resort",
+          "CourseName": "Primland Resort (Highland)",
           "Ranking": 36,
           "State": "VA",
           "Architect": "Donald Steel",
@@ -375,7 +375,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Links at Spanish Bay",
+          "CourseName": "Links at Spanish Bay",
           "Ranking": 42,
           "State": "CA",
           "Architect": "Robert Trent Jones Jr.",
@@ -411,7 +411,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Challenge at Manele",
+          "CourseName": "Challenge at Manele",
           "Ranking": 46,
           "State": "HI",
           "Architect": "jack Nicklaus",
@@ -492,7 +492,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Quarry at Giants Ridge",
+          "CourseName": "Giants Ridge (Quarry)",
           "Ranking": 54,
           "State": "MN",
           "Architect": "Jeff Brauer",
@@ -519,7 +519,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Harvester Golf Club",
+          "CourseName": "Harvester Golf Club",
           "Ranking": 57,
           "State": "IA",
           "Architect": "Keith Foster",
@@ -627,7 +627,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Greenbrier (Old White TPC)",
+          "CourseName": "Greenbrier (Old White TPC)",
           "Ranking": 69,
           "State": "WV",
           "Architect": "C.B. Macdonald_ Lester George",
@@ -636,7 +636,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Broadmoor (East)",
+          "CourseName": "Broadmoor (East)",
           "Ranking": 70,
           "State": "CO",
           "Architect": "Donald Ross_Robert Trent Jones Sr.",
@@ -654,7 +654,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Glen Club",
+          "CourseName": "Glen Club",
           "Ranking": 72,
           "State": "IL",
           "Architect": "Tom Fazio",
@@ -708,7 +708,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Prairie Club (Dunes)",
+          "CourseName": "Prairie Club (Dunes)",
           "Ranking": 78,
           "State": "NE",
           "Architect": "Tom Lehman_Chris Brands",
@@ -744,7 +744,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Links at Lighthouse Sound",
+          "CourseName": "Links at Lighthouse Sound",
           "Ranking": 82,
           "State": "MD",
           "Architect": "Arthur Hills",
@@ -843,7 +843,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Boulders Club(South)",
+          "CourseName": "Boulders Club (South)",
           "Ranking": 93,
           "State": "AZ",
           "Architect": "Jay Morrish",
@@ -852,7 +852,7 @@
           "Type": "public"
       },
       {
-          "CourseName": "The Golf Club at Redlands Mesa",
+          "CourseName": "Redlands Mesa",
           "Ranking": 94,
           "State": "CO",
           "Architect": "Jim Engh",

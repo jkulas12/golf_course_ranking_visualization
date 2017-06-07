@@ -85,7 +85,7 @@
 }
 ,
 {
-"CourseName":"The Prince at Princeville",
+"CourseName":"Princeville (Prince)",
 "Ranking":9,
 "State":"HI",
 "Architect":"Robert Trent Jones Jr.",
@@ -165,7 +165,7 @@
 }
 ,
 {
-"CourseName":"The Golf Club at Redlands Mesa",
+"CourseName":"Redlands Mesa",
 "Ranking":17,
 "State":"CO",
 "Architect":"Jim Engh",
@@ -185,7 +185,7 @@
 }
 ,
 {
-"CourseName":"The Quarry at Giants Ridge",
+"CourseName":"Giants Ridge (Quarry)",
 "Ranking":19,
 "State":"MN",
 "Architect":"Jeff Brauer",
@@ -215,7 +215,7 @@
 }
 ,
 {
-"CourseName":"The Broadmoor (East)",
+"CourseName":"Broadmoor (East)",
 "Ranking":22,
 "State":"CO",
 "Architect":"Donald Ross",
@@ -255,7 +255,7 @@
 }
 ,
 {
-"CourseName":"The Harvester Golf Club",
+"CourseName":"Harvester Golf Club",
 "Ranking":26,
 "State":"IA",
 "Architect":"Keith Foster",
@@ -335,7 +335,7 @@
 }
 ,
 {
-"CourseName":"The Challenge at Manele",
+"CourseName":"Challenge at Manele",
 "Ranking":34,
 "State":"HI",
 "Architect":"Jack Nicklaus",
@@ -415,7 +415,7 @@
 }
 ,
 {
-"CourseName":"The Classic at Madden's Resort",
+"CourseName":"Madden's Resort (Classic)",
 "Ranking":42,
 "State":"MN",
 "Architect":"Scott Hoffmann",
@@ -455,7 +455,7 @@
 }
 ,
 {
-"CourseName":"The Heritage Club",
+"CourseName":"Heritage Club",
 "Ranking":46,
 "State":"SC",
 "Architect":"Dan Maples",
@@ -575,7 +575,7 @@
 }
 ,
 {
-"CourseName":"The Golf Club at Cuscowilla",
+"CourseName":"Cuscowilla",
 "Ranking":58,
 "State":"GA",
 "Architect":"Bill Coore",
@@ -585,7 +585,7 @@
 }
 ,
 {
-"CourseName":"The Legend at Giants Ridge",
+"CourseName":"Giants Ridge (Legend)",
 "Ranking":59,
 "State":"MN",
 "Architect":"Jeff Brauer",
@@ -645,7 +645,7 @@
 }
 ,
 {
-"CourseName":"The Links of North Dakota",
+"CourseName":"Links of North Dakota",
 "Ranking":65,
 "State":"ND",
 "Architect":"Stephen Kay",
@@ -695,7 +695,7 @@
 }
 ,
 {
-"CourseName":"The Links at Spanish Bay",
+"CourseName":"Links at Spanish Bay",
 "Ranking":70,
 "State":"CA",
 "Architect":"Robert Trent Jones Jr.",
@@ -795,7 +795,7 @@
 }
 ,
 {
-"CourseName":"The Bluffs on Thompson Creek",
+"CourseName":"Bluffs on Thompson Creek",
 "Ranking":80,
 "State":"LA",
 "Architect":"Arnold Palmer",

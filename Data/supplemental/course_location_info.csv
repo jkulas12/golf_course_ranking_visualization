@@ -297,38 +297,38 @@ taconic_golf_club,Taconic Golf Club,Williamstown,MA
 talking_stick_north,Talking Stick (North),Scottsdale,AZ
 tetherow_golf_club,Tetherow Golf Club,Bend,OR
 the_alotian_club,The Alotian Club,Roland,AR
-the_bluffs_on_thompson_creek,The Bluffs on Thompson Creek,Saint Francisville,LA
-the_boulders_clubsouth,The Boulders Club(South),Scottsdale,AZ
+bluffs_on_thompson_creek,Bluffs on Thompson Creek,Saint Francisville,LA
+boulders_club_south,Boulders Club (South),Scottsdale,AZ
 the_bridge,The Bridge,Sag Harbor,NY
-the_broadmoor_east,The Broadmoor (East),Colorado Springs,CO
-the_bull_at_pinehurst_farms,The Bull at Pinehurst Farms,Sheboygan Falls,WI
-the_challenge_at_manele,The Challenge at Manele,Wailuku,HI
-the_classic_at_maddens_resort,The Classic at Madden's Resort,Brainerd,MN
+broadmoor_east,Broadmoor (East),Colorado Springs,CO
+pinehurst_farms_bull,Pinehurst Farms (Bull),Sheboygan Falls,WI
+challenge_at_manele,Challenge at Manele,Wailuku,HI
+maddens_resort_classic,Madden's Resort (Classic),Brainerd,MN
 the_concession,The Concession,Bradenton,FL
 the_country_clubclyde_squirrel,The Country Club(Clyde_Squirrel),Brookline,MA
 the_creek_club,The Creek Club,Locust Valley,NY
 the_dunes,The Dunes,New Buffalo,MI
-the_glen_club,The Glen Club,Glenview,IL
+glen_club,Glen Club,Glenview,IL
 the_golf_club,The Golf Club,New Albany,OH
-the_golf_club_at_black_rock,The Golf Club at Black Rock,Coeur d'Alene,ID
-the_golf_club_at_cuscowilla,The Golf Club at Cuscowilla,Eatonton,GA
-the_golf_club_at_redlands_mesa,The Golf Club at Redlands Mesa,Grand Junction,CO
-the_golf_courses_of_lawsonialinks,The Golf Courses of Lawsonia(Links),Green Lake,WI
-the_greenbrier_old_white_tpc,The Greenbrier (Old White TPC),White Sulphur Springs,WV
-the_harvester_golf_club,The Harvester Golf Club,Rhodes,IA
-the_heritage_club,The Heritage Club,Pawleys Island,SC
-the_highland_course_at_primland_resort,The Highland Course at Primland Resort,Meadows of Dan,VA
+black_rock,Black Rock,Coeur d'Alene,ID
+cuscowilla,Cuscowilla,Eatonton,GA
+redlands_mesa,Redlands Mesa,Grand Junction,CO
+lawsonia_links,Lawsonia (Links),Green Lake,WI
+greenbrier_old_white_tpc,Greenbrier (Old White TPC),White Sulphur Springs,WV
+harvester_golf_club,Harvester Golf Club,Rhodes,IA
+heritage_club,Heritage Club,Pawleys Island,SC
+primland_resort_highland,Primland Resort (Highland),Meadows of Dan,VA
 the_honors_course,The Honors Course,Ooltewah,TN
-the_legend_at_giants_ridge,The Legend at Giants Ridge,Aurora,MN
-the_links_at_lighthouse_sound,The Links at Lighthouse Sound,Bishopville,MD
-the_links_at_spanish_bay,The Links at Spanish Bay,Del Monte Forest,CA
-the_links_of_north_dakota,The Links of North Dakota,Tioga,ND
-the_prairie_club_dunes,The Prairie Club (Dunes),Valentine,NE
-the_prairie_clubpines,The Prairie Club(Pines),Valentine,NE
+giants_ridge_legend,Giants Ridge (Legend),Aurora,MN
+links_at_lighthouse_sound,Links at Lighthouse Sound,Bishopville,MD
+links_at_spanish_bay,Links at Spanish Bay,Del Monte Forest,CA
+links_of_north_dakota,Links of North Dakota,Tioga,ND
+prairie_club_dunes,Prairie Club (Dunes),Valentine,NE
+prairie_club_pines,Prairie Club (Pines),Valentine,NE
 the_preserve,The Preserve,Carmel-by-the-Sea,CA
-the_prince_at_princeville,The Prince at Princeville,Princeville,HI
-the_quarry_at_giants_ridge,The Quarry at Giants Ridge,Aurora,MN
-the_quarry_at_la_quinta,The Quarry at La Quinta,La Quinta,CA
+princeville_prince,Princeville (Prince),Princeville,HI
+giants_ridge_quarry,Giants Ridge (Quarry),Aurora,MN
+la_quinta_quarry,La Quinta (Quarry),La Quinta,CA
 the_rim,The Rim,Payson,AZ
 the_tribute,The Tribute,The Colony,TX
 tidewater,Tidewater,North Myrtle Beach,SC
@@ -382,6 +382,6 @@ yeamans_hall,Yeamans Hall,Hanahan,SC
 poppy_hills,Poppy Hills,Pebble Beach,CA
 troy_burne_golf_course,Troy Burne Golf Course,Hudson,WI
 quintero,Quintero,Peoria,AZ
-the_greenbrier_greenbrier,The Greenbrier (Greenbrier),White Sulphur Springs,WI
+greenbrier_greenbrier,Greenbrier (Greenbrier),White Sulphur Springs,WI
 world_woods_rolling_oaks,World Woods (Rolling Oaks),Brooksville,FL
-the_boulders_club_north,The Boulders Club(North),Scottsdale,AZ
+boulders_club_north,The Boulders Club (North),Scottsdale,AZ

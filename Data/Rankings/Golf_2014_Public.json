@@ -260,7 +260,7 @@
       },
       {
         "Ranking": 24,
-        "CourseName": "The Prince at Princeville",
+        "CourseName": "Princeville (Prince)",
         "City": "Princeville, Kauai",
         "State": "HI",
         "Architect": "Robert Trent Jones Jr.",
@@ -381,7 +381,7 @@
       },
       {
         "Ranking": 35,
-        "CourseName": "The Highland Course at Primland Resort",
+        "CourseName": "Primland Resort (Highland)",
         "City": "Meadows of Dan",
         "State": "VA",
         "Architect": "Donald Steel",
@@ -436,7 +436,7 @@
       },
       {
         "Ranking": 40,
-        "CourseName": "The Challenge at Manele",
+        "CourseName": "Challenge at Manele",
         "City": "Lana'I City, Lana'i",
         "State": "HI",
         "Architect": "Jack Nicklaus",
@@ -480,7 +480,7 @@
       },
       {
         "Ranking": 44,
-        "CourseName": "The Links at Spanish Bay",
+        "CourseName": "Links at Spanish Bay",
         "City": "Pebble Beach",
         "State": "CA",
         "Architect": "Robert Trent Jones Jr.",
@@ -535,7 +535,7 @@
       },
       {
         "Ranking": 49,
-        "CourseName": "The Golf Club at Cuscowilla",
+        "CourseName": "Cuscowilla",
         "City": "Eatonton",
         "State": "GA",
         "Architect": "Bill Coore_Ben Crenshaw",
@@ -568,7 +568,7 @@
       },
       {
         "Ranking": 52,
-        "CourseName": "The Quarry at Giants Ridge",
+        "CourseName": "Giants Ridge (Quarry)",
         "City": "Biwabik",
         "State": "MN",
         "Architect": "Jeff Brauer",
@@ -601,7 +601,7 @@
       },
       {
         "Ranking": 55,
-        "CourseName": "The Harvester Golf Club",
+        "CourseName": "Harvester Golf Club",
         "City": "Rhondes",
         "State": "IA",
         "Architect": "Keith Foster",
@@ -755,7 +755,7 @@
       },
       {
         "Ranking": 69,
-        "CourseName": "The Broadmoor (East)",
+        "CourseName": "Broadmoor (East)",
         "City": "Colorado Springs",
         "State": "CO",
         "Architect": "Donald Ross_Robert Trent Jones Sr.",
@@ -777,7 +777,7 @@
       },
       {
         "Ranking": 71,
-        "CourseName": "The Greenbrier (Old White TPC)",
+        "CourseName": "Greenbrier (Old White TPC)",
         "City": "White Sulpher Springs",
         "State": "WV",
         "Architect": "C.B. Macdonald_ Lester George",
@@ -810,7 +810,7 @@
       },
       {
         "Ranking": 74,
-        "CourseName": "The Prairie Club (Dunes)",
+        "CourseName": "Prairie Club (Dunes)",
         "City": "Valentine",
         "State": "NE",
         "Architect": "Tom Lehman_Chris Brands",
@@ -854,7 +854,7 @@
       },
       {
         "Ranking": 78,
-        "CourseName": "The Glen Club",
+        "CourseName": "Glen Club",
         "City": "Glenview",
         "State": "IL",
         "Architect": "Tom Fazio",
@@ -876,7 +876,7 @@
       },
       {
         "Ranking": 80,
-        "CourseName": "The Links at Lighthouse Sound",
+        "CourseName": "Links at Lighthouse Sound",
         "City": "Bishopville",
         "State": "MD",
         "Architect": "Arthur Hills",
@@ -1041,7 +1041,7 @@
       },
       {
         "Ranking": 95,
-        "CourseName": "The Golf Club at Redlands Mesa",
+        "CourseName": "Redlands Mesa",
         "City": "Grand Junction",
         "State": "CO",
         "Architect": "Jim Engh",
@@ -1096,7 +1096,7 @@
       },
       {
         "Ranking": 100,
-        "CourseName": "The Boulders Club(South)",
+        "CourseName": "Boulders Club (South)",
         "City": "Carefree",
         "State": "AZ",
         "Architect": "Jay Morrish",

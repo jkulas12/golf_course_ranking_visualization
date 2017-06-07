@@ -215,7 +215,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Prince at Princeville",
+      "CourseName": "Princeville (Prince)",
       "Ranking": 22,
       "City": "Princeville, Kauai",
       "State": "HI",
@@ -245,7 +245,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Quarry at Giants Ridge",
+      "CourseName": "Giants Ridge (Quarry)",
       "Ranking": 25,
       "City": "Biwabik",
       "State": "MN",
@@ -275,7 +275,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Challenge at Manele",
+      "CourseName": "Challenge at Manele",
       "Ranking": 28,
       "City": "Lana'I City, Lana'i",
       "State": "HI",
@@ -285,7 +285,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Greenbrier (Old White TPC)",
+      "CourseName": "Greenbrier (Old White TPC)",
       "Ranking": 29,
       "City": "White Sulpher Springs",
       "State": "WV",
@@ -305,7 +305,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Highland Course at Primland Resort",
+      "CourseName": "Primland Resort (Highland)",
       "Ranking": 31,
       "City": "Meadows of Dan",
       "State": "VA",
@@ -315,7 +315,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Broadmoor (East)",
+      "CourseName": "Broadmoor (East)",
       "Ranking": 32,
       "City": "Colorado Springs",
       "State": "CO",
@@ -345,7 +345,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Prairie Club (Dunes)",
+      "CourseName": "Prairie Club (Dunes)",
       "Ranking": 35,
       "City": "Valentine",
       "State": "NE",
@@ -415,7 +415,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Harvester Golf Club",
+      "CourseName": "Harvester Golf Club",
       "Ranking": 42,
       "City": "Rhondes",
       "State": "IA",
@@ -485,7 +485,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Links at Spanish Bay",
+      "CourseName": "Links at Spanish Bay",
       "Ranking": 49,
       "City": "Pebble Beach",
       "State": "CA",
@@ -555,7 +555,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Golf Club at Cuscowilla",
+      "CourseName": "Cuscowilla",
       "Ranking": 56,
       "City": "Eatonton",
       "State": "GA",
@@ -625,7 +625,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Classic at Madden's Resort",
+      "CourseName": "Madden's Resort (Classic)",
       "Ranking": 63,
       "City": "Brainerd",
       "State": "MN",
@@ -695,7 +695,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Bull at Pinehurst Farms",
+      "CourseName": "Pinehurst Farms (Bull)",
       "Ranking": 70,
       "City": "Sheboygan Falls",
       "State": "WI",
@@ -745,7 +745,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Prairie Club(Pines)",
+      "CourseName": "Prairie Club (Pines)",
       "Ranking": 75,
       "City": "Valentine",
       "State": "NE",
@@ -845,7 +845,7 @@
       "Type": "public"
     },
     {
-      "CourseName": "The Golf Courses of Lawsonia(Links)",
+      "CourseName": "Lawsonia (Links)",
       "Ranking": 85,
       "City": "Green Lake",
       "State": "WI",

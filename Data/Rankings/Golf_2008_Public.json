@@ -195,7 +195,7 @@
 }
 ,
 {
-"CourseName":"The Prince at Princeville",
+"CourseName":"Princeville (Prince)",
 "Ranking":20,
 "State":"HI",
 "Architect":"Robert Trent Jones Jr.",
@@ -215,7 +215,7 @@
 }
 ,
 {
-"CourseName":"The Golf Club at Cuscowilla",
+"CourseName":"Cuscowilla",
 "Ranking":22,
 "State":"GA",
 "Architect":"Bill Coore",
@@ -385,7 +385,7 @@
 }
 ,
 {
-"CourseName":"The Challenge at Manele",
+"CourseName":"Challenge at Manele",
 "Ranking":39,
 "State":"HI",
 "Architect":"jack Nicklaus",
@@ -395,7 +395,7 @@
 }
 ,
 {
-"CourseName":"The Links at Spanish Bay",
+"CourseName":"Links at Spanish Bay",
 "Ranking":40,
 "State":"CA",
 "Architect":"Robert Trent Jones Jr.",
@@ -475,7 +475,7 @@
 }
 ,
 {
-"CourseName":"The Greenbrier (Old White TPC)",
+"CourseName":"Greenbrier (Old White TPC)",
 "Ranking":48,
 "State":"WV",
 "Architect":"C.B. Macdonald",
@@ -485,7 +485,7 @@
 }
 ,
 {
-"CourseName":"The Harvester Golf Club",
+"CourseName":"Harvester Golf Club",
 "Ranking":49,
 "State":"IA",
 "Architect":"Keith Foster",
@@ -495,7 +495,7 @@
 }
 ,
 {
-"CourseName":"The Quarry at Giants Ridge",
+"CourseName":"Giants Ridge (Quarry)",
 "Ranking":50,
 "State":"MN",
 "Architect":"Jeff Brauer",
@@ -615,7 +615,7 @@
 }
 ,
 {
-"CourseName":"The Highland Course at Primland Resort",
+"CourseName":"Primland Resort (Highland)",
 "Ranking":62,
 "State":"VA",
 "Architect":"Donald Steel",
@@ -715,7 +715,7 @@
 }
 ,
 {
-"CourseName":"The Glen Club",
+"CourseName":"Glen Club",
 "Ranking":72,
 "State":"IL",
 "Architect":"Tom Fazio",
@@ -795,7 +795,7 @@
 }
 ,
 {
-"CourseName":"The Broadmoor (East)",
+"CourseName":"Broadmoor (East)",
 "Ranking":80,
 "State":"CO",
 "Architect":"Donald Ross",
@@ -885,7 +885,7 @@
 }
 ,
 {
-"CourseName":"The Links at Lighthouse Sound",
+"CourseName":"Links at Lighthouse Sound",
 "Ranking":89,
 "State":"MD",
 "Architect":"Arthur Hills",
@@ -895,7 +895,7 @@
 }
 ,
 {
-"CourseName":"The Boulders Club(South)",
+"CourseName":"Boulders Club (South)",
 "Ranking":90,
 "State":"AZ",
 "Architect":"Jay Morrish",
@@ -955,7 +955,7 @@
 }
 ,
 {
-"CourseName":"The Golf Club at Redlands Mesa",
+"CourseName":"Redlands Mesa",
 "Ranking":96,
 "State":"CO",
 "Architect":"Jim Engh",

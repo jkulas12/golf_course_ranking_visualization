@@ -115,7 +115,7 @@
 }
 ,
 {
-"CourseName":"The Prince at Princeville",
+"CourseName":"Princeville (Prince)",
 "Ranking":12,
 "State":"HI",
 "Architect":"Robert Trent Jones Jr.",
@@ -155,7 +155,7 @@
 }
 ,
 {
-"CourseName":"The Quarry at Giants Ridge",
+"CourseName":"Giants Ridge (Quarry)",
 "Ranking":16,
 "State":"MN",
 "Architect":"Jeff Brauer",
@@ -165,7 +165,7 @@
 }
 ,
 {
-"CourseName":"The Golf Club at Redlands Mesa",
+"CourseName":"Redlands Mesa",
 "Ranking":17,
 "State":"CO",
 "Architect":"Jim Engh",
@@ -205,7 +205,7 @@
 }
 ,
 {
-"CourseName":"The Harvester Golf Club",
+"CourseName":"Harvester Golf Club",
 "Ranking":21,
 "State":"IA",
 "Architect":"Keith Foster",
@@ -445,7 +445,7 @@
 }
 ,
 {
-"CourseName":"The Golf Club at Cuscowilla",
+"CourseName":"Cuscowilla",
 "Ranking":45,
 "State":"GA",
 "Architect":"Bill Coore",
@@ -495,7 +495,7 @@
 }
 ,
 {
-"CourseName":"The Classic at Madden's Resort",
+"CourseName":"Madden's Resort (Classic)",
 "Ranking":50,
 "State":"MN",
 "Architect":"Scott Hoffmann",
@@ -525,7 +525,7 @@
 }
 ,
 {
-"CourseName":"The Links of North Dakota",
+"CourseName":"Links of North Dakota",
 "Ranking":53,
 "State":"ND",
 "Architect":"Stephen Kay",
@@ -595,7 +595,7 @@
 }
 ,
 {
-"CourseName":"The Challenge at Manele",
+"CourseName":"Challenge at Manele",
 "Ranking":60,
 "State":"HI",
 "Architect":"Jack Nicklaus",
@@ -615,7 +615,7 @@
 }
 ,
 {
-"CourseName":"The Links at Spanish Bay",
+"CourseName":"Links at Spanish Bay",
 "Ranking":62,
 "State":"CA",
 "Architect":"Robert Trent Jones Jr.",
@@ -675,7 +675,7 @@
 }
 ,
 {
-"CourseName":"The Broadmoor (East)",
+"CourseName":"Broadmoor (East)",
 "Ranking":68,
 "State":"CO",
 "Architect":"Donald Ross",
@@ -775,7 +775,7 @@
 }
 ,
 {
-"CourseName":"The Heritage Club",
+"CourseName":"Heritage Club",
 "Ranking":78,
 "State":"SC",
 "Architect":"Dan Maples",
@@ -785,7 +785,7 @@
 }
 ,
 {
-"CourseName":"The Greenbrier (Old White TPC)",
+"CourseName":"Greenbrier (Old White TPC)",
 "Ranking":79,
 "State":"WV",
 "Architect":"C.B. Macdonald",
@@ -875,7 +875,7 @@
 }
 ,
 {
-"CourseName":"The Legend at Giants Ridge",
+"CourseName":"Giants Ridge (Legend)",
 "Ranking":88,
 "State":"MN",
 "Architect":"Jeff Brauer",
@@ -955,7 +955,7 @@
 }
 ,
 {
-"CourseName":"The Bluffs on Thompson Creek",
+"CourseName":"Bluffs on Thompson Creek",
 "Ranking":96,
 "State":"LA",
 "Architect":"Arnold Palmer",

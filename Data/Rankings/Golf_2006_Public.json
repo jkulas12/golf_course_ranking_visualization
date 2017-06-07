@@ -185,7 +185,7 @@
 }
 ,
 {
-"CourseName":"The Golf Club at Cuscowilla",
+"CourseName":"Cuscowilla",
 "Ranking":19,
 "State":"GA",
 "Architect":"Bill Coore",
@@ -195,7 +195,7 @@
 }
 ,
 {
-"CourseName":"The Prince at Princeville",
+"CourseName":"Princeville (Prince)",
 "Ranking":20,
 "State":"HI",
 "Architect":"Robert Trent Jones Jr.",
@@ -325,7 +325,7 @@
 }
 ,
 {
-"CourseName":"The Challenge at Manele",
+"CourseName":"Challenge at Manele",
 "Ranking":33,
 "State":"HI",
 "Architect":"Jack Nicklaus",
@@ -415,7 +415,7 @@
 }
 ,
 {
-"CourseName":"The Links at Spanish Bay",
+"CourseName":"Links at Spanish Bay",
 "Ranking":42,
 "State":"CA",
 "Architect":"Robert Trent Jones Jr.",
@@ -515,7 +515,7 @@
 }
 ,
 {
-"CourseName":"The Greenbrier (Old White TPC)",
+"CourseName":"Greenbrier (Old White TPC)",
 "Ranking":52,
 "State":"WV",
 "Architect":"C.B. Macdonald",
@@ -545,7 +545,7 @@
 }
 ,
 {
-"CourseName":"The Harvester Golf Club",
+"CourseName":"Harvester Golf Club",
 "Ranking":55,
 "State":"IA",
 "Architect":"Keith Foster",
@@ -555,7 +555,7 @@
 }
 ,
 {
-"CourseName":"The Quarry at Giants Ridge",
+"CourseName":"Giants Ridge (Quarry)",
 "Ranking":56,
 "State":"MN",
 "Architect":"Jeff Brauer",
@@ -645,7 +645,7 @@
 }
 ,
 {
-"CourseName":"The Glen Club",
+"CourseName":"Glen Club",
 "Ranking":65,
 "State":"IL",
 "Architect":"Tom Fazio",
@@ -785,7 +785,7 @@
 }
 ,
 {
-"CourseName":"The Links at Lighthouse Sound",
+"CourseName":"Links at Lighthouse Sound",
 "Ranking":79,
 "State":"MD",
 "Architect":"Arthur Hills",
@@ -805,7 +805,7 @@
 }
 ,
 {
-"CourseName":"The Broadmoor (East)",
+"CourseName":"Broadmoor (East)",
 "Ranking":81,
 "State":"CO",
 "Architect":"Donald Ross",
@@ -885,7 +885,7 @@
 }
 ,
 {
-"CourseName":"The Boulders Club(South)",
+"CourseName":"Boulders Club (South)",
 "Ranking":89,
 "State":"AZ",
 "Architect":"Jay Morrish",

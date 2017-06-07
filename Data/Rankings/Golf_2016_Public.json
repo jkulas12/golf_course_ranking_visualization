@@ -275,7 +275,7 @@
 }
 ,
 {
-"CourseName":"The Highland Course at Primland Resort",
+"CourseName":"Primland Resort (Highland)",
 "Ranking":28,
 "State":"VA",
 "Architect":"Donald Steel",
@@ -365,7 +365,7 @@
 }
 ,
 {
-"CourseName":"The Greenbrier (Old White TPC)",
+"CourseName":"Greenbrier (Old White TPC)",
 "Ranking":37,
 "State":"WV",
 "Architect":"C.B. Macdonald",
@@ -435,7 +435,7 @@
 }
 ,
 {
-"CourseName":"The Challenge at Manele",
+"CourseName":"Challenge at Manele",
 "Ranking":44,
 "State":"HI",
 "Architect":"Jack Nicklaus",
@@ -465,7 +465,7 @@
 }
 ,
 {
-"CourseName":"The Links at Spanish Bay",
+"CourseName":"Links at Spanish Bay",
 "Ranking":47,
 "State":"CA",
 "Architect":"Robert Trent Jones Jr.",
@@ -535,7 +535,7 @@
 }
 ,
 {
-"CourseName":"The Quarry at Giants Ridge",
+"CourseName":"Giants Ridge (Quarry)",
 "Ranking":54,
 "State":"MN",
 "Architect":"Jeff Brauer",
@@ -585,7 +585,7 @@
 }
 ,
 {
-"CourseName":"The Harvester Golf Club",
+"CourseName":"Harvester Golf Club",
 "Ranking":59,
 "State":"IA",
 "Architect":"Keith Foster",
@@ -665,7 +665,7 @@
 }
 ,
 {
-"CourseName":"The Broadmoor (East)",
+"CourseName":"Broadmoor (East)",
 "Ranking":67,
 "State":"CO",
 "Architect":"Donald Ross",
@@ -745,7 +745,7 @@
 }
 ,
 {
-"CourseName":"The Links at Lighthouse Sound",
+"CourseName":"Links at Lighthouse Sound",
 "Ranking":75,
 "State":"MD",
 "Architect":"Arthur Hills",
@@ -755,7 +755,7 @@
 }
 ,
 {
-"CourseName":"The Prairie Club (Dunes)",
+"CourseName":"Prairie Club (Dunes)",
 "Ranking":76,
 "State":"NE",
 "Architect":"Tom Lehman",
@@ -865,7 +865,7 @@
 }
 ,
 {
-"CourseName":"The Golf Courses of Lawsonia(Links)",
+"CourseName":"Lawsonia (Links)",
 "Ranking":87,
 "State":"WI",
 "Architect":"William Langford",
@@ -895,7 +895,7 @@
 }
 ,
 {
-"CourseName":"The Glen Club",
+"CourseName":"Glen Club",
 "Ranking":90,
 "State":"IL",
 "Architect":"Tom Fazio",
@@ -925,7 +925,7 @@
 }
 ,
 {
-"CourseName":"The Golf Club at Redlands Mesa",
+"CourseName":"Redlands Mesa",
 "Ranking":93,
 "State":"CO",
 "Architect":"Jim Engh",

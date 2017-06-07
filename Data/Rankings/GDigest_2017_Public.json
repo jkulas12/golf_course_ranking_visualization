@@ -194,7 +194,7 @@
 }
 ,
 {
-"CourseName":"The Prince at Princeville",
+"CourseName":"Princeville (Prince)",
 "Ranking":20,
 "State":"HI",
 "Architect":"Robert Trent Jones Jr.",
@@ -254,7 +254,7 @@
 }
 ,
 {
-"CourseName":"The Challenge at Manele",
+"CourseName":"Challenge at Manele",
 "Ranking":26,
 "State":"HI",
 "Architect":"Jack Nicklaus",
@@ -274,7 +274,7 @@
 }
 ,
 {
-"CourseName":"The Highland Course at Primland Resort",
+"CourseName":"Primland Resort (Highland)",
 "Ranking":28,
 "State":"VA",
 "Architect":"Donald Steel",
@@ -294,7 +294,7 @@
 }
 ,
 {
-"CourseName":"The Quarry at Giants Ridge",
+"CourseName":"Giants Ridge (Quarry)",
 "Ranking":30,
 "State":"MN",
 "Architect":"Jeff Brauer",
@@ -304,7 +304,7 @@
 }
 ,
 {
-"CourseName":"The Greenbrier (Old White TPC)",
+"CourseName":"Greenbrier (Old White TPC)",
 "Ranking":31,
 "State":"WV",
 "Architect":"C.B. Macdonald",
@@ -344,7 +344,7 @@
 }
 ,
 {
-"CourseName":"The Broadmoor (East)",
+"CourseName":"Broadmoor (East)",
 "Ranking":35,
 "State":"CO",
 "Architect":"Donald Ross",
@@ -394,7 +394,7 @@
 }
 ,
 {
-"CourseName":"The Harvester Golf Club",
+"CourseName":"Harvester Golf Club",
 "Ranking":40,
 "State":"IA",
 "Architect":"Keith Foster",
@@ -404,7 +404,7 @@
 }
 ,
 {
-"CourseName":"The Prairie Club (Dunes)",
+"CourseName":"Prairie Club (Dunes)",
 "Ranking":41,
 "State":"NE",
 "Architect":"Tom Lehman",
@@ -434,7 +434,7 @@
 }
 ,
 {
-"CourseName":"The Links at Spanish Bay",
+"CourseName":"Links at Spanish Bay",
 "Ranking":44,
 "State":"CA",
 "Architect":"Robert Trent Jones Jr.",
@@ -574,7 +574,7 @@
 }
 ,
 {
-"CourseName":"The Classic at Madden's Resort",
+"CourseName":"Madden's Resort (Classic)",
 "Ranking":58,
 "State":"MN",
 "Architect":"Scott Hoffmann",
@@ -584,7 +584,7 @@
 }
 ,
 {
-"CourseName":"The Golf Courses of Lawsonia(Links)",
+"CourseName":"Lawsonia (Links)",
 "Ranking":59,
 "State":"WI",
 "Architect":"William Langford",
@@ -834,7 +834,7 @@
 }
 ,
 {
-"CourseName":"The Bull at Pinehurst Farms",
+"CourseName":"Pinehurst Farms (Bull)",
 "Ranking":84,
 "State":"WI",
 "Architect":"Jack Nicklaus",
@@ -884,7 +884,7 @@
 }
 ,
 {
-"CourseName":"The Prairie Club(Pines)",
+"CourseName":"Prairie Club (Pines)",
 "Ranking":89,
 "State":"NE",
 "Architect":"Grahm Marsh",

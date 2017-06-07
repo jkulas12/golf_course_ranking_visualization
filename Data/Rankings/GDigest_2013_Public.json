@@ -195,7 +195,7 @@
 }
 ,
 {
-"CourseName":"The Quarry at Giants Ridge",
+"CourseName":"Giants Ridge (Quarry)",
 "Ranking":20,
 "State":"MN",
 "Architect":"Jeff Brauer",
@@ -205,7 +205,7 @@
 }
 ,
 {
-"CourseName":"The Highland Course at Primland Resort",
+"CourseName":"Primland Resort (Highland)",
 "Ranking":21,
 "State":"VA",
 "Architect":"Donald Steel",
@@ -215,7 +215,7 @@
 }
 ,
 {
-"CourseName":"The Prince at Princeville",
+"CourseName":"Princeville (Prince)",
 "Ranking":22,
 "State":"HI",
 "Architect":"Robert Trent Jones Jr.",
@@ -285,7 +285,7 @@
 }
 ,
 {
-"CourseName":"The Broadmoor (East)",
+"CourseName":"Broadmoor (East)",
 "Ranking":29,
 "State":"CO",
 "Architect":"Donald Ross",
@@ -325,7 +325,7 @@
 }
 ,
 {
-"CourseName":"The Challenge at Manele",
+"CourseName":"Challenge at Manele",
 "Ranking":33,
 "State":"HI",
 "Architect":"Jack Nicklaus",
@@ -335,7 +335,7 @@
 }
 ,
 {
-"CourseName":"The Greenbrier (Old White TPC)",
+"CourseName":"Greenbrier (Old White TPC)",
 "Ranking":34,
 "State":"WV",
 "Architect":"C.B. Macdonald",
@@ -455,7 +455,7 @@
 }
 ,
 {
-"CourseName":"The Harvester Golf Club",
+"CourseName":"Harvester Golf Club",
 "Ranking":46,
 "State":"IA",
 "Architect":"Keith Foster",
@@ -555,7 +555,7 @@
 }
 ,
 {
-"CourseName":"The Golf Club at Cuscowilla",
+"CourseName":"Cuscowilla",
 "Ranking":56,
 "State":"GA",
 "Architect":"Bill Coore",
@@ -595,7 +595,7 @@
 }
 ,
 {
-"CourseName":"The Links at Spanish Bay",
+"CourseName":"Links at Spanish Bay",
 "Ranking":60,
 "State":"CA",
 "Architect":"Robert Trent Jones Jr.",
@@ -665,7 +665,7 @@
 }
 ,
 {
-"CourseName":"The Classic at Madden's Resort",
+"CourseName":"Madden's Resort (Classic)",
 "Ranking":67,
 "State":"MN",
 "Architect":"Scott Hoffmann",
@@ -765,7 +765,7 @@
 }
 ,
 {
-"CourseName":"The Bull at Pinehurst Farms",
+"CourseName":"Pinehurst Farms (Bull)",
 "Ranking":77,
 "State":"WI",
 "Architect":"Jack Nicklaus",
@@ -985,7 +985,7 @@
 }
 ,
 {
-"CourseName":"The Golf Club at Redlands Mesa",
+"CourseName":"Redlands Mesa",
 "Ranking":99,
 "State":"CO",
 "Architect":"Jim Engh",

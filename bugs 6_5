@@ -11,6 +11,13 @@ On Firefox the map tiles occasionally disappear
 
 * When selecting a group of courses from the list on the right, they highlight on map but do not stay highlightd
 
-* Clicking and dragging scrollbar on courses list does not work (overrode by selectable functionality)
 
+* Remove "The's"
 
+* Remove data loading issue
+
+* Some rankings dont have complete data
+
+* sort mode changes when a new ranking is selected or deselected
+
+* when the map starts small and resized map tiles only populate a small portion

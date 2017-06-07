@@ -174,25 +174,27 @@ function load_all_rankings(rankings) {
 
         // load specific ranking
         d3.json(ranking_path + ".json", function(json) {
+            console.log("iterating through: " + d);
+            console.log('loading: ' + ranking_path);
             // array of all courses in this ranking
             var ranking_courses = [];
 
             // object for publication metadata
             var publication = {
-                className : createClassName(json.Publication),
-                displayName : json.Publication
+                className: createClassName(json.Publication),
+                displayName: json.Publication
             };
             // metadata of specific ranking
             var ranking = {
-                className : ranking_name,
-                publication : publication,
-                year : json.Year,
-                type : json.Type,
-                courses : {}
+                className: ranking_name,
+                publication: publication,
+                year: json.Year,
+                type: json.Type,
+                courses: {}
             };
 
             // iterate through all courses in a ranking
-            json.Courses.forEach(function(c) {
+            json.Courses.forEach(function (c) {
                 // create class name for given course
                 var course_class_name = createClassName(c.CourseName);
                 // key value pair for a course ranking {course_class_name : rank}
@@ -210,15 +212,15 @@ function load_all_rankings(rankings) {
                     if (c.Architect.indexOf("_") > -1) {
                         var archs = c.Architect.split("_");
                         // add all unmapped architects to map
-                        archs.forEach(function(a) {
+                        archs.forEach(function (a) {
                             var arch_class_name = createClassName(a);
                             // if architect does not exist, add to map
                             if (!architect_map.hasOwnProperty(arch_class_name)) {
                                 architect_map[arch_class_name] = {
-                                    displayName : a,
-                                    className : arch_class_name,
-                                    count : 1,
-                                    courses : [course_class_name]
+                                    displayName: a,
+                                    className: arch_class_name,
+                                    count: 1,
+                                    courses: [course_class_name]
                                 };
                             } else {
                                 // add course to list of courses by an architect
@@ -232,10 +234,10 @@ function load_all_rankings(rankings) {
                         var arch_class_name = createClassName(c.Architect);
                         if (!architect_map.hasOwnProperty(arch_class_name)) {
                             architect_map[arch_class_name] = {
-                                displayName : c.Architect,
-                                className : arch_class_name,
-                                count : 1,
-                                courses : [course_class_name]
+                                displayName: c.Architect,
+                                className: arch_class_name,
+                                count: 1,
+                                courses: [course_class_name]
                             }
                         } else {
                             // add course to list of courses by an architect
@@ -272,15 +274,17 @@ function load_all_rankings(rankings) {
                         c.Coordinates = c.Coordinates.split(",")
                     }
                     var course = {
-                        displayName : c.CourseName,
-                        className : course_class_name,
-                        yearCreated : course_years,
-                        rankings : publication_ranking,
-                        coordinates : c.Coordinates,
-                        x : c.Coordinates[1],
-                        y : c.Coordinates[0],
-                        architects : archs.map(function(d) {return createClassName(d)}),
-                        type : c.Type
+                        displayName: c.CourseName,
+                        className: course_class_name,
+                        yearCreated: course_years,
+                        rankings: publication_ranking,
+                        coordinates: c.Coordinates,
+                        x: c.Coordinates[1],
+                        y: c.Coordinates[0],
+                        architects: archs.map(function (d) {
+                            return createClassName(d)
+                        }),
+                        type: c.Type
                     };
                     course_map[course_class_name] = course;
                     // when a course already exists in course_map
@@ -296,103 +300,98 @@ function load_all_rankings(rankings) {
                 // TODO: go through courses in an architect and remove duplicates
             });
             ranking_map[ranking_name] = ranking;
-        });
-        // check to see if we have visited every ranking
-        if (ranking_index === all_rankings.length) {
-            ///////////////////////////////////////////////
-            /////// integrate slope and rating data ///////
-            ///////////////////////////////////////////////
-            d3.csv('Data/supplemental/slopeRatingYardageData.csv', function(slopeData) {
-                slopeData.forEach(function(c) {
-                    // TODO: figure out why some courses are not in map yet(?)
-                    var course_class_name = createClassName(c.name);
-                    if (Object.keys(course_map).indexOf(course_class_name) !== -1) {
-                        course_map[course_class_name]['slope'] = +c.slope;
-                        course_map[course_class_name]['par'] = +c.par;
-                        course_map[course_class_name]['rating'] = +c.rating;
-                        course_map[course_class_name]['yardage'] = +c.yardage;
-                    } else {
-                        // TODO: figure out why this is happening and courses arent visited
-                        console.log("couldn't find course in slope rating data: " + course_class_name);
-                    }
-                });
-                d3.csv('Data/supplemental/course_location_info.csv', function(locationData) {
-                    locationData.forEach(function(c) {
-                        var course_class_name = createClassName(c.CourseName);
+            console.log(ranking_name);
+            // check to see if we have visited every ranking
+            if (all_rankings.indexOf(ranking_name) === all_rankings.length - 1) {
+                ///////////////////////////////////////////////
+                /////// integrate slope and rating data ///////
+                ///////////////////////////////////////////////
+                d3.csv('Data/supplemental/slopeRatingYardageData.csv', function (slopeData) {
+                    slopeData.forEach(function (c) {
+                        // TODO: figure out why some courses are not in map yet(?)
+                        var course_class_name = createClassName(c.name);
                         if (Object.keys(course_map).indexOf(course_class_name) !== -1) {
-                            course_map[course_class_name]['city'] = c.City;
-                            course_map[course_class_name]['state'] = c.State;
-                        } else {
-                            console.log("couldn't find course in location data: " + course_class_name);
+                            course_map[course_class_name]['slope'] = +c.slope;
+                            course_map[course_class_name]['par'] = +c.par;
+                            course_map[course_class_name]['rating'] = +c.rating;
+                            course_map[course_class_name]['yardage'] = +c.yardage;
                         }
-                    })
-                });
-                /////////////////////////////////////////////
-                /// compute and integrate chart data ////////
-                /////////////////////////////////////////////
-                for (var c in course_map) {
-                    var course_rankings = {};
-                    for (var r in course_map[c].rankings) {
-                        var ranking = r;
-                        // split ranking for publication, type and year
-                        var split_ranking = ranking.split("_");
-                        // ranking in format pub_type
-                        var chart_ranking = split_ranking[0] + "_" + split_ranking[2];
-                        // if the course does not already have a ranking for this pub_type combo
-                        if (!course_rankings.hasOwnProperty(chart_ranking)) {
-                            course_rankings[chart_ranking] = {
-                                displayName : split_ranking[0] + " " + split_ranking[2],
-                                className : split_ranking[0] + "_" + split_ranking[2],
-                                ranks : [{
-                                    year : +split_ranking[1],
-                                    rank : course_map[c].rankings[ranking],
-                                    displayName : split_ranking[0] + " " + split_ranking[2],
-                                    className : split_ranking[0] + "_" + split_ranking[2]
-                                }]
-                            };
-                            // if the course already has a ranking for pub_type combo
-                        } else {
-                            course_rankings[chart_ranking].ranks.push({
-                                year : +split_ranking[1],
-                                rank : course_map[c].rankings[ranking],
-                                className : split_ranking[0] + "_" + split_ranking[2],
-                                displayName : split_ranking[0] + " " + split_ranking[2]
+                    });
+                    d3.csv('Data/supplemental/course_location_info.csv', function (locationData) {
+                        locationData.forEach(function (c) {
+                            var course_class_name = createClassName(c.CourseName);
+                            if (Object.keys(course_map).indexOf(course_class_name) !== -1) {
+                                course_map[course_class_name]['city'] = c.City;
+                                course_map[course_class_name]['state'] = c.State;
+                            }
+                        })
+                    });
+                    /////////////////////////////////////////////
+                    /// compute and integrate chart data ////////
+                    /////////////////////////////////////////////
+                    for (var c in course_map) {
+                        var course_rankings = {};
+                        for (var r in course_map[c].rankings) {
+                            var ranking = r;
+                            // split ranking for publication, type and year
+                            var split_ranking = ranking.split("_");
+                            // ranking in format pub_type
+                            var chart_ranking = split_ranking[0] + "_" + split_ranking[2];
+                            // if the course does not already have a ranking for this pub_type combo
+                            if (!course_rankings.hasOwnProperty(chart_ranking)) {
+                                course_rankings[chart_ranking] = {
+                                    displayName: split_ranking[0] + " " + split_ranking[2],
+                                    className: split_ranking[0] + "_" + split_ranking[2],
+                                    ranks: [{
+                                        year: +split_ranking[1],
+                                        rank: course_map[c].rankings[ranking],
+                                        displayName: split_ranking[0] + " " + split_ranking[2],
+                                        className: split_ranking[0] + "_" + split_ranking[2]
+                                    }]
+                                };
+                                // if the course already has a ranking for pub_type combo
+                            } else {
+                                course_rankings[chart_ranking].ranks.push({
+                                    year: +split_ranking[1],
+                                    rank: course_map[c].rankings[ranking],
+                                    className: split_ranking[0] + "_" + split_ranking[2],
+                                    displayName: split_ranking[0] + " " + split_ranking[2]
 
-                            });
+                                });
+                            }
                         }
+                        course_map[createClassName(c)]['chart_data'] = course_rankings
                     }
-                    course_map[createClassName(c)]['chart_data'] = course_rankings
-                }
-                //////////////////////////////////////////////////////////////////
-                ////////// Code here for events after data is loaded /////////////
-                //////////////////////////////////////////////////////////////////
+                    //////////////////////////////////////////////////////////////////
+                    ////////// Code here for events after data is loaded /////////////
+                    //////////////////////////////////////////////////////////////////
 
-                tooltip = d3.select("body").append("div")
-                    .attr("class", "tooltip")
-                    .style("opacity", 0);
+                    tooltip = d3.select("body").append("div")
+                        .attr("class", "tooltip")
+                        .style("opacity", 0);
 
-                rankTooltip = d3.select('body').append('div')
-                    .attr('class', 'rankTooltip')
-                    .style('opacity', 0);
+                    rankTooltip = d3.select('body').append('div')
+                        .attr('class', 'rankTooltip')
+                        .style('opacity', 0);
 
-                chartTooltip = d3.select('body').append('div')
-                    .attr('class', 'chartTooltip')
-                    .style('opacity', 0)
+                    chartTooltip = d3.select('body').append('div')
+                        .attr('class', 'chartTooltip')
+                        .style('opacity', 0)
 
-                initialize_chart();
-                initialize_container_lists();
-                populate_ranking_matrix();
-                add_check_boxes();
-                initialize_publication_year_widget();
-                initialize_course_year_slider();
-                initialize_selectable()
-                refresh_map();
-                rightControlResize();
-
-
-            });
-        }
+                    initialize_chart();
+                    initialize_container_lists();
+                    populate_ranking_matrix();
+                    add_check_boxes();
+                    initialize_publication_year_widget();
+                    initialize_course_year_slider();
+                    initialize_selectable()
+                    refresh_map();
+                    rightControlResize();
+                })
+            }
+        })
     });
+
 }
 
 function populate_ranking_matrix() {
@@ -408,8 +407,8 @@ function populate_ranking_matrix() {
     for (var r in rankings) {
         var ranking = rankings[r].split('_');
         var rank_obj = {'publication' : ranking[0],
-                        'year' : +ranking[1],
-                        'type' : ranking[2]}
+            'year' : +ranking[1],
+            'type' : ranking[2]}
         if (rank_obj['publication'] === 'Golf') {
             golf_mag_rankings.push(rank_obj)
         } else {
@@ -462,7 +461,7 @@ function populate_ranking_matrix() {
         .selectAll('text')
         .style("text-anchor", "end")
         .attr("dx", ".5em")
-        //.attr("dy", ".5em");
+    //.attr("dy", ".5em");
 
     d3.select('#GolfCoursesContainer > svg')
         .selectAll('rect')
@@ -596,7 +595,7 @@ function populate_ranking_matrix() {
                     all_ranks = d3.selectAll('.Golf.Public');
                     type_class = 'Public';
                 }
-            // golfDigest
+                // golfDigest
             } else {
                 pub_class = '.GDigest';
                 if (clicked_text.search('All') !== -1) {
@@ -854,7 +853,7 @@ function initialize_selectable() {
 
             // sort
 
-        // list was previously sorted numerically
+            // list was previously sorted numerically
         } else {
             // switch active div
             $('.alphabeticalSortDiv').addClass('active').removeClass('inactive');
@@ -879,7 +878,6 @@ function initialize_selectable() {
 
         update_course_list(sorted_courses);
         if (highlighted_courses.length == 1) {
-            console.log('here');
             setTimeout(function() {
                 scroll_courses_list(course_map[highlighted_courses[0]]);
                 d3.select('li.course-' + course_map[highlighted_courses[0]].className).classed('ui-selected', true);
@@ -936,7 +934,6 @@ function initialize_selectable() {
 
         update_course_list(sorted_courses);
         if (highlighted_courses.length == 1) {
-            console.log('here');
             setTimeout(function() {
                 scroll_courses_list(course_map[highlighted_courses[0]]);
                 d3.select('li.course-' + course_map[highlighted_courses[0]].className).classed('ui-selected', true);
@@ -1905,7 +1902,6 @@ function generate_map() {
         .translate([0, 0]);
     tile = d3.tile()
         .size([w, h]);
-    console.log(tile);
 
     zoom = d3.zoom()
         .scaleExtent([1 << 11, 1 << 19])
@@ -2052,7 +2048,7 @@ function endRubberBand() {
         update_course_list(selectedCourses);
         update_architect_list(selectedCourses);
         rubberBand = null;
-    window.getSelection().empty();
+        window.getSelection().empty();
 
     }
 
@@ -2079,7 +2075,6 @@ function clearChart() {
 function zoomed() {
 
     var transform = d3.event.transform;
-    console.log(transform);
     zoom_scale = transform.k
     var tiles = tile
         .scale(transform.k)
@@ -2150,7 +2145,7 @@ function update_course_list(courses) {
                 } else {
                     return parseInt(courseEnter.data().length - class_map[d.className] + 2);
                 }
-        });
+            });
         courseEnter.merge(courseSelect)
             .selectAll('.rankSpan')
             .text(function(d,i) {
@@ -2328,8 +2323,7 @@ function updateCourseLegend(containerData, course) {
 // translate: amount to translate
 // return: string version of translation
 function stringify(scale, translate) {
-    console.log(scale);
-    console.log(translate);
+
     var k = scale / 256, r = scale % 1 ? Number : Math.round;
     return "translate(" + r(translate[0] * scale) + "," + r(translate[1] * scale) + ") scale(" + k + ")";
 }

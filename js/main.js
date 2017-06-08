@@ -1718,6 +1718,7 @@ function get_highlighted_courses() {
             highlighted_courses.push(highlighted_points[node].__data__);
         }
     }
+    console.log(highlighted_courses)
     return highlighted_courses
 }
 

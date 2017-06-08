@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be1a3c0b-0349-4300-888c-844cf1496732" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/course_pictures/pinehurst_resortno_4.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/images/course_pictures/pinehurst_resortno_8.jpeg" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/pinehurst_no_4.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/pinehurst_no_8.jpeg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2005_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2005_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2007_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2009_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2009_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2011_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2011_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2013_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2013_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2015_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2015_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/GDigest_2017_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/GDigest_2017_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2002_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2002_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2004_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2004_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2006_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2006_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2008_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2008_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2010_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2010_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2012_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2012_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Rankings/Golf_2014_Public.json" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2014_Public.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/supplemental/course_location_info.csv" afterPath="$PROJECT_DIR$/Data/supplemental/course_location_info.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/supplemental/slopeRatingYardageData.csv" afterPath="$PROJECT_DIR$/Data/supplemental/slopeRatingYardageData.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path="golf_viz_public.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +29,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43965518">
-              <caret line="189" column="78" selection-start-line="189" selection-start-column="78" selection-end-line="189" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.33045977">
+              <caret line="179" column="20" selection-start-line="179" selection-start-column="20" selection-end-line="179" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -58,7 +41,7 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="15.888889">
+            <state vertical-scroll-proportion="0.0">
               <caret line="1830" column="91" selection-start-line="1830" selection-start-column="74" selection-end-line="1830" selection-end-column="91" />
               <folding />
             </state>
@@ -169,7 +152,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,9 +234,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf_viz_public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="golf_viz_public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course_pictures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -547,32 +552,38 @@
       <option name="project" value="LOCAL" />
       <updated>1496869803321</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="updated Pinehurst naming">
+      <created>1496942483619</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1496942483619</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="421" y="23" width="1019" height="867" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21982336" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21982336" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06265664" sideWeight="0.50311524" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32523617" sideWeight="0.49655172" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32523617" sideWeight="0.49655172" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928476" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939634" sideWeight="0.49688473" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -600,7 +611,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated ranking selection options&#10;improved chart&#10;added shading to ranking background&#10;added ranking clear button" />
     <MESSAGE value="random bug fixes&#10;click on map recenters&#10;changed point colors&#10;shifted chart so years align&#10;added tooltip to chart points&#10;added city and state data for courses" />
     <MESSAGE value="some fixes on list ordering" />
     <MESSAGE value="switched rank year notation to lines instead or rectangles&#10;changed map tiles&#10;switched checkbox background for course type colors&#10;removed opacity when selecting a group of courses&#10;" />
@@ -625,7 +635,8 @@
     <MESSAGE value="initial attempt to fix ranking loading issue" />
     <MESSAGE value="Fixed incorrect rankings" />
     <MESSAGE value="removed &quot;the's&quot;&#10;fixed sorting problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed &quot;the's&quot;&#10;fixed sorting problem" />
+    <MESSAGE value="updated Pinehurst naming" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated Pinehurst naming" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -714,7 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3744799">
           <caret line="387" column="22" selection-start-line="387" selection-start-column="22" selection-end-line="387" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,7 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.01923077">
           <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -861,7 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="867" column="33" selection-start-line="867" selection-start-column="33" selection-end-line="867" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -869,7 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="437" column="24" selection-start-line="437" selection-start-column="24" selection-end-line="437" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -877,7 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5635965">
           <caret line="795" column="1" selection-start-line="795" selection-start-column="1" selection-end-line="795" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -885,7 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="547" column="24" selection-start-line="547" selection-start-column="24" selection-end-line="547" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -893,7 +898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="537" column="24" selection-start-line="537" selection-start-column="24" selection-end-line="537" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,7 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="865" column="23" selection-start-line="865" selection-start-column="14" selection-end-line="865" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -909,7 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="767" column="23" selection-start-line="767" selection-start-column="14" selection-end-line="767" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -917,7 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="589" column="24" selection-start-line="589" selection-start-column="15" selection-end-line="589" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -925,7 +926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="636" column="23" selection-start-line="636" selection-start-column="14" selection-end-line="636" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -933,7 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="987" column="23" selection-start-line="987" selection-start-column="14" selection-end-line="987" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -941,7 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="937" column="23" selection-start-line="937" selection-start-column="14" selection-end-line="937" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -949,7 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.529412">
           <caret line="997" column="24" selection-start-line="997" selection-start-column="24" selection-end-line="997" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -957,7 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.9803922">
           <caret line="881" column="35" selection-start-line="881" selection-start-column="35" selection-end-line="881" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -965,7 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.9803922">
           <caret line="1054" column="33" selection-start-line="1054" selection-start-column="33" selection-end-line="1054" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -973,7 +968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.0">
           <caret line="286" column="1" selection-start-line="286" selection-start-column="1" selection-end-line="286" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -981,7 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.2604167">
           <caret line="227" column="10" selection-start-line="227" selection-start-column="10" selection-end-line="227" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -989,25 +982,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.037037">
           <caret line="237" column="15" selection-start-line="237" selection-start-column="15" selection-end-line="237" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="15.888889">
-          <caret line="1830" column="91" selection-start-line="1830" selection-start-column="74" selection-end-line="1830" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43965518">
-          <caret line="189" column="78" selection-start-line="189" selection-start-column="78" selection-end-line="189" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.33045977">
+          <caret line="179" column="20" selection-start-line="179" selection-start-column="20" selection-end-line="179" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1830" column="91" selection-start-line="1830" selection-start-column="74" selection-end-line="1830" selection-end-column="91" />
+          <folding />
         </state>
       </provider>
     </entry>

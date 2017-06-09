@@ -115,6 +115,8 @@ var lineGen = d3.line()
 
 var yScale, xScale;
 
+// global variable to keep track of how many courses were selected
+var selected_courses;
 
 var wt = d3.transition()
     .duration(500);
@@ -693,15 +695,22 @@ function initialize_selectable() {
     });
 
     $('.courseList').selectable({
+        selecting : function(event, ui) {
+            selected_courses = $('.ui-selecting').length;
+        },
+        filter : 'li',
         selected : function(event, ui) {
+
             // course object that is being selected
             // possible later error...make sure to not modify object
             var course = course_map[$(ui.selected.__data__)[0].className];
             // check to see if the previous selection was an architect
-            // TODO: should only do if only one course is selected... stil doesnt work
-            if ($('.courseList > .ui-selected').length < 2) {
+            if (selected_courses < 2) {
                 pan_to_course(course);
+                selectCourses = []
             }
+
+
             if (d3.selectAll('.prevArch')._groups[0].length != 0) {
 
                 selectCourses = [];
@@ -728,9 +737,10 @@ function initialize_selectable() {
                     }
                 });
 
-                d3.selectAll('.prevArch  > .ui-selected').classed('ui-selected', false).classed('prevArch', false);
-                d3.selectAll('.prevArch').classed('ui-selected', false).classed('prevArch', false);
+                //d3.selectAll('.prevArch  > .ui-selected').classed('ui-selected', false).classed('prevArch', false);
+                //d3.selectAll('.prevArch').classed('ui-selected', false).classed('prevArch', false);
                 selectCourses.push($(ui.selected.__data__)[0]);
+                $(ui.selected).addClass('ui-selected');
                 refresh_chart(course);
                 refresh_points(selectCourses);
                 $(ui.selected).addClass('prevCourse');
@@ -738,6 +748,7 @@ function initialize_selectable() {
         },
         unselected : function(event, ui) {
             var course = $(ui.unselected.__data__)[0];
+
             courseCount[course.className]--;
             // name sure to only trigger on LI selections
             if (ui.unselected.tagName === "LI") {
@@ -794,6 +805,7 @@ function initialize_selectable() {
                 selectCourses = selectCourses.map(function(d) {
                     return course_map[d];
                 });
+
                 refresh_points(selectCourses);
                 update_course_list(selectCourses);
             }
@@ -976,6 +988,7 @@ function initialize_selectable() {
             selectCourses.push(course);
             refresh_points(selectCourses);
             $(ui.selected).addClass('prevCourse');
+
             $('#courseListSearchInput').val(default_search_text)
                 .css('color', '#929292');
         }
@@ -1222,6 +1235,7 @@ function is_course_in_current_rankings(course) {
 }
 
 function refresh_chart(course) {
+    console.log('refresh_chart');
 
     tooltip.transition()
         .duration(500)
@@ -1230,6 +1244,7 @@ function refresh_chart(course) {
 
     // if more than one course is selected, dont show chart
     if (d3.selectAll(".courseList > li.ui-selected")._groups[0].length > 1) {
+        console.log('clearing chart and legend')
         clearChart();
         clearLegend();
         return
@@ -1718,7 +1733,6 @@ function get_highlighted_courses() {
             highlighted_courses.push(highlighted_points[node].__data__);
         }
     }
-    console.log(highlighted_courses)
     return highlighted_courses
 }
 
@@ -1782,7 +1796,6 @@ function refresh_points(courses) {
 
     // empty pointLayer
     $('.pointLayer').empty();
-
     // map select courses
     var all_points = d3.select('.pointLayer').selectAll('.non_highlighted_point')
         .data(non_highlighted_courses)
@@ -1813,6 +1826,7 @@ function refresh_points(courses) {
                 .style("opacity", 0);
         })
         .on('click', function(d) {
+
             d3.selectAll('.point')
                 .style('fill', function(c) {
                     return course_type_colors[c.type];
@@ -1829,7 +1843,6 @@ function refresh_points(courses) {
                 })
                 .style('stroke-width', '3px')
                 .attr('class', function(d) {return d.className +  ' point highlighted_point'});
-
 
             d3.selectAll(".courseList > li.ui-selected").classed('ui-selected', false)
             d3.select('.course-' + d['className']).classed('ui-selected', true);
@@ -2066,7 +2079,7 @@ function clearChart() {
     $(".legend-type").text("");
 
     // deselect course from list if selected
-    $(".ui-selected").removeClass('ui-selected');
+    //$(".ui-selected").removeClass('ui-selected');
 }
 
 

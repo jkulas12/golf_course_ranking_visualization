@@ -705,9 +705,11 @@ function initialize_selectable() {
             // possible later error...make sure to not modify object
             var course = course_map[$(ui.selected.__data__)[0].className];
             // check to see if the previous selection was an architect
+
             if (selected_courses < 2) {
                 pan_to_course(course);
-                selectCourses = []
+                selectCourses = [];
+                courseCount = {};
             }
 
 
@@ -1235,7 +1237,6 @@ function is_course_in_current_rankings(course) {
 }
 
 function refresh_chart(course) {
-    console.log('refresh_chart');
 
     tooltip.transition()
         .duration(500)
@@ -1244,7 +1245,6 @@ function refresh_chart(course) {
 
     // if more than one course is selected, dont show chart
     if (d3.selectAll(".courseList > li.ui-selected")._groups[0].length > 1) {
-        console.log('clearing chart and legend')
         clearChart();
         clearLegend();
         return
@@ -1785,7 +1785,7 @@ function get_valid_courses() {
 // courses: list of courses to be mapped
 // courses is selected courses
 function refresh_points(courses) {
-
+    var cnames = courses.map(function(c) {return c.displayName})
     // map courses to add geometry
     var highlighted_courses = courses.map(function(c) {return type(c)});
     var all_course_names = get_valid_courses().map(function(c) {return c.className})

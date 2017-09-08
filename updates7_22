@@ -1,0 +1,6 @@
+
+8/6
+
+When a course is selected and then a group of courses is rubberbanded, the previously selected
+Course is now at bottom of list. D3 issue, because the course is a part of the selection, it is not a
+part of the enter selection

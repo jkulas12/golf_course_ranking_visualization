@@ -150,8 +150,9 @@ $(window).on("load", function() {
     var w = $(window).width();
     $("#main").height(h)
         .width(w);
-    load_all_rankings(all_rankings);
-
+    d3.queue(1)
+        .defer(load_all_rankings)
+        .defer(initialize_viz);
     generate_map();
 });
 $(document).ready(function() {
@@ -160,15 +161,26 @@ $(document).ready(function() {
     $('#tlyPageGuideToggles').css("left", help_x_pos);
 });
 
-
+function initialize_viz(callback) {
+    initialize_chart();
+    initialize_container_lists();
+    populate_ranking_matrix();
+    add_check_boxes();
+    initialize_publication_year_widget();
+    initialize_course_year_slider();
+    initialize_selectable()
+    refresh_map();
+    rightControlResize();
+    callback(null);
+}
 
 
 
 // function to load all rankings
 // populates 3 maps: course_map, architect_map and ranking_map
-function load_all_rankings(rankings) {
+function load_all_rankings(callback) {
     var ranking_index = 0;
-    rankings.forEach(function(d) {
+    all_rankings.forEach(function(d) {
         ranking_index++;
         var ranking_path = RANKINGS_PATH +  d;
         // parse out ranking_name from ranking_path
@@ -376,16 +388,9 @@ function load_all_rankings(rankings) {
                     chartTooltip = d3.select('body').append('div')
                         .attr('class', 'chartTooltip')
                         .style('opacity', 0)
+                    callback(null);
 
-                    initialize_chart();
-                    initialize_container_lists();
-                    populate_ranking_matrix();
-                    add_check_boxes();
-                    initialize_publication_year_widget();
-                    initialize_course_year_slider();
-                    initialize_selectable()
-                    refresh_map();
-                    rightControlResize();
+
                 })
             }
         })
@@ -882,8 +887,16 @@ function initialize_selectable() {
         var highlighted_courses = get_highlighted_courses().map(function(d) {return d.className});
         // check to make sure that we actually have some map courses to filter on
         // if not we just take courses we already had
-
-        update_course_list(sorted_courses);
+        if (highlighted_courses.length > 0) {
+            if (descending) {
+                sorted_courses = highlighted_courses.map(function(d) {return course_map[d]}).sort(function(a,b) { return a.displayName > b.displayName ? 1 : -1});
+            } else {
+                sorted_courses = highlighted_courses.map(function(d) {return course_map[d]}).sort(function(a,b) {return a.displayName <= b.displayName ? 1 : -1});
+            }
+            update_course_list(sorted_courses)
+        } else {
+            update_course_list(sorted_courses)
+        }
         if (highlighted_courses.length == 1) {
             setTimeout(function() {
                 scroll_courses_list(course_map[highlighted_courses[0]]);
@@ -897,6 +910,8 @@ function initialize_selectable() {
 
     // numeric sorting
     $('.orderedSortDiv').click(function(d) {
+        
+
         var sorted_courses;
         var descending;
         var valid_rankings = get_selected_rankings();
@@ -936,10 +951,19 @@ function initialize_selectable() {
 
 
         var highlighted_courses = get_highlighted_courses().map(function(d) {return d.className});
-        // check to make sure that we actually have some map courses to filter on
-        // if not we just take courses we already had
 
-        update_course_list(sorted_courses);
+        // TODO: check to see if there are highlighted courses, if so keep selected courses
+
+        if (highlighted_courses.length > 0) {
+            if (descending) {
+                sorted_courses = composite_sort(highlighted_courses.map(function(c) {return course_map[c]}));
+            } else {
+                sorted_courses = composite_sort(highlighted_courses.map(function(c) {return course_map[c]})).reverse();
+            }
+            update_course_list(sorted_courses)
+        } else {
+            update_course_list(sorted_courses)
+        }
         if (highlighted_courses.length == 1) {
             setTimeout(function() {
                 scroll_courses_list(course_map[highlighted_courses[0]]);
@@ -1378,7 +1402,7 @@ function initialize_chart() {
     // chart size variables
     var margin = {top: 10, right: 10, bottom: 13, left: 15},
         width = 300 - margin.left - margin.right,
-        chartHeight =  $('#chart').height() - margin.top - margin.bottom;
+        chartHeight =  $(window).height() - 350 - margin.top - margin.bottom;
     var xAxis_buffer = 5;
     xScale = d3.scaleLinear().range([width, margin.right + margin.left]).domain([2017, 2000]);
     yScale = d3.scaleLinear().range([chartHeight - margin.bottom - xAxis_buffer, margin.top]).domain([100, 1]);
@@ -1402,7 +1426,8 @@ function initialize_chart() {
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
-
+    //$('#chart').height(chartHeight)
+    $('#chartSVG').css({'top' : '340px'});
     // add axis
     chartSVG.append("svg:g")
         .attr("transform", "translate(" + margin.left + "," + (chartHeight - margin.bottom) + ")")
@@ -1650,9 +1675,6 @@ function initialize_publication_year_widget() {
     $($('.ui-slider-handle')[1]).addClass('right-slide-node');
 
 
-    // on double click, manually set both to the clicked year
-    // TODO: add functionality to update map, courses and architects
-    // TODO: if two widgets overlap at the furtherst most right point, impossible to select something else
 
     $('.left-slide-node').dblclick(function(d,ui) {
         var val = $('#pubYearSelectWidgetDiv').limitslider("values")[0];
@@ -2039,7 +2061,7 @@ function zoomMove() {
 
 // updates lists and map based on rubberbanding
 function endRubberBand() {
-
+    console.log('endRubberBand');
     var rb = annotG.selectAll('.rubberband').remove();
 
     var selectedCourses = [];
@@ -2059,6 +2081,11 @@ function endRubberBand() {
         if (selectedCourses.length === 1) {
             refresh_chart(selectedCourses[0])
         }
+
+
+        selectedCourses = sort_course_list_courses(selectedCourses);
+        console.log(selectedCourses);
+
         refresh_points(selectedCourses);
         update_course_list(selectedCourses);
         update_architect_list(selectedCourses);
@@ -2067,6 +2094,44 @@ function endRubberBand() {
 
     }
 
+}
+
+// function to sort course list based on sort type
+function sort_course_list_courses(courses) {
+    console.log(courses);
+    var sort_type = get_course_list_sort_type();
+    console.log(sort_type);
+    if (sort_type[0] === 'ordered' && sort_type[1] === 'descending') {
+        return composite_sort(courses)
+    } else if (sort_type[0] === 'ordered' && sort_type === 'ascending') {
+        courses = composite_sort(courses)
+        courses.reverse();
+        return courses;
+    } else if (sort_type[0] === 'alphabetical' && sort_type[1] === 'descending') {
+        courses.sort(function(a,b) { return a.displayName > b.displayName ? 1 : -1});
+        console.log(courses);
+        return courses
+    } else if (sort_type[0] === 'alphabetical' && sort_type[1] === 'ascending') {
+        courses.sort(function(a,b) { return a.displayName <= b.displayName ? 1 : -1});
+        return courses
+    }
+}
+
+// function to return sort type of courses list
+function get_course_list_sort_type() {
+    if ($('.orderedSortDiv').hasClass('active')) {
+        if ($('.orderedSortDiv > span').hasClass('glyphicon-arrow-down')) {
+            return ['ordered', 'descending']
+        } else {
+            return ['ordered', 'ascending']
+        }
+    } else {
+        if ($('.orderedSortDiv > span').hasClass('glyphicon-arrow-down')) {
+            return ['alphabetical', 'descending']
+        } else {
+            return ['alphabetical', 'ascending']
+        }
+    }
 }
 
 
@@ -2086,7 +2151,6 @@ function clearChart() {
 
 
 // function to zoom map. Queries new tiles
-// TODO: add functionality to update points if they exist
 function zoomed() {
 
     var transform = d3.event.transform;
@@ -2137,7 +2201,7 @@ function update_course_list(courses) {
     var courseSelect = d3.select("#courses ul").selectAll('.course')
         .data(courses, function(d,i){return d.className+'-'+i;});
 
-
+    console.log(courses);
     // defines all elements entering the DOM
     var courseEnter = courseSelect.enter().append('li')
         .attr('class',function(d){return 'course course-'+d.className;});
@@ -2148,8 +2212,8 @@ function update_course_list(courses) {
         .style('float', 'left')
         .style("border", "none");
 
-    var rank_decay_map = gen_ranking_decay_maps();
 
+    var sort_type = get_course_list_sort_type();
     // add course rank if in composite rank
     if ($('.orderedSortDiv').hasClass('active')) {
         courseEnter.append('span')
@@ -2158,7 +2222,7 @@ function update_course_list(courses) {
                 if ($('.orderedSortDiv > span').hasClass('glyphicon-arrow-down')) {
                     return parseInt(class_map[d.className]);
                 } else {
-                    return parseInt(courseEnter.data().length - class_map[d.className] + 2);
+                    return parseInt(courseEnter.data().length - class_map[d.className] + 1);
                 }
             });
         courseEnter.merge(courseSelect)
@@ -2170,8 +2234,6 @@ function update_course_list(courses) {
                     return parseInt(courseEnter.data().length - class_map[d.className] + 2);
                 }
             });
-
-
     }
     // adds course name
     courseEnter.append('span')
@@ -2264,9 +2326,9 @@ function rightControlResize() {
 function leftControlResize() {
 
     var windowHeight = $(window).height();
-    $('#coursePictureDiv').height(130);
-    $('#courseInformationContainer').height(180);
-    $('#chartSVG').height(windowHeight - 310);
+    $('#coursePictureDiv').height(130).css({'top': '0px'});
+    $('#courseInformationContainer').height(180).css({'top': '130px'});
+    $('#chartSVG').height(windowHeight - 350).css({'top' : '340px'});
 
 
 }

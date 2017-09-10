@@ -43,6 +43,7 @@ var all_rankings = [
     'Golf_2014_Public',
     "Golf_2015_All",
     "Golf_2016_Public",
+    "Golf_2017_All",
     "GDigest_2001_All",
     "GDigest_2003_All",
     "GDigest_2005_All",
@@ -61,7 +62,6 @@ var all_rankings = [
     'GDigest_2017_Public'
 ];
 
-var most_recent_ranking = 'GDigest_2017_All';
 
 // mapping from publication display_name -> class_name
 var pub_display_class_map = {
@@ -188,6 +188,7 @@ function load_all_rankings(callback) {
 
         // load specific ranking
         d3.json(ranking_path + ".json", function(json) {
+
             // array of all courses in this ranking
             var ranking_courses = [];
 
@@ -403,7 +404,7 @@ function populate_ranking_matrix() {
     var rankings = Object.keys(ranking_map);
     // kind of hacky...
     // empty object inserts to offset the pattern svg inserted for hatching
-    var golf_mag_rankings = [{},{}, {}, {}, {}, {}, {},{},{},{},{}];
+    var golf_mag_rankings = [{}, {}, {}, {}, {}, {},{},{},{},{},{}];
     var golf_digest_rankings = [{},{}, {}, {}, {}, {}, {},{},{},{},{}];
 
     for (var r in rankings) {
@@ -462,7 +463,7 @@ function populate_ranking_matrix() {
         .style("text-anchor", "end")
         .attr("dx", ".5em")
     //.attr("dy", ".5em");
-
+    console.log(golf_mag_rankings)
     d3.select('#GolfCoursesContainer > svg')
         .selectAll('rect')
         .data(golf_mag_rankings)
@@ -1695,8 +1696,8 @@ function initialize_course_year_slider() {
     $("#slider").slider({
         range:"max",
         min:1890,
-        max:2017,
-        value:2017,
+        max:2018,
+        value:2018,
         slide: function(event, ui) {
             var year = $("#slider").slider("option","value");
             $("#year").val(year);
@@ -1710,7 +1711,7 @@ function initialize_course_year_slider() {
         }
     });
 
-    $("#year").val(2017);
+    $("#year").val(2018);
 
 }
 // updates map, courses and architects list
@@ -2061,7 +2062,6 @@ function zoomMove() {
 
 // updates lists and map based on rubberbanding
 function endRubberBand() {
-    console.log('endRubberBand');
     var rb = annotG.selectAll('.rubberband').remove();
 
     var selectedCourses = [];
@@ -2084,7 +2084,6 @@ function endRubberBand() {
 
 
         selectedCourses = sort_course_list_courses(selectedCourses);
-        console.log(selectedCourses);
 
         refresh_points(selectedCourses);
         update_course_list(selectedCourses);
@@ -2098,9 +2097,7 @@ function endRubberBand() {
 
 // function to sort course list based on sort type
 function sort_course_list_courses(courses) {
-    console.log(courses);
     var sort_type = get_course_list_sort_type();
-    console.log(sort_type);
     if (sort_type[0] === 'ordered' && sort_type[1] === 'descending') {
         return composite_sort(courses)
     } else if (sort_type[0] === 'ordered' && sort_type === 'ascending') {
@@ -2109,7 +2106,6 @@ function sort_course_list_courses(courses) {
         return courses;
     } else if (sort_type[0] === 'alphabetical' && sort_type[1] === 'descending') {
         courses.sort(function(a,b) { return a.displayName > b.displayName ? 1 : -1});
-        console.log(courses);
         return courses
     } else if (sort_type[0] === 'alphabetical' && sort_type[1] === 'ascending') {
         courses.sort(function(a,b) { return a.displayName <= b.displayName ? 1 : -1});
@@ -2201,7 +2197,6 @@ function update_course_list(courses) {
     var courseSelect = d3.select("#courses ul").selectAll('.course')
         .data(courses, function(d,i){return d.className+'-'+i;});
 
-    console.log(courses);
     // defines all elements entering the DOM
     var courseEnter = courseSelect.enter().append('li')
         .attr('class',function(d){return 'course course-'+d.className;});

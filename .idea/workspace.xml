@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be1a3c0b-0349-4300-888c-844cf1496732" name="Default" comment="changed name for prairie_club_pines picture">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/updates7_22" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bugs 6_5" afterPath="" />
+    <list default="true" id="be1a3c0b-0349-4300-888c-844cf1496732" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/monterey_peninsula_dunes.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/moraine.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/philadelphia_cricket_club_wissahickon.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/pinehurst_farms_bull.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/sand_valley.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/images/course_pictures/sleepy_hollow.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Data/Rankings/Golf_2017_All.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/slopeRatingData.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/supplemental/course_location_info.csv" afterPath="$PROJECT_DIR$/Data/supplemental/course_location_info.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/supplemental/slopeRatingYardageData.csv" afterPath="$PROJECT_DIR$/Data/supplemental/slopeRatingYardageData.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/style.css" afterPath="$PROJECT_DIR$/js/vendor/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/missing_course_pictures" afterPath="$PROJECT_DIR$/missing_course_pictures" />
     </list>
     <ignored path="golf_viz_public.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +39,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="15" selection-end-column="7" />
+            <state vertical-scroll-proportion="-7.5">
+              <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -42,24 +48,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
+      <file leaf-file-name="missing_course_pictures" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/missing_course_pictures">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38194445">
-              <caret line="2302" column="0" selection-start-line="2302" selection-start-column="0" selection-end-line="2302" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.26712328">
+              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vendor/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-              <folding>
-                <marker date="1500750085000" expanded="true" signature="165:210" placeholder="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -96,7 +90,6 @@
         <option value="$PROJECT_DIR$/js/vendor/pageguide/dist/css/pageguide.min.css" />
         <option value="$PROJECT_DIR$/Data/Rankings/Golf_2003_All.json" />
         <option value="$PROJECT_DIR$/py/query_images.py" />
-        <option value="$PROJECT_DIR$/missing_course_pictures" />
         <option value="$PROJECT_DIR$/js/k" />
         <option value="$PROJECT_DIR$/js/vendor/async.min.js" />
         <option value="$PROJECT_DIR$/Data/Rankings/GDigest_2001_All.json" />
@@ -128,6 +121,8 @@
         <option value="$PROJECT_DIR$/Data/supplemental/course_location_info.csv" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/vendor/style.css" />
+        <option value="$PROJECT_DIR$/Data/Rankings/Golf_2017_All.json" />
+        <option value="$PROJECT_DIR$/missing_course_pictures" />
         <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
@@ -138,10 +133,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="46" />
+    <option name="x" value="521" />
     <option name="y" value="23" />
-    <option name="width" value="1348" />
-    <option name="height" value="867" />
+    <option name="width" value="919" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -176,48 +171,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="golf_viz_public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="golf_viz_public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -544,32 +497,38 @@
       <option name="project" value="LOCAL" />
       <updated>1497044292974</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Merging changes from test repository">
+      <created>1504874581570</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1504874581570</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="46" y="23" width="1348" height="867" extended-state="0" />
-    <editor active="false" />
+    <frame x="521" y="23" width="919" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1661721" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2437432" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06265664" sideWeight="0.50311524" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06188119" sideWeight="0.50311524" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32523617" sideWeight="0.49655172" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24982603" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32523617" sideWeight="0.49655172" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928476" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939634" sideWeight="0.49688473" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -597,7 +556,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added images&#10;removed some panning functionality&#10;added functionality to use arrow keys on the list" />
     <MESSAGE value="added images&#10;                                                 removed some panning functionality&#10;                                                 added functionality to use arrow keys on the list" />
     <MESSAGE value="Other bug fixes&#10;Added all pictures" />
     <MESSAGE value="Fixed Firefox right control resize problem" />
@@ -622,7 +580,8 @@
     <MESSAGE value="Solved issue with multiple courses getting stuck on map when selected.&#10;&#10;Now issue where viz can get stuck in pattern where chart will not refresh" />
     <MESSAGE value="fixed course chart and panel not populating for a course after many were selected" />
     <MESSAGE value="changed name for prairie_club_pines picture" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed name for prairie_club_pines picture" />
+    <MESSAGE value="Merging changes from test repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merging changes from test repository" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -692,13 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8621746">
           <caret line="296" column="2" selection-start-line="296" selection-start-column="2" selection-end-line="296" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/missing_course_pictures">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11658031">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -798,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Rankings/Golf_2011_All.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33240613">
-          <caret line="682" column="33" selection-start-line="682" selection-start-column="29" selection-end-line="682" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/Rankings/Golf_2013_All.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33240613">
@@ -823,13 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.666667">
           <caret line="926" column="18" selection-start-line="926" selection-start-column="14" selection-end-line="926" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/slopeRatingData.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -959,7 +897,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/vendor/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-0.625">
           <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
           <folding>
             <marker date="1500750085000" expanded="true" signature="165:210" placeholder="{...}" />
@@ -967,20 +905,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/Golf_2011_All.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="36.25">
+          <caret line="682" column="33" selection-start-line="682" selection-start-column="29" selection-end-line="682" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Rankings/Golf_2017_All.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3137255">
+          <caret line="523" column="1" selection-start-line="523" selection-start-column="1" selection-end-line="523" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.925926">
+          <caret line="331" column="56" selection-start-line="331" selection-start-column="56" selection-end-line="331" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="15" selection-end-column="7" />
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/missing_course_pictures">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38194445">
-          <caret line="2302" column="0" selection-start-line="2302" selection-start-column="0" selection-end-line="2302" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.26712328">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
           <folding />
         </state>
       </provider>

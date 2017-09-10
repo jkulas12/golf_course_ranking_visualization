@@ -1,0 +1,1006 @@
+﻿{ 
+"Publication":"Golf Magazine",
+"Year":2017,
+"Type":"All",
+"Courses": [
+{
+"CourseName":"Pine Valley",
+"Ranking":1,
+"State":"NJ",
+"Architect":"George Crump",
+"Year":"1918",
+"Coordinates":[39.789,-74.97],
+"Type":"private"
+}
+,
+{
+"CourseName":"Cypress Point",
+"Ranking":2,
+"State":"CA",
+"Architect":"Alister MacKenzie",
+"Year":"1928",
+"Coordinates":[36.5791272,-121.963845],
+"Type":"private"
+}
+,
+{
+"CourseName":"Augusta National",
+"Ranking":3,
+"State":"GA",
+"Architect":"Alister MacKenzie",
+"Year":"1933",
+"Coordinates":[33.5,-82.02222],
+"Type":"private"
+}
+,
+{
+"CourseName":"Shinnecock Hills",
+"Ranking":4,
+"State":"NY",
+"Architect":"William Flynn",
+"Year":"1931",
+"Coordinates":[40.8881,-72.461],
+"Type":"private"
+}
+,
+{
+"CourseName":"National Golf Links of America",
+"Ranking":5,
+"State":"NY",
+"Architect":"C.B. Macdonald",
+"Year":"1911",
+"Coordinates":[40.9094,-72.45],
+"Type":"private"
+}
+,
+{
+"CourseName":"Oakmont",
+"Ranking":6,
+"State":"PA",
+"Architect":"Henry Fownes",
+"Year":"1903",
+"Coordinates":[40.5276,-79.824],
+"Type":"private"
+}
+,
+{
+"CourseName":"Pebble Beach",
+"Ranking":7,
+"State":"CA",
+"Architect":"Jack Neville",
+"Year":"1919",
+"Coordinates":[36.56,-121.9],
+"Type":"public"
+}
+,
+{
+"CourseName":"Merion (East)",
+"Ranking":8,
+"State":"PA",
+"Architect":"Hugh Wilson",
+"Year":"1912",
+"Coordinates":[40.001,-75.31],
+"Type":"private"
+}
+,
+{
+"CourseName":"Sand Hills",
+"Ranking":9,
+"State":"NE",
+"Architect":"Bill Coore",
+"Year":"1994",
+"Coordinates":[41.8833,-101.04],
+"Type":"private"
+}
+,
+{
+"CourseName":"Pinehurst (No.2)",
+"Ranking":10,
+"State":"NC",
+"Architect":"Donald Ross",
+"Year":"1907",
+"Coordinates":[35.1895,-79.467],
+"Type":"public"
+}
+,
+{
+"CourseName":"Fishers Island",
+"Ranking":11,
+"State":"NY",
+"Architect":"Seth Raynor",
+"Year":"1926",
+"Coordinates":[41.261944,-72.00722],
+"Type":"private"
+}
+,
+{
+"CourseName":"Chicago",
+"Ranking":12,
+"State":"IL",
+"Architect":"C.B. Macdonald",
+"Year":"1895",
+"Coordinates":[41.8448,-88.116],
+"Type":"private"
+}
+,
+{
+"CourseName":"Los Angeles(North)",
+"Ranking":13,
+"State":"CA",
+"Architect":"George Thomas",
+"Year":"1921",
+"Coordinates":[34.071893,-118.42313],
+"Type":"private"
+}
+,
+{
+"CourseName":"Seminole",
+"Ranking":14,
+"State":"FL",
+"Architect":"Donald Ross",
+"Year":"1907",
+"Coordinates":[26.860306,-80.048176],
+"Type":"private"
+}
+,
+{
+"CourseName":"Crystal Downs",
+"Ranking":15,
+"State":"MI",
+"Architect":"Alister MacKenzie",
+"Year":"1932",
+"Coordinates":[44.736667,-86.23416],
+"Type":"private"
+}
+,
+{
+"CourseName":"San Francisco Golf Club",
+"Ranking":16,
+"State":"CA",
+"Architect":"A.W. Tillinghast",
+"Year":"1918",
+"Coordinates":[37.712,-122.47],
+"Type":"private"
+}
+,
+{
+"CourseName":"Pacific Dunes",
+"Ranking":17,
+"State":"OR",
+"Architect":"Tom Doak",
+"Year":"2001",
+"Coordinates":[43.188221,-124.39017],
+"Type":"public"
+}
+,
+{
+"CourseName":"Winged Foot (West)",
+"Ranking":18,
+"State":"NY",
+"Architect":"A.W. Tillinghast",
+"Year":"1923",
+"Coordinates":[40.9625,-73.75361],
+"Type":"private"
+}
+,
+{
+"CourseName":"Prairie Dunes",
+"Ranking":19,
+"State":"KS",
+"Architect":"Perry Maxwell",
+"Year":"1937",
+"Coordinates":[38.091,-97.84],
+"Type":"private"
+}
+,
+{
+"CourseName":"Riviera",
+"Ranking":20,
+"State":"CA",
+"Architect":"George Thomas",
+"Year":"1926",
+"Coordinates":[34.05,-118.501],
+"Type":"private"
+}
+,
+{
+"CourseName":"Friar's Head",
+"Ranking":21,
+"State":"NY",
+"Architect":"Bill Coore",
+"Year":"2003",
+"Coordinates":[40.9641,-72.72],
+"Type":"private"
+}
+,
+{
+"CourseName":"The Country Club(Clyde_Squirrel)",
+"Ranking":22,
+"State":"MS",
+"Architect":"Willie Campbell",
+"Year":"1895",
+"Coordinates":[42.313333,-71.15083],
+"Type":"private"
+}
+,
+{
+"CourseName":"Bethpage(Black)",
+"Ranking":23,
+"State":"NY",
+"Architect":"A.W. Tillinghast",
+"Year":"1935",
+"Coordinates":[40.7423,-73.455],
+"Type":"public"
+}
+,
+{
+"CourseName":"Oakland Hills(South)",
+"Ranking":24,
+"State":"MI",
+"Architect":"Donald Ross",
+"Year":"1917",
+"Coordinates":[42.544722,-83.27083],
+"Type":"private"
+}
+,
+{
+"CourseName":"Kiawah Island (Ocean)",
+"Ranking":25,
+"State":"SC",
+"Architect":"Pete Dye",
+"Year":"1991",
+"Coordinates":[32.6113,-80.022],
+"Type":"public"
+}
+,
+{
+"CourseName":"Garden City Golf Club",
+"Ranking":26,
+"State":"NY",
+"Architect":"Devereux Emmet",
+"Year":"1899",
+"Coordinates":[40.7322,-73.646],
+"Type":"private"
+}
+,
+{
+"CourseName":"Shoreacres",
+"Ranking":27,
+"State":"IL",
+"Architect":"Seth Raynor",
+"Year":"1921",
+"Coordinates":[42.298684,-87.8449],
+"Type":"private"
+}
+,
+{
+"CourseName":"Whistling Straits (Straits)",
+"Ranking":28,
+"State":"WI",
+"Architect":"Pete Dye",
+"Year":"1998",
+"Coordinates":[43.851,-87.73],
+"Type":"public"
+}
+,
+{
+"CourseName":"Murfield Village",
+"Ranking":29,
+"State":"OH",
+"Architect":"Jack Nicklaus",
+"Year":"1974",
+"Coordinates":[40.1405,-83.141],
+"Type":"private"
+}
+,
+{
+"CourseName":"TPC Sawgrass (Players Stadium)",
+"Ranking":30,
+"State":"FL",
+"Architect":"Pete Dye",
+"Year":"1981",
+"Coordinates":[30.198,-81.39],
+"Type":"public"
+}
+,
+{
+"CourseName":"Camargo",
+"Ranking":31,
+"State":"OH",
+"Architect":"Seth Raynor",
+"Year":"1921",
+"Coordinates":[39.179554,-84.33564],
+"Type":"private"
+}
+,
+{
+"CourseName":"Bandon Dunes",
+"Ranking":32,
+"State":"OR",
+"Architect":"David McLay Kidd",
+"Year":"1999",
+"Coordinates":[43.188221,-124.39017],
+"Type":"public"
+}
+,
+{
+"CourseName":"Olympic (Lake)",
+"Ranking":33,
+"State":"CA",
+"Architect":"Sa, Whiting",
+"Year":"1924",
+"Coordinates":[37.709,-122.49],
+"Type":"private"
+}
+,
+{
+"CourseName":"Southern Hills",
+"Ranking":34,
+"State":"OK",
+"Architect":"Perry Maxwell",
+"Year":"1936",
+"Coordinates":[36.072636,-95.94965],
+"Type":"private"
+}
+,
+{
+"CourseName":"Maidstone",
+"Ranking":35,
+"State":"NY",
+"Architect":"John Park",
+"Year":"1891",
+"Coordinates":[40.952872,-72.177],
+"Type":"private"
+}
+,
+{
+"CourseName":"California Golf Clubs of San Francisco",
+"Ranking":36,
+"State":"CA",
+"Architect":"A. Vernon Macan",
+"Year":"1926",
+"Coordinates":[37.64732,-122.4398],
+"Type":"private"
+}
+,
+{
+"CourseName":"Baltusrol (Lower)",
+"Ranking":37,
+"State":"NJ",
+"Architect":"A.W. Tillinghast",
+"Year":"1922",
+"Coordinates":[40.705,-74.32],
+"Type":"private"
+}
+,
+{
+"CourseName":"Somerset Hills",
+"Ranking":38,
+"State":"NJ",
+"Architect":"A.W. Tillinghast",
+"Year":"1918",
+"Coordinates":[40.72316,-74.588],
+"Type":"private"
+}
+,
+{
+"CourseName":"Quaker Ridge",
+"Ranking":39,
+"State":"NY",
+"Architect":"A.W. Tillinghast",
+"Year":"1926",
+"Coordinates":[40.966111,-73.76472],
+"Type":"private"
+}
+,
+{
+"CourseName":"The Golf Club",
+"Ranking":40,
+"State":"OH",
+"Architect":"Pete Dye",
+"Year":"1967",
+"Coordinates":[40.0695,-82.78],
+"Type":"private"
+}
+,
+{
+"CourseName":"Winged Foot (East)",
+"Ranking":41,
+"State":"NY",
+"Architect":"A.W. Tillinghast",
+"Year":"1923",
+"Coordinates":[40.9625,-73.75361],
+"Type":"private"
+}
+,
+{
+"CourseName":"Ballyneal",
+"Ranking":42,
+"State":"CO",
+"Architect":"Tom Doak",
+"Year":"2006",
+"Coordinates":[40.420004,-102.26558],
+"Type":"private"
+}
+,
+{
+"CourseName":"Oak Hill (East)",
+"Ranking":43,
+"State":"NY",
+"Architect":"Donald Ross",
+"Year":"1923",
+"Coordinates":[43.113,-77.53],
+"Type":"private"
+}
+,
+{
+"CourseName":"Inverness",
+"Ranking":44,
+"State":"OH",
+"Architect":"Donald Ross",
+"Year":"1919",
+"Coordinates":[41.646389,-83.65027],
+"Type":"private"
+}
+,
+{
+"CourseName":"Harbour Town",
+"Ranking":45,
+"State":"SC",
+"Architect":"Pete Dye",
+"Year":"1969",
+"Coordinates":[32.136,-80.8],
+"Type":"public"
+}
+,
+{
+"CourseName":"Bandon Trails",
+"Ranking":46,
+"State":"OR",
+"Architect":"Bill Coore",
+"Year":"2005",
+"Coordinates":[43.188221,-124.39017],
+"Type":"public"
+}
+,
+{
+"CourseName":"Streamsong Resort (Red)",
+"Ranking":47,
+"State":"FL",
+"Architect":"Bill Coore",
+"Year":"2013",
+"Coordinates":[27.679645,-81.937],
+"Type":"public"
+}
+,
+{
+"CourseName":"Valley Club of Montecito",
+"Ranking":48,
+"State":"CA",
+"Architect":"Alister MacKenzie",
+"Year":"1929",
+"Coordinates":[34.42969,-119.61085],
+"Type":"private"
+}
+,
+{
+"CourseName":"Peachtree",
+"Ranking":49,
+"State":"GA",
+"Architect":"Robert Trent Jones",
+"Year":"1948",
+"Coordinates":[33.881094,-84.32278],
+"Type":"private"
+}
+,
+{
+"CourseName":"Old Sandwich",
+"Ranking":50,
+"State":"MS",
+"Architect":"Bill Coore",
+"Year":"2004",
+"Coordinates":[41.904594,-70.60651],
+"Type":"private"
+}
+,
+{
+"CourseName":"Medinah (No.3)",
+"Ranking":51,
+"State":"IL",
+"Architect":"Tom Bendelow",
+"Year":"1928",
+"Coordinates":[41.966,-88.04],
+"Type":"private"
+}
+,
+{
+"CourseName":"Sand Valley",
+"Ranking":52,
+"State":"WI",
+"Architect":"Bill Coore_Ben Crenshaw",
+"Year":"2017",
+"Coordinates":[44.1841,-89.852608],
+"Type":"public"
+}
+,
+{
+"CourseName":"Pasatiempo",
+"Ranking":53,
+"State":"CA",
+"Architect":"Alister MacKenzie",
+"Year":"1929",
+"Coordinates":[37.0064,-122],
+"Type":"public"
+}
+,
+{
+"CourseName":"Spyglass Hill",
+"Ranking":54,
+"State":"CA",
+"Architect":"Robert Trent Jones",
+"Year":"1966",
+"Coordinates":[36.5851,-121.955],
+"Type":"public"
+}
+,
+{
+"CourseName":"Yale University",
+"Ranking":55,
+"State":"CT",
+"Architect":"C.B. Macdonald",
+"Year":"1926",
+"Coordinates":[41.3194,-72.986],
+"Type":"private"
+}
+,
+{
+"CourseName":"Yeamans Hall",
+"Ranking":56,
+"State":"SC",
+"Architect":"Seth Raynor",
+"Year":"1925",
+"Coordinates":[32.925223,-79.98476],
+"Type":"private"
+}
+,
+{
+"CourseName":"Old Macdonald",
+"Ranking":57,
+"State":"OR",
+"Architect":"Tom Doak",
+"Year":"2010",
+"Coordinates":[43.188221,-124.39017],
+"Type":"public"
+}
+,
+{
+"CourseName":"Wade Hampton",
+"Ranking":58,
+"State":"NC",
+"Architect":"Tom Fazio",
+"Year":"1987",
+"Coordinates":[35.086795,-83.07125],
+"Type":"private"
+}
+,
+{
+"CourseName":"Old Town Club",
+"Ranking":59,
+"State":"NC",
+"Architect":"Perry Maxwell",
+"Year":"1937",
+"Coordinates":[36.124227,-80.27172],
+"Type":"private"
+}
+,
+{
+"CourseName":"Plainfield",
+"Ranking":60,
+"State":"NJ",
+"Architect":"Donald Ross",
+"Year":"1921",
+"Coordinates":[40.594444,-74.38944],
+"Type":"private"
+}
+,
+{
+"CourseName":"Shadow Creek",
+"Ranking":61,
+"State":"NV",
+"Architect":"Tom Fazio",
+"Year":"1990",
+"Coordinates":[36.256995,-115.10795],
+"Type":"public"
+}
+,
+{
+"CourseName":"Eastward Ho",
+"Ranking":62,
+"State":"MA",
+"Architect":"Herbert Fowler",
+"Year":"1922",
+"Coordinates":[41.716774,-69.98425],
+"Type":"private"
+}
+,
+{
+"CourseName":"Myopia Hunt Club",
+"Ranking":63,
+"State":"MA",
+"Architect":"Herbert Leeds",
+"Year":"1896",
+"Coordinates":[42.609459,-70.85841],
+"Type":"private"
+}
+,
+{
+"CourseName":"Streamsong Resort (Blue)",
+"Ranking":64,
+"State":"FL",
+"Architect":"Tom Doak",
+"Year":"2013",
+"Coordinates":[27.679645,-81.937],
+"Type":"public"
+}
+,
+{
+"CourseName":"Rock Creek Cattle Company",
+"Ranking":65,
+"State":"MT",
+"Architect":"Tom Doak",
+"Year":"2008",
+"Coordinates":[46.482497,-112.834011],
+"Type":"private"
+}
+,
+{
+"CourseName":"Kittansett",
+"Ranking":66,
+"State":"MA",
+"Architect":"William Flynn",
+"Year":"1922",
+"Coordinates":[41.676988,-70.71678],
+"Type":"private"
+}
+,
+{
+"CourseName":"Monterey Peninsula (Shore)",
+"Ranking":67,
+"State":"CA",
+"Architect":"Bob Baldock",
+"Year":"1961",
+"Coordinates":[36.600433,-121.94733],
+"Type":"private"
+}
+,
+{
+"CourseName":"Nanea",
+"Ranking":68,
+"State":"HI",
+"Architect":"David McLay Kidd",
+"Year":"2003",
+"Coordinates":[19.785056,-155.95923],
+"Type":"private"
+}
+,
+{
+"CourseName":"Piping Rock",
+"Ranking":69,
+"State":"NY",
+"Architect":"C.B. Macdonald",
+"Year":"1913",
+"Coordinates":[40.859655,-73.58396],
+"Type":"private"
+}
+,
+{
+"CourseName":"East Lake",
+"Ranking":70,
+"State":"GA",
+"Architect":"Tom Bendelow",
+"Year":"1910",
+"Coordinates":[33.743,-84.3],
+"Type":"private"
+}
+,
+{
+"CourseName":"Newport",
+"Ranking":71,
+"State":"RI",
+"Architect":"Willie Davis",
+"Year":"1894",
+"Coordinates":[41.461944,-71.34694],
+"Type":"private"
+}
+,
+{
+"CourseName":"Baltimore (Five Farms East)",
+"Ranking":72,
+"State":"MD",
+"Architect":"A.W. Tillinghast",
+"Year":"1926",
+"Coordinates":[39.440172,-76.66169],
+"Type":"private"
+}
+,
+{
+"CourseName":"Cherry Hills",
+"Ranking":73,
+"State":"CO",
+"Architect":"William Flynn",
+"Year":"1923",
+"Coordinates":[39.643,-104.96],
+"Type":"private"
+}
+,
+{
+"CourseName":"Erin Hills Golf Course",
+"Ranking":74,
+"State":"WI",
+"Architect":"Muchael Hurdzan",
+"Year":"2006",
+"Coordinates":[43.244204,-88.3954],
+"Type":"public"
+}
+,
+{
+"CourseName":"Interlachen",
+"Ranking":75,
+"State":"MN",
+"Architect":"Willie Watson",
+"Year":"1911",
+"Coordinates":[44.913744,-93.37739],
+"Type":"private"
+}
+,
+{
+"CourseName":"Sebonack",
+"Ranking":76,
+"State":"NY",
+"Architect":"Jack Nicklaus",
+"Year":"2006",
+"Coordinates":[40.911,-72.45],
+"Type":"private"
+}
+,
+{
+"CourseName":"Congressional (Blue)",
+"Ranking":77,
+"State":"MD",
+"Architect":"Devereux Emmet",
+"Year":"1924",
+"Coordinates":[38.996,-77.17],
+"Type":"private"
+}
+,
+{
+"CourseName":"The Honors Course",
+"Ranking":78,
+"State":"TN",
+"Architect":"Pete Dye",
+"Year":"1983",
+"Coordinates":[35.0867,-85.044],
+"Type":"private"
+}
+,
+{
+"CourseName":"Scioto",
+"Ranking":79,
+"State":"OH",
+"Architect":"Donald Ross",
+"Year":"1916",
+"Coordinates":[40.002,-83.07],
+"Type":"private"
+}
+,
+{
+"CourseName":"Bel-Air",
+"Ranking":80,
+"State":"CA",
+"Architect":"George Thomas",
+"Year":"1926",
+"Coordinates":[34.079033,-118.4501],
+"Type":"private"
+}
+,
+{
+"CourseName":"Fox Chapel",
+"Ranking":81,
+"State":"PA",
+"Architect":"Seth Raynor",
+"Year":"1923",
+"Coordinates":[40.522911,-79.87778],
+"Type":"private"
+}
+,
+{
+"CourseName":"Essex Country Club",
+"Ranking":82,
+"State":"MA",
+"Architect":"Donald Ross",
+"Year":"1893",
+"Coordinates":[42.584494,-70.761041],
+"Type":"private"
+}
+,
+{
+"CourseName":"Baltusrol (Upper)",
+"Ranking":83,
+"State":"NJ",
+"Architect":"A.W.Tillinghast",
+"Year":"1923",
+"Coordinates":[40.705,-74.32],
+"Type":"private"
+}
+,
+{
+"CourseName":"Milwaukee",
+"Ranking":84,
+"State":"WI",
+"Architect":"H.S. Colt",
+"Year":"1929",
+"Coordinates":[43.164373,-87.94476],
+"Type":"private"
+}
+,
+{
+"CourseName":"Ridgewood (West_East)",
+"Ranking":85,
+"State":"NJ",
+"Architect":"A.W. Tillinghast",
+"Year":"1929",
+"Coordinates":[40.941894,-74.07766],
+"Type":"private"
+}
+,
+{
+"CourseName":"Philadelphia Cricket Club (Wissahickon)",
+"Ranking":86,
+"State":"PA",
+"Architect":"A.W. Tillinghast",
+"Year":"1922",
+"Coordinates":[40.1045,-75.222],
+"Type":"private"
+}
+,
+{
+"CourseName":"Torrey Pines (South)",
+"Ranking":87,
+"State":"CA",
+"Architect":"Billy Bell Jr.",
+"Year":"1957",
+"Coordinates":[32.9045,-117.245],
+"Type":"public"
+}
+,
+{
+"CourseName":"Boston Golf Club",
+"Ranking":88,
+"State":"MA",
+"Architect":"Gil Hanse",
+"Year":"2005",
+"Coordinates":[42.189488,-70.8976],
+"Type":"private"
+}
+,
+{
+"CourseName":"Moraine",
+"Ranking":89,
+"State":"OH",
+"Architect":"Alex Campbell/ Keith Fostor",
+"Year":"1930",
+"Coordinates":[39.689522,-84.195676],
+"Type":"private"
+}
+,
+{
+"CourseName":"The Creek Club",
+"Ranking":90,
+"State":"NY",
+"Architect":"C.B. Macdonald",
+"Year":"1925",
+"Coordinates":[40.890167,-73.596792],
+"Type":"private"
+}
+,
+{
+"CourseName":"Calusa Pines",
+"Ranking":91,
+"State":"FL",
+"Architect":"Michael Hurdzan",
+"Year":"2001",
+"Coordinates":[26.262583,-81.66626],
+"Type":"private"
+}
+,
+{
+"CourseName":"Colonial",
+"Ranking":92,
+"State":"TX",
+"Architect":"John Bredemus",
+"Year":"1935",
+"Coordinates":[32.720339,-97.37359],
+"Type":"private"
+}
+,
+{
+"CourseName":"Hazeltine National",
+"Ranking":93,
+"State":"MN",
+"Architect":"Robert Trent Jones",
+"Year":"1962",
+"Coordinates":[44.834,-93.59],
+"Type":"private"
+}
+,
+{
+"CourseName":"Monterey Peninsula (Dunes)",
+"Ranking":94,
+"State":"CA",
+"Architect":"Seth Raynor/Tom Faxio",
+"Year":"1926",
+"Coordinates":[36.601,-121.9479],
+"Type":"private"
+}
+,
+{
+"CourseName":"Gozzer Ranch",
+"Ranking":95,
+"State":"ID",
+"Architect":"Tom Fazio",
+"Year":"2007",
+"Coordinates":[47.617363,-116.76080],
+"Type":"private"
+}
+,
+{
+"CourseName":"Sleepy Hollow",
+"Ranking":96,
+"State":"NY",
+"Architect":"C.B. Macdonald/Seth Raynor/ A.W. Tillinghast",
+"Year":"1911",
+"Coordinates":[41.12381,-73.86144],
+"Type":"private"
+}
+,
+{
+"CourseName":"Aronimink",
+"Ranking":97,
+"State":"PA",
+"Architect":"Donald Ross",
+"Year":"1928",
+"Coordinates":[40.01162,-75.40853],
+"Type":"private"
+}
+,
+{
+"CourseName":"Chambers Bay",
+"Ranking":98,
+"State":"WA",
+"Architect":"Robert Trent Jones II",
+"Year":"2007",
+"Coordinates":[47.2,-122.5],
+"Type":"public"
+}
+,
+{
+"CourseName":"Mountain Lake",
+"Ranking":99,
+"State":"FL",
+"Architect":"Seth Raynor",
+"Year":"1918",
+"Coordinates":[27.9395,-81.596286],
+"Type":"private"
+}
+,
+{
+"CourseName":"Blackwolf Run (River)",
+"Ranking":100,
+"State":"WI",
+"Architect":"Pete Dye",
+"Year":"1988",
+"Coordinates":[43.728061,-87.885],
+"Type":"public"
+}
+
+]}
